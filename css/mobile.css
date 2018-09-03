@@ -17,4 +17,8 @@
         margin-top: 20px;
         font-size: 100%;
     }
+
+    .top-nav-link {
+        display: none;
+    }
 }

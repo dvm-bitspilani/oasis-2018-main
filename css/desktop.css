@@ -40,10 +40,14 @@ body, html, #homeLayer1, #trees {
 }
 
 /* HAM */
-#ham-icon, #close-icon {
+#close-icon {
     position: absolute;
     height: 60px;
     margin: 20px 0 0 30px;
+}
+
+#ham-icon {
+    height: 60px;
 }
 
 #ham-icon:hover, #close-icon:hover {
@@ -57,6 +61,34 @@ body, html, #homeLayer1, #trees {
 #close-icon {
     display: none;
     z-index: 5;
+}
+
+/* NAV */
+#top-nav {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px 0 0 30px;
+    color: #fff;
+    z-index: 3;
+}
+
+.top-nav-link {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3vw;
+    font-size: 180%;
+    transition: transform 0.1s linear;
+}
+
+.top-nav-link:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: #c4217d;
 }
 
 /* MENU */

@@ -6,7 +6,7 @@ function openMenu () {
     menu.style.top = "0";
     menu.style.opacity = "0.9";
 
-    hamIcon.style.display = "none";
+    hamIcon.style.opacity = "0";
 
     closeIcon.style.display = "block";
 }
@@ -17,7 +17,7 @@ function closeMenu () {
 
     closeIcon.style.display = "none";
 
-    hamIcon.style.display = "block";
+    hamIcon.style.opacity = "1";
 }
 
 hamIcon.addEventListener("click", openMenu);
