@@ -5,13 +5,25 @@ body, html {
     overflow: hidden;
 }
 
-.layer, .page {
+.layer, .page, .fullpage-flex {
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
     overflow: hidden;
+    z-index: 2;
+}
+
+.fullpage-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page:not(#home-page) {
+    display: none;
 }
 
 #homeLayer1 {
@@ -27,6 +39,7 @@ body, html, #homeLayer1, #trees {
     background-position: center;
 }
 
+/* HAM */
 #ham-icon, #close-icon {
     position: absolute;
     height: 60px;
@@ -37,11 +50,16 @@ body, html, #homeLayer1, #trees {
     cursor: pointer;
 }
 
+#ham-icon {
+    z-index: 3;
+}
+
 #close-icon {
     display: none;
     z-index: 5;
 }
 
+/* MENU */
 #menu {
     height: 100vh;
     width: 100vw;
@@ -67,9 +85,75 @@ body, html, #homeLayer1, #trees {
     margin-top: 40px;
     font-size: 200%;
     color: #c4217d;
+    text-align: center;
 }
 
 #menu-list li:hover {
     cursor: pointer;
     color: #831654;
+}
+
+/* EVENTS PAGE */
+#events-page {
+    background: black;
+}
+
+#events-container {
+    height: 90vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+#events-container-head {
+    flex-grow: 1;
+}
+
+#events-category-scroll {
+    flex-grow: 1.2;
+    display: flex;
+    justify-content: center;
+}
+
+#events-list {
+    flex-grow: 1.2;
+}
+
+#event-svg-container {
+    width: 40%;
+}
+
+#events-container-head, #events-category-scroll, #events-list, #event-svg-container {
+    border: solid black 1px;
+}
+
+/* DEVELOPERS PAGE */
+#dev-page {
+    background: url('../imgs/bg2.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.dev-flex {
+    justify-content: space-around;
+}
+
+.page-heading {
+    width: 35vw;
+}
+
+#devs-container {
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dev-member {
+    height: 350px;
+    width: 300px;
+    background: #fff;
 }

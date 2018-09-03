@@ -22,3 +22,42 @@ function closeMenu () {
 
 hamIcon.addEventListener("click", openMenu);
 closeIcon.addEventListener("click", closeMenu);
+
+var pages = {
+    home: {
+        name: "home",
+        linkElem: document.getElementById("home-link"),
+        domElem: document.getElementById("home-page")
+    },
+    developers: {
+        name: "developers",
+        linkElem: document.getElementById("dev-link"),
+        domElem: document.getElementById("dev-page")
+    },
+    events: {
+        name: "events",
+        linkElem: document.getElementById("events-link"),
+        domElem: document.getElementById("events-page")
+    }
+};
+
+var currentPage = pages.home;
+
+function openPage (pageName) {
+    currentPage.domElem.style.display = "none";
+
+    pages[pageName].domElem.style.display = "block";
+
+    currentPage = pages[pageName];
+
+    closeMenu();
+}
+
+for (var page in pages) {
+    (function () {
+        var pageObj = pages[page];
+        pageObj.linkElem.addEventListener("click", function () {
+            openPage(pageObj.name);
+        });
+    })();
+}

@@ -19,7 +19,7 @@
     </head>
     <body>
         <!-- HOME -->
-        <div class = "page" id = "home">
+        <div class = "page" id = "home-page">
             <!-- layers -->
             <div class = "layer" id = "homeLayer1"></div>
             <div class = "layer" id = "trees"></div>
@@ -34,14 +34,44 @@
         <!-- MENU -->
         <div id = "menu">
             <ul id = "menu-list">
-                <li>ABOUT</li>
-                <li>ABOUT</li>
-                <li>ABOUT</li>
-                <li>ABOUT</li>
+                <li id = "home-link">HOME</li>
+                <li id = "dev-link">DEVELOPERS</li>
+                <li id = "events-link">EVENTS</li>
             </ul>
+        </div>
+
+        <!-- DEVELOPERS -->
+        <div class = "page" id = "dev-page">
+            <div class = "fullpage-flex dev-flex">
+                <img src = "imgs/page-heading.svg" class = "page-heading" />
+
+                <div id = "devs-container">
+                    <div class = "dev-member">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EVENTS -->
+        <div class = "page" id = "events-page">
+            <div class = "fullpage-flex">
+                <div id = "events-container">
+                    <div id = "events-container-head"></div>
+                    <div id = "events-category-scroll">
+                        <div id = "event-svg-container">
+
+                        </div>
+                    </div>
+                    <div id = "events-list">
+
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- SCRIPTS -->
         <script src = "js/navigation.js"></script>
+        <script src = "js/events.js"></script>
     </body>
 </html>
