@@ -1,0 +1,20 @@
+@media all and (max-width: 700px) {
+    #homeLayer1 {
+        background: url('../imgs/mobileHomeLayer1.svg') no-repeat;
+    }
+
+    #homeLayer1, #trees {
+        background-size: cover;
+        background-position: center;
+    }
+
+    #ham-icon, #close-icon {
+        height: 50px;
+        margin: 15px 0 0 15px;
+    }
+
+    #menu-list {
+        margin-top: 20px;
+        font-size: 100%;
+    }
+}

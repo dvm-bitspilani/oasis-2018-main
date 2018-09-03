@@ -1,0 +1,75 @@
+body, html {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+.layer, .page {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#homeLayer1 {
+    background: url('../imgs/homeLayer1.svg') no-repeat;
+}
+
+#trees {
+    background: url('../imgs/trees.svg') no-repeat;
+}
+
+body, html, #homeLayer1, #trees {
+    background-size: cover;
+    background-position: center;
+}
+
+#ham-icon, #close-icon {
+    position: absolute;
+    height: 60px;
+    margin: 20px 0 0 30px;
+}
+
+#ham-icon:hover, #close-icon:hover {
+    cursor: pointer;
+}
+
+#close-icon {
+    display: none;
+    z-index: 5;
+}
+
+#menu {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    background: #352783;
+    opacity: 0;
+    transition: top 0.1s linear, opacity 0.1s linear;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+}
+
+#menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#menu-list li {
+    margin-top: 40px;
+    font-size: 200%;
+    color: #c4217d;
+}
+
+#menu-list li:hover {
+    cursor: pointer;
+    color: #831654;
+}
