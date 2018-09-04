@@ -8,17 +8,37 @@
         background-position: center;
     }
 
+    /* HAM */
     #ham-icon, #close-icon {
         height: 50px;
         margin: 15px 0 0 15px;
     }
 
-    #menu-list {
-        margin-top: 20px;
-        font-size: 100%;
+    /* NAV */
+
+    #top-nav {
+        margin: 0;
     }
 
     .top-nav-link {
-        display: none;
+        display: none !important;
+    }
+
+    #register-icon {
+        margin: 15px 15px 0 0;
+    }
+
+    #register-icon img {
+        width: 30vw;
+    }
+
+    /* MENU */
+    #menu-list {
+        margin-top: 20px;
+        font-size: 80%;
+    }
+
+    #menu-list li {
+        margin-top: 25px;
     }
 }

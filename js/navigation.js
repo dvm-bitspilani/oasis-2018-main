@@ -29,6 +29,16 @@ var pages = {
         linkElem: document.getElementById("home-link"),
         domElem: document.getElementById("home-page")
     },
+    archive: {
+        name: "archive",
+        linkElem: document.getElementById("archive-link"),
+        domElem: document.getElementById("archive-page")
+    },
+    about: {
+        name: "about",
+        linkElem: document.getElementById("about-link"),
+        domElem: document.getElementById("about-page")
+    },
     developers: {
         name: "developers",
         linkElem: document.getElementById("dev-link"),
@@ -38,6 +48,16 @@ var pages = {
         name: "events",
         linkElem: document.getElementById("events-link"),
         domElem: document.getElementById("events-page")
+    },
+    contacts: {
+        name: "contacts",
+        linkElem: document.getElementById("contacts-link"),
+        domElem: document.getElementById("contacts-page")
+    },
+    sponsors: {
+        name: "sponsors",
+        linkElem: document.getElementById("sponsors-link"),
+        domElem: document.getElementById("sponsors-page")
     }
 };
 
@@ -49,6 +69,16 @@ function openPage (pageName) {
     pages[pageName].domElem.style.display = "block";
 
     currentPage = pages[pageName];
+
+    var navDisplayProperty = "none";
+    if (pageName === "home") {
+        navDisplayProperty = "flex";
+    }
+
+    var topNavLinks = document.getElementsByClassName("top-nav-link");
+    for (var z = 0; z < topNavLinks.length; z++) {
+        topNavLinks[z].style.display = navDisplayProperty;
+    }
 
     closeMenu();
 }
