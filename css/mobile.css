@@ -24,11 +24,11 @@
         display: none !important;
     }
 
-    #register-icon {
+    #register-link {
         margin: 15px 15px 0 0;
     }
 
-    #register-icon img {
+    #register-link img {
         width: 30vw;
     }
 

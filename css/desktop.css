@@ -50,11 +50,11 @@ body, html, #homeLayer1, #trees {
     height: 60px;
 }
 
-#ham-icon:hover, #close-icon:hover {
+#ham-icon:hover, #close-icon:hover, #register-link:hover {
     cursor: pointer;
 }
 
-#ham-icon, #register-icon {
+#ham-icon, #register-link {
     z-index: 3;
 }
 
@@ -92,14 +92,14 @@ body, html, #homeLayer1, #trees {
 }
 
 
-#register-icon {
+#register-link {
     position: absolute;
     top: 0;
     right: 0;
     margin: 20px 30px 0 0;
 }
 
-#register-icon img {
+#register-link img {
     width: 15vw;
 }
 

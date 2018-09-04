@@ -58,6 +58,11 @@ var pages = {
         name: "sponsors",
         linkElem: document.getElementById("sponsors-link"),
         domElem: document.getElementById("sponsors-page")
+    },
+    register: {
+        name: "register",
+        linkElem: document.getElementById("register-link"),
+        domElem: document.getElementById("register-page")
     }
 };
 
