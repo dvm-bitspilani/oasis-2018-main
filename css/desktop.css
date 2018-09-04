@@ -22,7 +22,7 @@ body, html {
     align-items: center;
 }
 
-.page:not(#home-page) {
+.page:not(#events-page) {
     display: none;
 }
 
@@ -153,8 +153,27 @@ body, html, #homeLayer1, #trees {
 }
 
 #event-svg-container {
-    width: 40%;
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
 }
+
+#event-svg-container li {
+    display: block;
+    float: left;
+}
+
+#event-svg-container li img {
+    display: block;
+    width: 100%;
+}
+
+/* #event-svg-container li {
+    height: 100%;
+    width: 100%;
+    background: url('../imgs/svg-anim/DRAMAanimation.svg') no-repeat;
+    background-position: center;
+} */
 
 #events-container-head, #events-category-scroll, #events-list, #event-svg-container {
     border: solid black 1px;

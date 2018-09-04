@@ -13,6 +13,7 @@
         <meta name="description" content="The official website of the awesome cultural festival of BITS Pilani, Pilani Campus - 2018 Edition"/>
         <!-- <link rel="shortcut icon" href="https://bits-oasis.org/2017/static/pcradmin/images/Oasis-Logo.png" /> -->
 
+        <link type="text/css" rel="stylesheet" href="css/lightslider.min.css" />  
         <link rel = "stylesheet" type = "text/css" href = "css/common.css" />
         <link rel = "stylesheet" type = "text/css" href = "css/desktop.css" />
         <link rel = "stylesheet" type = "text/css" href = "css/mobile.css" />
@@ -64,8 +65,12 @@
                 <div id = "events-container">
                     <div id = "events-container-head"></div>
                     <div id = "events-category-scroll">
-                        <div id = "event-svg-container">
-
+                        <div style = "width: 40%">
+                            <ul id = "event-svg-container">
+                                <li><img src = "./imgs/svg-anim/DRAMAanimation.svg"/></li>
+                                <li><img src = "./imgs/svg-anim/MUSICanimation.svg"/></li>
+                                <li><img src = "./imgs/svg-anim/oratoryAnimation.svg"/></li>
+                            </ul>
                         </div>
                     </div>
                     <div id = "events-list">
@@ -76,6 +81,8 @@
         </div>
 
         <!-- SCRIPTS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/lightslider.min.js"></script>
         <script src = "js/navigation.js"></script>
         <script src = "js/events.js"></script>
     </body>
