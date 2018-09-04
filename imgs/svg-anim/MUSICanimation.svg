@@ -3,10 +3,6 @@
         <style>
             .cls-1,.cls-3,.cls-4{fill:none;}.cls-1,.cls-2{stroke:#fff;stroke-width:2px;}.cls-1,.cls-2,.cls-3,.cls-4{stroke-miterlimit:10;}.cls-3{stroke:#fff800;}.cls-3,.cls-4{stroke-width:3px;}.cls-4{stroke:#6ef989;}.cls-5{fill:#e2aff9;}
 
-            svg {
-                background: black;
-            }
-
             @-webkit-keyframes yellowOne {
                 0% { stroke: #737518; }
                 33% { stroke: #737518; }

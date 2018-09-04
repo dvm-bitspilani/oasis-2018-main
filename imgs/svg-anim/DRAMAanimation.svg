@@ -3,10 +3,6 @@
         <style>
             .cls-1{fill:#cf0;}.cls-2{fill:#295a0d;}.cls-3{fill:#abedc6;}
 
-            svg {
-                background: black;
-            }
-
             @-webkit-keyframes textOne {
             <!-- on off -->
                 0% { fill: #abedc7}

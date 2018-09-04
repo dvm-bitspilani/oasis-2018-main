@@ -3,10 +3,6 @@
         <style>
             .cls-1,.cls-2,.cls-3{fill:none;}.cls-2{stroke:#ff1049;}.cls-2,.cls-3{stroke-miterlimit:10;}.cls-3{stroke:#fff;}.cls-4{fill:aqua;}
 
-            svg {
-                background: black;
-            }
-
             @-webkit-keyframes y {
                 0% { stroke: #8a0022; }
                 33% { stroke: #8a0022; }

@@ -167,19 +167,20 @@ body, html, #homeLayer1, #trees {
 }
 
 #event-svg-container {
-    list-style: none outside none;
-    padding-left: 0;
-    margin-bottom:0;
+    height: 100%;
 }
 
-#event-svg-container li {
-    display: block;
-    float: left;
-}
-
-#event-svg-container li img {
-    display: block;
+.event-category {
+    height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.event-category img {
+    display: block;
+    height: 100%;
 }
 
 /* #event-svg-container li {
@@ -189,9 +190,13 @@ body, html, #homeLayer1, #trees {
     background-position: center;
 } */
 
-#events-container-head, #events-category-scroll, #events-list, #event-svg-container {
-    border: solid black 1px;
+.flickity-viewport {
+    height: 100% !important;
 }
+
+/* #events-container-head, #events-category-scroll, #events-list {
+    border: solid black 1px;
+} */
 
 /* DEVELOPERS PAGE */
 #dev-page {
