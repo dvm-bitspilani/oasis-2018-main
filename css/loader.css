@@ -33,10 +33,44 @@ body{
   }
   @keyframes stagger{
     0%{
-      transform: translateX(5px);
+      transform: translateX(8px);
     }
 
     100%{
       transform: translateX(0px);
+    }
+  }
+
+  .speedLine path {
+    transform: translateX(3000px);
+    animation: animateLines 1s ease-in-out infinite;
+  }
+
+  #speedLine0 path {
+    animation-delay: 0s;
+  }
+
+  #speedLine1 path {
+    animation-delay: 0.4s;
+  }
+
+  #speedLine2 path {
+    animation-delay: 0.3s;
+  }
+
+  #speedLine3 path {
+    animation-delay: 0.5s;
+  }
+
+  #speedLine4 path {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes animateLines {
+    0% {
+      transform: translateX(3000px);
+    }
+    100% {
+      transform: translateX(-3000px);
     }
   }
