@@ -8,3 +8,5 @@ function initializeSlider () {
         "pageDots": false
     });
 }
+
+initializeSlider();
