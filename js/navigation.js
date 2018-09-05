@@ -85,6 +85,8 @@ function openPage (pageName) {
         topNavLinks[z].style.display = navDisplayProperty;
     }
 
+    initializeSlider();
+
     closeMenu();
 }
 
