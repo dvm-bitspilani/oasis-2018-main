@@ -220,11 +220,8 @@ body, html, #homeLayer1, #trees {
     overflow-y: scroll;
 }
 
-.dev-member, .contacts-member {
-    height: 350px;
-    width: 300px;
-    background: #fff;
-    margin-bottom: 2vh;
+.contact-img, .dev-img {
+    margin-bottom: 10vh;
     margin-right: 3vw;
     margin-left: 3vw;
 }
@@ -233,5 +230,27 @@ body, html, #homeLayer1, #trees {
     margin-top: 15vh;
 }
 
+.contact-name, .dev-name {
+    color: #00F9FF;
+    font-size: 200%;
+    margin-bottom: 0.7vh;
+    margin-top: 0.7vh;
+}
 
+.contact-info, .dev-info {
+    color: #00FF38;
+    font-size: 120%;
+}
+
+/*SOCIAL ICON*/
+#social-media{
+    padding-top: 1.7vh;
+}
+
+.social-icon{
+    width: 30px;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    cursor: pointer;
+}
 
