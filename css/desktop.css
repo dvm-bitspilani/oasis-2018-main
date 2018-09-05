@@ -193,14 +193,14 @@ body, html, #homeLayer1, #trees {
     border: solid black 1px;
 }
 
-/* DEVELOPERS PAGE */
-#dev-page {
+/* DEVELOPERS PAGE, CONTACTS PAGE */
+#dev-page, #contacts-page {
     background: url('../imgs/bg2.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.dev-flex {
+.dev-flex, .contacts-flex {
     justify-content: space-around;
 }
 
@@ -208,17 +208,30 @@ body, html, #homeLayer1, #trees {
     width: 35vw;
 }
 
-#devs-container {
+#devs-container, #contacts-container {
     height: 75vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    text-align: center;
     flex-wrap: wrap;
+    overflow-y: scroll;
 }
 
-.dev-member {
+.dev-member, .contacts-member {
     height: 350px;
     width: 300px;
     background: #fff;
+    margin-bottom: 2vh;
+    margin-right: 3vw;
+    margin-left: 3vw;
 }
+
+#contacts-container {
+    margin-top: 15vh;
+}
+
+
+
