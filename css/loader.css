@@ -21,4 +21,21 @@ body{
     fill:red;
   }
 
+  #bus{
+    animation: stagger .15s ease;
+    animation-iteration-count: infinite;
+  }
   
+  #rainbow{
+    animation: stagger .15s ease;
+    animation-iteration-count: infinite;
+  }
+  @keyframes stagger{
+    0%{
+      transform: translateX(5px);
+    }
+
+    100%{
+      transform: translateX(0px);
+    }
+  }

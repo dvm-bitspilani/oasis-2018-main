@@ -1,5 +1,6 @@
 var colorJets=document.getElementById('colorJets');
 var greyJets=document.getElementById('greyJets');
+// var bus=document.getElementById('bus');
 
     var v=15, dir=1;
     function cir(){
@@ -8,7 +9,7 @@ var greyJets=document.getElementById('greyJets');
         if(v<15) dir=1;
         if(v>28) dir=-1;
     }
-    setInterval(cir,15);
+    setInterval(cir,11);
 
     var v1=30, dir1=1;
     function cir1(){
@@ -17,7 +18,7 @@ var greyJets=document.getElementById('greyJets');
         if(v1<30) dir1=1;
         if(v1>40) dir1=-1;
     }
-    setInterval(cir1,15);
+    setInterval(cir1,11);
 
     var v2=36, dir2=1;
     function cir2(){
@@ -26,7 +27,7 @@ var greyJets=document.getElementById('greyJets');
         if(v2<36) dir2=1;
         if(v2>50) dir2=-1;
     }
-    setInterval(cir2,15);
+    setInterval(cir2,11);
 
     var v3=18, dir3=1;
     function cir3(){
@@ -35,7 +36,7 @@ var greyJets=document.getElementById('greyJets');
         if(v3<18) dir3=1;
         if(v3>34) dir3=-1;
     }
-    setInterval(cir3,15);
+    setInterval(cir3,11);
 
     var v4=27, dir4=1;
     function cir4(){
@@ -44,7 +45,7 @@ var greyJets=document.getElementById('greyJets');
         if(v4<27) dir4=1;
         if(v4>40) dir4=-1;
     }
-    setInterval(cir4,15);
+    setInterval(cir4,11);
 
     var v5=32, dir5=1;
     function cir5(){
@@ -53,7 +54,7 @@ var greyJets=document.getElementById('greyJets');
         if(v5<32) dir5=1;
         if(v5>50) dir5=-1;
     }
-    setInterval(cir5,15);
+    setInterval(cir5,11);
 
     var v6=15, dir6=1;
     function cir6(){
@@ -62,7 +63,7 @@ var greyJets=document.getElementById('greyJets');
         if(v6<15) dir6=1;
         if(v6>20) dir6=-1;
     }
-    setInterval(cir6,15);
+    setInterval(cir6,11);
 
     var v7=17, dir7=1;
     function cir7(){
@@ -71,7 +72,7 @@ var greyJets=document.getElementById('greyJets');
         if(v7<17) dir7=1;
         if(v7>35) dir7=-1;
     }
-    setInterval(cir7,15);
+    setInterval(cir7,11);
 
     var v8=35, dir8=1;
     function cir8(){
@@ -80,7 +81,7 @@ var greyJets=document.getElementById('greyJets');
         if(v8<35) dir8=1;
         if(v8>60) dir8=-1;
     }
-    setInterval(cir8,15);
+    setInterval(cir8,11);
 
     var v9=30, dir9=1;
     function cir9(){
@@ -89,7 +90,7 @@ var greyJets=document.getElementById('greyJets');
         if(v9<30) dir9=1;
         if(v9>50) dir9=-1;
     }
-    setInterval(cir9,15);
+    setInterval(cir9,11);
 
     var vX=32, dirX=1;
     function cirX(){
@@ -98,5 +99,5 @@ var greyJets=document.getElementById('greyJets');
         if(vX<32) dirX=1;
         if(vX>60) dirX=-1;
     }
-    setInterval(cirX,15);
+    setInterval(cirX,11);
 
