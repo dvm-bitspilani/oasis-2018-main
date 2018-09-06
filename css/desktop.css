@@ -132,9 +132,12 @@ body, html, #homeLayer1, #trees {
     text-align: center;
 }
 
-#menu-list li:hover {
+#menu-list li span {
+    transform: border 0.1s linear;
+}
+
+#menu-list li span:hover {
     cursor: pointer;
-    color: #831654;
 }
 
 /* EVENTS PAGE */

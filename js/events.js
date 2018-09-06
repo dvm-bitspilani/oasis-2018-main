@@ -12,7 +12,7 @@ var mockEventsData = [
                 name: "event2"
             }
         ],
-        svg: BASE_PATH_SVG + "DRAMAanimation.svg"
+        svg: BASE_PATH_SVG + "drama.svg"
     },
     {
         category: "music",
@@ -24,7 +24,7 @@ var mockEventsData = [
                 name: "event4"
             }
         ],
-        svg: BASE_PATH_SVG + "MUSICanimation.svg"
+        svg: BASE_PATH_SVG + "music.svg"
     },
     {
         category: "oratory",
@@ -36,7 +36,31 @@ var mockEventsData = [
                 name: "event6"
             }
         ],
-        svg: BASE_PATH_SVG + "oratoryAnimation.svg"
+        svg: BASE_PATH_SVG + "oratory.svg"
+    },
+    {
+        category: "photography",
+        events: [
+            {
+                name: "event5"
+            },
+            {
+                name: "event6"
+            }
+        ],
+        svg: BASE_PATH_SVG + "photography.svg"
+    },
+    {
+        category: "finearts",
+        events: [
+            {
+                name: "event5"
+            },
+            {
+                name: "event6"
+            }
+        ],
+        svg: BASE_PATH_SVG + "finearts.svg"
     }
 ];
 
@@ -73,6 +97,7 @@ function initializeSlider () {
         wrapAround: true,
         cellAlign: "center",
         pageDots: false,
+        prevNextButtons: false,
         on: {
             ready: function () {
                 changeEventList(0);
