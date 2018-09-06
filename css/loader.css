@@ -76,10 +76,14 @@ body{
 
   .cls-3 path {
     opacity: 0;
+  }
+
+  #cloud1 path {
     animation: animateClouds 18s ease-in-out infinite;
   }
 
   #cloud2 path {
+    animation: animateClouds 16.5s ease-in-out infinite;
     animation-delay: 2s;
   }
 
@@ -89,6 +93,7 @@ body{
       transform: translateX(5000px);
     }
     100% {
+      opacity: 1;
       transform: translateX(-5000px);
     }
   }
@@ -99,6 +104,7 @@ body{
       transform: translateX(4000px);
     }
     100% {
+      opacity: 1;
       transform: translateX(-1000px);
     }
   }
