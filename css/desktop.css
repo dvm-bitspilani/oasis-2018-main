@@ -22,7 +22,7 @@ body, html {
     align-items: center;
 }
 
-.page:not(#events-page) {
+.page:not(#home-page) {
     display: none;
 }
 
@@ -76,7 +76,7 @@ body, html, #homeLayer1, #trees {
 }
 
 .top-nav-link {
-    font-family: sans-serif;
+    font-family: "bebas", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,12 +179,13 @@ body, html, #homeLayer1, #trees {
 }
 
 #events-list div {
-    font-family: sans-serif;
+    font-family: "comic sans", sans-serif;
     font-size: 200%;
     border: solid 3px;
     border-radius: 20px;
     padding: 3px 6px;
     margin: 10px 20px;
+    text-transform: uppercase;
 }
 
 #events-list div:nth-child(even) {
@@ -199,6 +200,7 @@ body, html, #homeLayer1, #trees {
 
 #event-svg-container {
     height: 100%;
+    width: 60%;
 }
 
 .event-category {
