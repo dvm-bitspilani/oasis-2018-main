@@ -1,0 +1,10 @@
+/*fonts*/
+@font-face {
+	font-family: "louis_george";
+	src: url("../fonts/LouisGeorgeCafe.ttf");
+}
+
+@font-face {
+	font-family: "biko";
+	src: url("../fonts/Biko_Regular.otf");
+}
