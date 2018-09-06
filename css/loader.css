@@ -1,5 +1,5 @@
 body{
-    background-color:#1d1d1d;
+    background-color:#000;
     overflow:hidden;
   }
   body, html {
@@ -13,8 +13,8 @@ body{
   }
   
   svg{
-    position: absolute;
     width: 60vw;
+    max-width: 1000px;
     height: 60vh;
   }
   
@@ -33,17 +33,20 @@ body{
   }
   @keyframes stagger{
     0%{
-      transform: translateX(8px);
+      transform: translateX(10px);
     }
 
     100%{
-      transform: translateX(0px);
+      transform: translateX(-2px);
     }
   }
 
   .speedLine path {
-    transform: translateX(3000px);
-    animation: animateLines 1s ease-in-out infinite;
+    transform: translateX(2000px);
+  }
+
+  #speedLine0 path {
+    transform: translate(2000px, 50px);
   }
 
   #speedLine0 path {
@@ -66,11 +69,94 @@ body{
     animation-delay: 0.2s;
   }
 
+  .speedLine path {
+    opacity: 0;
+    animation: animateLines 1.2s ease-in-out infinite;
+  }
+
+  .cls-3 path {
+    opacity: 0;
+    animation: animateClouds 18s ease-in-out infinite;
+  }
+
+  #cloud2 path {
+    animation-delay: 2s;
+  }
+
   @keyframes animateLines {
     0% {
-      transform: translateX(3000px);
+      opacity: 1;
+      transform: translateX(5000px);
     }
     100% {
-      transform: translateX(-3000px);
+      transform: translateX(-5000px);
+    }
+  }
+
+  @keyframes animateClouds {
+    0% {
+      opacity: 1;
+      transform: translateX(4000px);
+    }
+    100% {
+      transform: translateX(-1000px);
+    }
+  }
+
+  .busTransition {
+    animation: animateOutBus 1s ease-in-out forwards;
+  }
+
+  @keyframes animateOutBus {
+    20% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateX(3000px);
+    }
+  }
+
+  #oasisText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    animation: staggerText .15s ease infinite;
+    align-items: center;
+    font-family: monospace;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+  }
+
+  @keyframes staggerText {
+    0% {
+      margin-left: -1.5px;
+    }
+    100% {
+      margin-left: 1.5px;
+    }
+  }
+
+  #title {
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+  }
+
+  #subtitle {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+  }
+
+  @media all and (max-width: 600px) {
+    #title {
+      font-size: 40px;
+    }
+    #subtitle {
+      font-size: 20px;
     }
   }
