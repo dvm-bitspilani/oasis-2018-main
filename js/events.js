@@ -78,17 +78,6 @@ for (var i = 0; i < mockEventsData.length; i++) {
     eventSvgContainer.appendChild(categoryDiv);
 }
 
-function changeEventList (index) {
-    eventList.innerHTML = "";
-
-    for (var k = 0; k < mockEventsData[index].events.length; k++) {
-        var eventDiv = document.createElement("div");
-        eventDiv.innerHTML = mockEventsData[index].events[k].name;
-
-        eventList.appendChild(eventDiv);
-    }
-}
-
 var elem = document.querySelector('#event-svg-container');
 var flkty;
 
@@ -97,21 +86,8 @@ function initializeSlider () {
         wrapAround: true,
         cellAlign: "center",
         pageDots: false,
-        prevNextButtons: false,
-        on: {
-            ready: function () {
-                changeEventList(0);
-            }
-        }
+        prevNextButtons: false
     });
-
-    // ON SLIDE CHANGE
-    flkty.on(
-        'change',
-        function (index) {
-            changeEventList(index);
-        }
-    );
 }
 
 // initializeSlider();
