@@ -1,6 +1,7 @@
 var menu = document.getElementById("menu"),
     hamIcon = document.getElementById("ham-icon"),
-    closeIcon = document.getElementById("close-icon");
+    closeIcon = document.getElementById("close-icon"),
+    closeEvents = document.getElementById('close-events');
 
 function openMenu () {
     menu.style.top = "0";
@@ -98,3 +99,7 @@ for (var page in pages) {
         });
     })();
 }
+
+closeEvents.addEventListener("click", function () {
+    openPage(pages.home.name);
+});

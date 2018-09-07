@@ -65,7 +65,9 @@ var mockEventsData = [
 ];
 
 var eventSvgContainer = document.getElementById("event-svg-container"),
-    eventList = document.getElementById("events-list");
+    eventList = document.getElementById("events-list"),
+    leftArrow = document.getElementById("left-arrow"),
+    rightArrow = document.getElementById("right-arrow");
 
 for (var i = 0; i < mockEventsData.length; i++) {
     var categoryDiv = document.createElement("div");
@@ -88,6 +90,14 @@ function initializeSlider () {
         pageDots: false,
         prevNextButtons: false
     });
+
+    leftArrow.addEventListener("click", function () {
+        flkty.previous();
+    });
+
+    rightArrow.addEventListener("click", function () {
+        flkty.next();
+    })
 }
 
 // initializeSlider();

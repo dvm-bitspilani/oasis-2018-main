@@ -9,9 +9,14 @@
     }
 
     /* HAM */
-    #ham-icon, #close-icon {
+    #ham-icon {
         height: 50px;
         margin: 15px 0 0 15px;
+    }
+
+    #close-icon {
+        height: 40px;
+        margin: 20px 0 0 20px;
     }
 
     /* NAV */
@@ -40,5 +45,27 @@
 
     #menu-list li {
         margin-top: 25px;
+    }
+
+    /* EVENTS */
+    #events-container {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #events-category-scroll {
+        height: 30%;
+    }
+
+    #event-svg-container {
+        width: 80%;
+    }
+
+    #left-arrow, #right-arrow {
+        height: 35px;
+    }
+
+    #view-events-button {
+        font-size: 180%;
     }
 }

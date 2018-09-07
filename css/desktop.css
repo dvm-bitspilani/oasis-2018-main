@@ -3,6 +3,7 @@ body, html {
     width: 100vw;
     margin: 0;
     overflow: hidden;
+    position: relative;
 }
 
 .layer, .page, .fullpage-flex {
@@ -42,8 +43,8 @@ body, html, #homeLayer1, #trees {
 /* HAM */
 #close-icon {
     position: absolute;
-    height: 60px;
-    margin: 20px 0 0 30px;
+    height: 40px;
+    margin: 30px 0 0 40px;
 }
 
 #ham-icon {
@@ -146,6 +147,7 @@ body, html, #homeLayer1, #trees {
 }
 
 #events-container {
+    position: absolute;
     height: 90vh;
     width: 60vw;
     display: flex;
@@ -155,6 +157,8 @@ body, html, #homeLayer1, #trees {
     background: url('../imgs/boxBg.svg') no-repeat;
     background-size: cover;
     background-position: center;
+    border: solid #fff 30px;
+    box-sizing: border-box;
 }
 
 #events-container-head {
@@ -167,6 +171,7 @@ body, html, #homeLayer1, #trees {
     height: 40%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #events-list {
@@ -214,25 +219,60 @@ body, html, #homeLayer1, #trees {
     align-content: center;
 }
 
+#events-foot {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#view-events-button {
+    font-family: 'biko-bold';
+    font-size: 200%;
+    color: #14406C;
+    background: #65F0DC;
+    padding: 10px 15px 5px 15px;
+    border-radius: 10px;
+}
+
+#view-events-button:hover {
+    cursor: pointer;
+}
+
 .event-category img {
     display: block;
     height: 100%;
 }
 
-/* #event-svg-container li {
-    height: 100%;
-    width: 100%;
-    background: url('../imgs/svg-anim/DRAMAanimation.svg') no-repeat;
-    background-position: center;
-} */
+#left-arrow, #right-arrow {
+    height: 50px;
+}
+
+#left-arrow:hover, #right-arrow:hover {
+    cursor: pointer;
+}
+
+#left-arrow {
+    transform: rotate(180deg);
+}
 
 .flickity-viewport {
     height: 100% !important;
 }
 
-/* #events-container-head, #events-category-scroll, #events-list {
-    border: solid black 1px;
-} */
+#close-events {
+    font-family: 'bebas';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 200%;
+    color: #fff;
+}
+
+#close-events:hover {
+    cursor: pointer;
+}
 
 /* DEVELOPERS PAGE */
 #dev-page {

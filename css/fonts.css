@@ -7,3 +7,8 @@
     font-family: "comic sans";
     src: url("../fonts/comic.ttf");
 }
+
+@font-face {
+    font-family: "biko-bold";
+    src: url("../fonts/Biko_Bold.otf");
+}

@@ -38,8 +38,8 @@
 
             @-webkit-keyframes textOne {
                 0% { stroke: #5a3172; fill: #5a3172}
-                66% { stroke: #5a3172; fill: #5a3172}
-                67% { stroke: #e2aff9; fill: #e2aff9}
+                50% { stroke: #5a3172; fill: #5a3172}
+                51% { stroke: #e2aff9; fill: #e2aff9}
                 100% { stroke: #e2aff9; fill: #e2aff9}
             }
 
