@@ -146,10 +146,22 @@ body, html, #homeLayer1, #trees {
     background: black;
 }
 
-#events-container {
-    position: absolute;
+#events-whiteborder {
     height: 90vh;
     width: 60vw;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.event-box {
+	height: calc(90vh - 60px);
+	width: calc(60vw - 60px);
+}
+
+#events-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,7 +169,6 @@ body, html, #homeLayer1, #trees {
     background: url('../imgs/boxBg.svg') no-repeat;
     background-size: cover;
     background-position: center;
-    border: solid #fff 30px;
     box-sizing: border-box;
 }
 
@@ -204,6 +215,45 @@ body, html, #homeLayer1, #trees {
 #events-list div:nth-child(odd) {
     border-color: #cbb0e2;
     color: #cbb0e2;
+}
+
+#category-events-list {
+	background-color: magenta;	
+	position: absolute;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#category-events-list h2 {
+	font-size: 56px;
+	color: #FCBE42;
+	text-align: center;
+	margin: 5px 0;
+	margin-bottom: 20px;
+	font-family: louisgeorge;
+}
+
+.events-list-item-container {
+	position: relative;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.events-list-item-text {
+	font-family: 'biko';
+	text-align: center;
+	padding-bottom: 10px;
+	color: white;
+}
+
+.events-list-item-text:after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 10%;
+	width: 80%;
+	height: 1px;
+	border-bottom: 1px solid white;
 }
 
 #event-svg-container {
