@@ -79,7 +79,7 @@ body{
   }
 
   #cloud1 path {
-    animation: animateClouds 18s ease-in-out infinite;
+    animation: animateClouds 18s linear infinite;
   }
 
   #cloud2 path {
