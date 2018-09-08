@@ -48,6 +48,16 @@
     }
 
     /* EVENTS */
+	#events-whiteborder {
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.event-box {
+		height: 100vh;
+		width: 100vw;
+	}
+
     #events-container {
         height: 100vh;
         width: 100vw;
