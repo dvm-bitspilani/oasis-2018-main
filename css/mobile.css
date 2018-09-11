@@ -69,3 +69,9 @@
         font-size: 180%;
     }
 }
+
+@media all and (max-width: 600px) {
+	#events-container-inner {
+		width: 85vw;
+	}
+}
