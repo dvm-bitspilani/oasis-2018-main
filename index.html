@@ -253,7 +253,7 @@
 
 <body>
     <!-- LOADER -->
-    <div id="loader-container">
+    <!-- <div id="loader-container">
         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3255.33 1704.98">
             <defs>
                 <style>
@@ -720,7 +720,7 @@
                 The Far Out Fest
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- STRETCH SVGS  -->
     <svg id="top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 74.195">
@@ -803,9 +803,21 @@
     <div class="page" id="home-page">
         <!-- layers -->
         <div class="layer" id="homeLayer1"></div>
-        <div class="layer" id="trees"></div>
+
+        <div id="register-link">
+            <img src="imgs/register.svg" />
+        </div>
+
+        <div id="events-link">
+            <img src="imgs/eventsButton.svg" />
+        </div>
 
 
+        <div id = "social-media">
+            <a href = "#"><img src = "imgs/facebook icon.svg" /></a>
+            <img src = "imgs/insta icon.svg" />
+            <img src = "imgs/twitter icon.svg" />
+        </div>
     </div>
 
     <!-- ABOUT -->
@@ -819,13 +831,12 @@
         <div>
             <img src="imgs/ham.svg" id="ham-icon" />
         </div>
-        <div class="top-nav-link" id="contacts-link">CONTACTS</div>
-        <div class="top-nav-link" id="sponsors-link">SPONSORS</div>
-        <div class="top-nav-link" id="events-link">EVENTS</div>
-    </div>
-
-    <div id="register-link">
-        <img src="imgs/register.svg" />
+        <div class="top-nav-link" id="contacts-link">
+            <span>CONTACTS</span>
+        </div>
+        <div class="top-nav-link" id="sponsors-link">
+            <span>SPONSORS</span>
+        </div>
     </div>
 
     <!-- MENU -->
@@ -1031,10 +1042,10 @@
 
         function onLoadComplete() {
             busWithSmoke.classList.add("busTransition");
-            setTimeout(function () {oasisText.style.opacity = 1;}, 500);
-            setTimeout(function() {oasisTitle.classList.add('blurText'); oasisSubtitle.classList.add('blurText');}, 2000);
-            setTimeout(function () {loaderDiv.style.opacity = 0;}, 2300);
-            setTimeout(function() {loaderDiv.style.display = 'none'}, 3000);
+            setTimeout(function () { oasisText.style.opacity = 1; }, 500);
+            setTimeout(function () { oasisTitle.classList.add('blurText'); oasisSubtitle.classList.add('blurText'); }, 2000);
+            setTimeout(function () { loaderDiv.style.opacity = 0; }, 2300);
+            setTimeout(function () { loaderDiv.style.display = 'none' }, 3000);
         }
     </script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
