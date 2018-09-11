@@ -3,7 +3,11 @@ var menu = document.getElementById("menu"),
     closeIcon = document.getElementById("close-icon"),
     closeEvents = document.getElementById('close-events');
 
+var isMenuOpen = 0;
+
 function openMenu () {
+    isMenuOpen = 1;
+
     menu.style.top = "0";
     menu.style.opacity = "0.9";
 
@@ -13,6 +17,8 @@ function openMenu () {
 }
 
 function closeMenu () {
+    isMenuOpen = 0;
+
     menu.style.top = "-100vh";
     menu.style.opacity = "0";
 
@@ -70,11 +76,34 @@ var pages = {
 var currentPage = pages.home;
 
 function openPage (pageName) {
-    currentPage.domElem.style.display = "none";
+    stretchAll();
 
-    pages[pageName].domElem.style.display = "block";
+    currentPage.domElem.style.zIndex = "3";
+    currentPage.domElem.style.transition = "transform 0.25s linear";
+    currentPage.domElem.style.transform = "scale(1)";
 
-    currentPage = pages[pageName];
+    setTimeout(
+        function () {
+            currentPage.domElem.style.transition = "transform 0.2s linear, opacity 0.2s linear";
+            currentPage.domElem.style.transform = "scale(1.2)";
+            currentPage.domElem.style.opacity = "0";
+
+            pages[pageName].domElem.style.transition = "";
+            pages[pageName].domElem.style.transform = "scale(1.05)";
+            pages[pageName].domElem.style.opacity = "1";
+            pages[pageName].domElem.style.zIndex = "2";
+            pages[pageName].domElem.style.display = "block";
+        },
+        350
+    );
+
+    setTimeout(
+        function () {
+            currentPage.domElem.style.display = "none";
+            currentPage = pages[pageName];
+        },
+        500
+    );
 
     var navDisplayProperty = "none";
     if (pageName === "home") {
@@ -85,8 +114,6 @@ function openPage (pageName) {
     for (var z = 0; z < topNavLinks.length; z++) {
         topNavLinks[z].style.display = navDisplayProperty;
     }
-
-    initializeSlider();
 
     closeMenu();
 }
@@ -120,7 +147,3 @@ function stretchAll () {
     stretch("right");
     stretch("left");
 }
-
-document.addEventListener("click", function () {
-    stretchAll();
-});

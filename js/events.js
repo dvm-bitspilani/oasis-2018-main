@@ -64,40 +64,40 @@ var mockEventsData = [
     }
 ];
 
-var eventSvgContainer = document.getElementById("event-svg-container"),
-    eventList = document.getElementById("events-list"),
-    leftArrow = document.getElementById("left-arrow"),
-    rightArrow = document.getElementById("right-arrow");
+// var eventSvgContainer = document.getElementById("event-svg-container"),
+//     eventList = document.getElementById("events-list"),
+//     leftArrow = document.getElementById("left-arrow"),
+//     rightArrow = document.getElementById("right-arrow");
 
-for (var i = 0; i < mockEventsData.length; i++) {
-    var categoryDiv = document.createElement("div");
-    categoryDiv.setAttribute("class", "event-category");
+// for (var i = 0; i < mockEventsData.length; i++) {
+//     var categoryDiv = document.createElement("div");
+//     categoryDiv.setAttribute("class", "event-category");
 
-    var categoryImg = document.createElement("img");
-    categoryImg.setAttribute("src", mockEventsData[i].svg);
+//     var categoryImg = document.createElement("img");
+//     categoryImg.setAttribute("src", mockEventsData[i].svg);
 
-    categoryDiv.appendChild(categoryImg);
-    eventSvgContainer.appendChild(categoryDiv);
-}
+//     categoryDiv.appendChild(categoryImg);
+//     eventSvgContainer.appendChild(categoryDiv);
+// }
 
-var elem = document.querySelector('#event-svg-container');
-var flkty;
+// var elem = document.querySelector('#event-svg-container');
+// var flkty;
 
-function initializeSlider () {
-    flkty = new Flickity( elem, {
-        wrapAround: true,
-        cellAlign: "center",
-        pageDots: false,
-        prevNextButtons: false
-    });
+// function initializeSlider () {
+//     flkty = new Flickity( elem, {
+//         wrapAround: true,
+//         cellAlign: "center",
+//         pageDots: false,
+//         prevNextButtons: false
+//     });
 
-    leftArrow.addEventListener("click", function () {
-        flkty.previous();
-    });
+//     leftArrow.addEventListener("click", function () {
+//         flkty.previous();
+//     });
 
-    rightArrow.addEventListener("click", function () {
-        flkty.next();
-    })
-}
+//     rightArrow.addEventListener("click", function () {
+//         flkty.next();
+//     })
+// }
 
 // initializeSlider();
