@@ -5,7 +5,7 @@ var menu = document.getElementById("menu"),
 
 var isMenuOpen = 0;
 
-function openMenu () {
+function openMenu() {
     isMenuOpen = 1;
 
     menu.style.top = "0";
@@ -16,7 +16,7 @@ function openMenu () {
     closeIcon.style.display = "block";
 }
 
-function closeMenu () {
+function closeMenu() {
     isMenuOpen = 0;
 
     menu.style.top = "-100vh";
@@ -75,7 +75,7 @@ var pages = {
 
 var currentPage = pages.home;
 
-function openPage (pageName) {
+function openPage(pageName) {
     stretchAll();
 
     currentPage.domElem.style.zIndex = "3";
@@ -136,12 +136,12 @@ function stretch(pos) {
         second = document.getElementById("second-" + pos);
 
     first.beginElement();
-    setTimeout(function() {
-      second.beginElement();
+    setTimeout(function () {
+        second.beginElement();
     }, 350);
 }
 
-function stretchAll () {
+function stretchAll() {
     stretch("top");
     stretch("bottom");
     stretch("right");
