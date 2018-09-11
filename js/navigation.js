@@ -103,3 +103,24 @@ for (var page in pages) {
 closeEvents.addEventListener("click", function () {
     openPage(pages.home.name);
 });
+
+function stretch(pos) {
+    var first = document.getElementById("first-" + pos),
+        second = document.getElementById("second-" + pos);
+
+    first.beginElement();
+    setTimeout(function() {
+      second.beginElement();
+    }, 350);
+}
+
+function stretchAll () {
+    stretch("top");
+    stretch("bottom");
+    stretch("right");
+    stretch("left");
+}
+
+document.addEventListener("click", function () {
+    stretchAll();
+});

@@ -73,15 +73,14 @@ body, html, #homeLayer1, #trees {
     left: 0;
     margin: 20px 0 0 30px;
     color: #fff;
-    z-index: 3;
 }
 
 .top-nav-link {
-    font-family: "bebas", sans-serif;
+    font-family: "ikaros", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2.5vw;
+    padding: 0 5vw;
     font-size: 180%;
     transition: transform 0.1s linear;
 }
@@ -123,13 +122,13 @@ body, html, #homeLayer1, #trees {
     list-style: none;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "bebas neue", sans-serif;
 }
 
 #menu-list li {
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 200%;
-    color: #c4217d;
+    color: #fff;
     text-align: center;
 }
 

@@ -12,3 +12,13 @@
     font-family: "biko-bold";
     src: url("../fonts/Biko_Bold.otf");
 }
+
+@font-face {
+    font-family: "ikaros";
+    src: url("../fonts/Ikaros-Regular.otf");
+}
+
+@font-face {
+    font-family: "bebas neuee";
+    src: url("../fonts/BebasNeue-Regular.ttf");
+}

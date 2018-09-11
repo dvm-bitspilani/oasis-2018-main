@@ -13,6 +13,44 @@
         <meta name="description" content="The official website of the awesome cultural festival of BITS Pilani, Pilani Campus - 2018 Edition"/>
         <!-- <link rel="shortcut icon" href="https://bits-oasis.org/2017/static/pcradmin/images/Oasis-Logo.png" /> -->
 
+        <style>
+            body {
+                margin: 0;
+            }
+
+            #top, #bottom, #right, #left {
+                z-index: 300;
+            }
+
+            #top {
+                position: absolute;
+                top: 0;
+                width: 100vw;
+            }
+
+            #bottom {
+                position: absolute;
+                bottom: 0;
+                width: 100vw;
+                /* transform-origin: 100% 100%; */
+                transform: rotate(180deg);
+            }
+
+            #right {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100vh;
+            }
+
+            #left {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                transform: rotate(180deg);
+            }
+        </style>
         <link type="text/css" rel="stylesheet" href="css/flickity.min.css" />
         <link rel = "stylesheet" type = "text/css" href = "css/fonts.css" />
         <link rel = "stylesheet" type = "text/css" href = "css/common.css" />
@@ -20,6 +58,71 @@
         <link rel = "stylesheet" type = "text/css" href = "css/mobile.css" />
     </head>
     <body>
+
+        <svg id = "top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 74.195">
+            <defs>
+            <style>
+                .cls-1, .cls-3 {
+                fill: none;
+                }
+        
+                .cls-2 {
+                clip-path: url(#clip-path);
+                }
+        
+                .cls-3 {
+                stroke: #000;
+                }
+            </style>
+            <clipPath id="clip-path">
+                <path id="Path_3" data-name="Path 3" class="cls-1" d="M0-40.006H1920V34.189H0Z" transform="translate(0 40.006)"/>
+            </clipPath>
+            </defs>
+                <path id="Path_1" data-name="Path 1" d="M959.668,0S497.772.006,1.706.006-960,0-960,0Z" transform="translate(960)">
+                    <animate id = "first-top" begin = "indefinite" attributeName="d" to="M959.668,0S497.772,71.307,1.706,72.329-960,0-960,0Z" dur="0.25s" fill="freeze" />
+                    <animate id = "second-top" begin = "indefinite" attributeName="d" to="M959.668,0S497.772.006,1.706.006-960,0-960,0Z" dur="0.07s" fill="freeze" />
+                </path>
+        </svg>
+
+        <svg id = "bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 74.195">
+            <defs>
+            <style>
+                .cls-1, .cls-3 {
+                fill: none;
+                }
+        
+                .cls-2 {
+                clip-path: url(#clip-path);
+                }
+        
+                .cls-3 {
+                stroke: #000;
+                }
+            </style>
+            <clipPath id="clip-path">
+                <path id="Path_3" data-name="Path 3" class="cls-1" d="M0-40.006H1920V34.189H0Z" transform="translate(0 40.006)"/>
+            </clipPath>
+            </defs>
+                <path id="Path_1" data-name="Path 1" d="M959.668,0S497.772.006,1.706.006-960,0-960,0Z" transform="translate(960)">
+                    <animate id = "first-bottom" begin = "indefinite" attributeName="d" to="M959.668,0S497.772,71.307,1.706,72.329-960,0-960,0Z" dur="0.25s" fill="freeze" />
+                    <animate id = "second-bottom" begin = "indefinite" attributeName="d" to="M959.668,0S497.772.006,1.706.006-960,0-960,0Z" dur="0.07s" fill="freeze" />
+                </path>
+        </svg>
+
+        <svg id = "right" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58 561.83" enable-background="new 0 0 58 561.83" xml:space="preserve">
+            <path stroke="#000000" stroke-miterlimit="10" d="M57.5,561.83v-4.5c0,0,0-85,0-269s0-286.5,0-286.5l0,0V561.83z">
+                <animate id = "first-right" begin = "indefinite" attributeName="d" to="M57.5,561.83v-4.5c0,0-57-91-57-275s57-280.5,57-280.5l0,0V561.83z" dur="0.25s" fill="freeze" />
+                <animate id = "second-right" begin = "indefinite" attributeName="d" to="M57.5,561.83v-4.5c0,0,0-85,0-269s0-286.5,0-286.5l0,0V561.83z" dur="0.07s" fill="freeze" />
+            </path>
+        </svg>
+
+        <svg id = "left" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58 561.83" enable-background="new 0 0 58 561.83" xml:space="preserve">
+          <path stroke="#000000" stroke-miterlimit="10" d="M57.5,561.83v-4.5c0,0,0-85,0-269s0-286.5,0-286.5l0,0V561.83z">
+              <animate id = "first-left" begin = "indefinite" attributeName="d" to="M57.5,561.83v-4.5c0,0-57-91-57-275s57-280.5,57-280.5l0,0V561.83z" dur="0.25s" fill="freeze" />
+              <animate id = "second-left" begin = "indefinite" attributeName="d" to="M57.5,561.83v-4.5c0,0,0-85,0-269s0-286.5,0-286.5l0,0V561.83z" dur="0.07s" fill="freeze" />
+          </path>
+        </svg>
+
         <!-- HOME -->
         <div class = "page" id = "home-page">
             <!-- layers -->
@@ -33,7 +136,6 @@
         <img src = "imgs/close-icon.svg" id = "close-icon"/>
         <div id = "top-nav">
             <div><img src = "imgs/ham.svg" id = "ham-icon"/></div>
-            <div class = "top-nav-link" id = "events-link">EVENTS</div>
             <div class = "top-nav-link" id = "contacts-link">CONTACTS</div>
             <div class = "top-nav-link" id = "sponsors-link">SPONSORS</div>
         </div>
@@ -93,5 +195,9 @@
         <script src="js/flickity.min.js"></script>
         <script src = "js/events.js"></script>
         <script src = "js/navigation.js"></script>
+
+        <script>
+      
+    </script>
     </body>
 </html>
