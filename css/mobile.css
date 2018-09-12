@@ -10,8 +10,8 @@
 
     /* HAM */
     #ham-icon {
-        height: 50px;
-        margin: 15px 0 0 15px;
+        height: 30px;
+        margin: 4vh 0 0 4vh;
     }
 
     #close-icon {
@@ -30,11 +30,24 @@
     }
 
     #register-link {
-        margin: 15px 15px 0 0;
+        margin: 10vh 4vh 0 0;
     }
 
-    #register-link img {
-        width: 30vw;
+    #register-link img, #events-link img {
+        width: 28vw;
+    }
+
+    #social-media {
+        margin: 4vh 4vh 0 0;
+    }
+
+    #events-link {
+        margin: 10vh 0 0 4vh;
+    }
+
+    #social-media img {
+        height: 20px;
+        margin-left: 20px;
     }
 
     /* MENU */
