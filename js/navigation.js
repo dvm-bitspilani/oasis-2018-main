@@ -102,10 +102,6 @@ function openPage(pageName) {
         else {
             exitPage = currentPage.domElem;
         }
-        topStretch.style.display = "block";
-        leftStretch.style.display = "block";
-        rightStretch.style.display = "block";
-        bottomStretch.style.display = "block";
         stretchAll();
 
         exitPage.style.zIndex = "3";
@@ -132,11 +128,6 @@ function openPage(pageName) {
                 exitPage.style.display = "none";
                 currentPage.domElem.style.display = "none";
                 currentPage = pages[pageName];
-
-                topStretch.style.display = "none";
-                leftStretch.style.display = "none";
-                rightStretch.style.display = "none";
-                bottomStretch.style.display = "none";
             },
             500
         );

@@ -61,6 +61,10 @@
     }
 
     /* EVENTS */
+    #events-page {
+        background: url('../imgs/mobileBackground2.svg') no-repeat;
+        background-size: cover;
+    }
     #events-container {
         height: 100vh;
         width: 100vw;
@@ -80,5 +84,10 @@
 
     #view-events-button {
         font-size: 180%;
+    }
+
+    #menu, #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
+        background: url('../imgs/mobileBackground1.svg') no-repeat;
+        background-size: cover;
     }
 }

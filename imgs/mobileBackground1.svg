@@ -1,0 +1,25 @@
+<svg id="mobile_background_rest" data-name="mobile background rest" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1921">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.513" y1="1" x2="0.513" y2="0.022" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0c6077"/>
+      <stop offset="0.244" stop-color="#1cb69b"/>
+      <stop offset="0.639" stop-color="#0f6178"/>
+      <stop offset="1" stop-color="#01041d" stop-opacity="0.851"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e8b3c6" stop-opacity="0.349"/>
+      <stop offset="1" stop-color="#bfad2e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-1" width="1080" height="1921"/>
+  <ellipse id="Ellipse_5" data-name="Ellipse 5" class="cls-2" cx="504.5" cy="505" rx="504.5" ry="505" transform="translate(36 870)"/>
+</svg>
