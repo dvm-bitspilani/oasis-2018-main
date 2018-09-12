@@ -1,0 +1,25 @@
+<svg id="background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1423">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.513" y1="1" x2="0.513" y2="0.022" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0c6077"/>
+      <stop offset="0.1" stop-color="#1cb69b"/>
+      <stop offset="0.639" stop-color="#0f6178"/>
+      <stop offset="1" stop-color="#01041d" stop-opacity="0.851"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e8b3c6" stop-opacity="0.349"/>
+      <stop offset="1" stop-color="#bfad2e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect id="Rectangle_357" data-name="Rectangle 357" class="cls-1" width="1920" height="1080"/>
+  <ellipse id="Ellipse_7" data-name="Ellipse 7" class="cls-2" cx="610.5" cy="611" rx="610.5" ry="611" transform="translate(350 201)"/>
+</svg>

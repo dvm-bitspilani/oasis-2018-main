@@ -3,33 +3,6 @@ var menu = document.getElementById("menu"),
     closeIcon = document.getElementById("close-icon"),
     closeEvents = document.getElementById('close-events');
 
-var isMenuOpen = 0;
-
-function openMenu () {
-    isMenuOpen = 1;
-
-    menu.style.top = "0";
-    menu.style.opacity = "0.9";
-
-    hamIcon.style.opacity = "0";
-
-    closeIcon.style.display = "block";
-}
-
-function closeMenu () {
-    isMenuOpen = 0;
-
-    menu.style.top = "-100vh";
-    menu.style.opacity = "0";
-
-    closeIcon.style.display = "none";
-
-    hamIcon.style.opacity = "1";
-}
-
-hamIcon.addEventListener("click", openMenu);
-closeIcon.addEventListener("click", closeMenu);
-
 var pages = {
     home: {
         name: "home",
@@ -75,47 +48,113 @@ var pages = {
 
 var currentPage = pages.home;
 
-function openPage (pageName) {
-    stretchAll();
+var topStretch = document.getElementById("top"),
+    leftStretch = document.getElementById("left"),
+    rightStretch = document.getElementById("right"),
+    bottomStretch = document.getElementById("bottom");
 
-    currentPage.domElem.style.zIndex = "3";
-    currentPage.domElem.style.transition = "transform 0.25s linear";
-    currentPage.domElem.style.transform = "scale(1)";
 
+var isMenuOpen = 0;
+
+function openMenu() {
+    isMenuOpen = 1;
+
+    currentPage.domElem.style.transition = "opacity 0.1s ease-in-out";
+    currentPage.domElem.style.opacity = "0";
+
+    menu.style.display = "flex";
     setTimeout(
         function () {
-            currentPage.domElem.style.transition = "transform 0.2s linear, opacity 0.2s linear";
-            currentPage.domElem.style.transform = "scale(1.2)";
-            currentPage.domElem.style.opacity = "0";
-
-            pages[pageName].domElem.style.transition = "";
-            pages[pageName].domElem.style.transform = "scale(1.05)";
-            pages[pageName].domElem.style.opacity = "1";
-            pages[pageName].domElem.style.zIndex = "2";
-            pages[pageName].domElem.style.display = "block";
+            menu.style.opacity = "1";
         },
-        350
+        100
     );
 
-    setTimeout(
-        function () {
-            currentPage.domElem.style.display = "none";
-            currentPage = pages[pageName];
-        },
-        500
-    );
+    closeIcon.style.display = "block";
+}
 
-    var navDisplayProperty = "none";
-    if (pageName === "home") {
-        navDisplayProperty = "flex";
+function closeMenu(isNewPage) {
+    isMenuOpen = 0;
+
+    if (!isNewPage) {
+        currentPage.domElem.style.opacity = "1";
+        menu.style.opacity = "0";
+        setTimeout(
+            function () {
+                menu.style.display = "none";
+            },
+            100
+        );
     }
 
-    var topNavLinks = document.getElementsByClassName("top-nav-link");
-    for (var z = 0; z < topNavLinks.length; z++) {
-        topNavLinks[z].style.display = navDisplayProperty;
-    }
+    closeIcon.style.display = "none";
+}
 
-    closeMenu();
+hamIcon.addEventListener("click", openMenu);
+closeIcon.addEventListener("click", function () { closeMenu(false) });
+
+function openPage(pageName) {
+    if (currentPage.name != pageName) {
+        var exitPage;
+        if (isMenuOpen) {
+            exitPage = menu;
+        }
+        else {
+            exitPage = currentPage.domElem;
+        }
+        topStretch.style.display = "block";
+        leftStretch.style.display = "block";
+        rightStretch.style.display = "block";
+        bottomStretch.style.display = "block";
+        stretchAll();
+
+        exitPage.style.zIndex = "3";
+        exitPage.style.transition = "transform 0.25s linear";
+        exitPage.style.transform = "scale(1)";
+
+        setTimeout(
+            function () {
+                exitPage.style.transition = "transform 0.2s linear, opacity 0.2s linear";
+                exitPage.style.transform = "scale(1.2)";
+                exitPage.style.opacity = "0";
+
+                pages[pageName].domElem.style.transition = "";
+                pages[pageName].domElem.style.transform = "scale(1.05)";
+                pages[pageName].domElem.style.opacity = "1";
+                pages[pageName].domElem.style.zIndex = "2";
+                pages[pageName].domElem.style.display = "block";
+            },
+            350
+        );
+
+        setTimeout(
+            function () {
+                exitPage.style.display = "none";
+                currentPage.domElem.style.display = "none";
+                currentPage = pages[pageName];
+
+                topStretch.style.display = "none";
+                leftStretch.style.display = "none";
+                rightStretch.style.display = "none";
+                bottomStretch.style.display = "none";
+            },
+            500
+        );
+
+        var navDisplayProperty = "none";
+        if (pageName === "home") {
+            navDisplayProperty = "flex";
+        }
+
+        var topNavLinks = document.getElementsByClassName("top-nav-link");
+        for (var z = 0; z < topNavLinks.length; z++) {
+            topNavLinks[z].style.display = navDisplayProperty;
+        }
+        closeMenu(true);
+    }
+    else {
+        closeMenu(false);
+    }
 }
 
 for (var page in pages) {
@@ -136,12 +175,12 @@ function stretch(pos) {
         second = document.getElementById("second-" + pos);
 
     first.beginElement();
-    setTimeout(function() {
-      second.beginElement();
+    setTimeout(function () {
+        second.beginElement();
     }, 350);
 }
 
-function stretchAll () {
+function stretchAll() {
     stretch("top");
     stretch("bottom");
     stretch("right");
