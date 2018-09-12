@@ -75,7 +75,17 @@ var pages = {
 
 var currentPage = pages.home;
 
+var topStretch = document.getElementById("top"),
+    leftStretch = document.getElementById("left"),
+    rightStretch = document.getElementById("right"),
+    bottomStretch = document.getElementById("bottom");
+
+
 function openPage(pageName) {
+    topStretch.style.display = "block";
+    leftStretch.style.display = "block";
+    rightStretch.style.display = "block";
+    bottomStretch.style.display = "block";
     stretchAll();
 
     currentPage.domElem.style.zIndex = "3";
@@ -101,6 +111,11 @@ function openPage(pageName) {
         function () {
             currentPage.domElem.style.display = "none";
             currentPage = pages[pageName];
+
+            topStretch.style.display = "none";
+            leftStretch.style.display = "none";
+            rightStretch.style.display = "none";
+            bottomStretch.style.display = "none";
         },
         500
     );

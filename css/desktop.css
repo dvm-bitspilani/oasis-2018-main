@@ -14,7 +14,7 @@ body, html {
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: 2;
+    z-index: 299;
 }
 
 .page {
@@ -67,8 +67,8 @@ body, html, #homeLayer1, #trees {
     cursor: pointer;
 }
 
-#ham-icon, #register-link {
-    z-index: 3;
+#ham-icon, #register-link, #events-link {
+    z-index: 301;
 }
 
 /* NAV */
@@ -80,6 +80,7 @@ body, html, #homeLayer1, #trees {
     left: 0;
     margin: 20px 0 0 30px;
     color: #fff;
+    z-index: 301;
 }
 
 .top-nav-link {
@@ -118,7 +119,6 @@ body, html, #homeLayer1, #trees {
     top: 0;
     left: 0;
     margin: 13vh 0 0 90px;
-    z-index: 2;
 }
 
 #events-link img {
