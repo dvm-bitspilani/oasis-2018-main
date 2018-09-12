@@ -391,6 +391,11 @@ body, html, #homeLayer1, #trees {
     margin: 30px;
 }
 
+#categories-close{
+    color: white;
+    cursor: pointer;
+}
+
 /* DEVELOPERS PAGE */
 #dev-page {
     background: url('../imgs/bg2.png') no-repeat;

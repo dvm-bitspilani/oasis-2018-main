@@ -112,11 +112,18 @@ events.addEventListener('swiped-right', function(){
 
 var cHeading=document.getElementById('categories-heading');
 var categories=document.getElementById('categories-wrapper');
+var categoriesClose=document.getElementById('categories-close');
 
 cHeading.addEventListener('click', function(){
     categories.style.top="0%";
     categories.style.display='flex';
     categories.style.zIndex="999";
+});
+
+categoriesClose.addEventListener('click', function(){
+    categories.style.top="100%";
+    categories.style.display='none';
+    categories.style.zIndex="0";
 });
 
 
