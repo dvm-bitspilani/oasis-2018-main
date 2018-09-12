@@ -68,6 +68,10 @@
     #view-events-button {
         font-size: 180%;
     }
+
+    #categories-heading{
+        font-size: 4vw;
+    }
 }
 
 @media all and (max-width: 600px) {

@@ -112,18 +112,27 @@ events.addEventListener('swiped-right', function(){
 
 var cHeading=document.getElementById('categories-heading');
 var categories=document.getElementById('categories-wrapper');
+var categoriesInner=document.getElementById('categories-wrapper-inner');
 var categoriesClose=document.getElementById('categories-close');
 
 cHeading.addEventListener('click', function(){
     categories.style.top="0%";
     categories.style.display='flex';
     categories.style.zIndex="999";
+    // categories.style.opacity="1";
+    setTimeout(function(){
+    categoriesInner.style.opacity="1";    
+    }, 1);
 });
 
 categoriesClose.addEventListener('click', function(){
+    categoriesInner.style.opacity="0";    
+    setTimeout(function(){
     categories.style.top="100%";
     categories.style.display='none';
-    categories.style.zIndex="0";
+    categories.style.zIndex="0"
+    }, 500);    
+    // categories.style.opacity="0"; 
 });
 
 

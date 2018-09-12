@@ -208,7 +208,7 @@ body, html, #homeLayer1, #trees {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background: url('../imgs/boxBg.svg') no-repeat;
     background-size: cover;
@@ -275,8 +275,8 @@ body, html, #homeLayer1, #trees {
 
 .event-change-btn {
 	cursor: pointer;
-	height: 20px;
-	weight: 20px;
+	height: 30px;
+	width: 20px;
 }
 
 #events-container-head {
@@ -392,13 +392,26 @@ body, html, #homeLayer1, #trees {
     cursor: pointer;
 }
 
-#categories-heading{
-    width: 100px;
+#categories-nav{
+    display: flex;
+    height: 10px;
+    width: 92vw;
     color: white;
     font-family: "ikaros", sans-serif;
-    font-size: 1em;
+    font-size: 2vw;
+    justify-content: space-between;
+    align-items: center;
+    /* cursor: pointer; */
+}
+
+#events-close{
+    width: 20px;
     cursor: pointer;
-    right: 100%;
+}
+
+#categories-heading{
+    cursor:pointer;
+    font-size: 30px;
 }
 
 #categories-wrapper{
@@ -415,6 +428,8 @@ body, html, #homeLayer1, #trees {
     /*border: solid #fff 30px;*/
     box-sizing: border-box;
     overflow-y: scroll;
+    /* opacity: 0; */
+    /* transition: opacity 5s linear; */
 }
 
 #categories-wrapper-inner{
@@ -422,6 +437,9 @@ body, html, #homeLayer1, #trees {
     width: 80vw;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
     /* justify-content: space-between; */
 }
 
@@ -430,6 +448,7 @@ body, html, #homeLayer1, #trees {
     font-family: "ikaros", sans-serif;
     font-size: 4vw;
     text-align: center;
+    letter-spacing: 1vw;
 }
 
 #categories-events{
@@ -444,7 +463,10 @@ body, html, #homeLayer1, #trees {
 }
 
 #categories-close{
-    color: white;
+    position: absolute;
+    top: 4vh;
+    right: 4vw;    
+    width: 20px;
     cursor: pointer;
 }
 
