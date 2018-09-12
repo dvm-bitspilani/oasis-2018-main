@@ -199,7 +199,8 @@ body, html, #homeLayer1, #trees {
 }
 
 #events-image {
-	flex-grow: 1;
+    flex-grow: 1;
+    text-align: center;
 }
 
 #view-events-btn {
@@ -337,6 +338,57 @@ body, html, #homeLayer1, #trees {
 
 #close-events:hover {
     cursor: pointer;
+}
+
+#categories-heading{
+    width: 100px;
+    color: white;
+    font-family: "ikaros", sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    right: 100%;
+}
+
+#categories-wrapper{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../imgs/boxBg.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*border: solid #fff 30px;*/
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+#categories-wrapper-inner{
+    height: 75vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+#categories-main-heading{
+    color: white;
+    font-family: "ikaros", sans-serif;
+    font-size: 4vw;
+    text-align: center;
+}
+
+#categories-events{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+#categories-events-image{
+    width: 21vw;
+    margin: 30px;
 }
 
 /* DEVELOPERS PAGE */

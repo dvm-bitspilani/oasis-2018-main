@@ -110,6 +110,15 @@ events.addEventListener('swiped-right', function(){
     change(-1);
 });
 
+var cHeading=document.getElementById('categories-heading');
+var categories=document.getElementById('categories-wrapper');
+
+cHeading.addEventListener('click', function(){
+    categories.style.top="0%";
+    categories.style.display='flex';
+    categories.style.zIndex="999";
+});
+
 
 // var eventSvgContainer = document.getElementById("event-svg-container"),
 //     eventList = document.getElementById("events-list"),
