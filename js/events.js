@@ -64,6 +64,69 @@ var mockEventsData = [
     }
 ];
 
+var images = new Array(5);  
+    // images to be changed also change he first image in index.html
+    images[0] = "./imgs/bg2.png";
+    images[1] = "./imgs/trees.svg";
+    images[2] = "./imgs/register.svg";
+    images[3] = "./imgs/ham.svg";
+    images[4] = "./imgs/page-heading.svg";
+
+    var numimg = 4; //change it to number of images -1 
+    var curimg = 0;
+
+    function change(n){
+        var im=document.getElementById("image");
+        if(curimg==0&&n==-1){
+            curimg = numimg;
+            im.src = images[curimg];
+        }
+        else if(curimg==numimg&&n==1){
+            curimg = 0;
+            im.src = images[curimg];
+        }
+        else{
+            curimg = curimg + n;    
+            im.src = images[curimg];
+        }
+    }
+
+var prev= document.getElementById('prev-event');
+var next=document.getElementById('next-event');
+var events=document.getElementById('events-page');
+
+next.addEventListener("click", function(){
+    change(1);
+});
+prev.addEventListener("click", function(){
+    change(-1);
+});
+
+events.addEventListener('swiped-left', function(){
+    change(1);
+});
+
+events.addEventListener('swiped-right', function(){
+    change(-1);
+});
+
+var cHeading=document.getElementById('categories-heading');
+var categories=document.getElementById('categories-wrapper');
+var categoriesClose=document.getElementById('categories-close');
+
+cHeading.addEventListener('click', function(){
+    categories.style.top="0%";
+    categories.style.display='flex';
+    categories.style.zIndex="999";
+});
+
+categoriesClose.addEventListener('click', function(){
+    categories.style.top="100%";
+    categories.style.display='none';
+    categories.style.zIndex="0";
+});
+
+
 // var eventSvgContainer = document.getElementById("event-svg-container"),
 //     eventList = document.getElementById("events-list"),
 //     leftArrow = document.getElementById("left-arrow"),
