@@ -64,32 +64,52 @@ var mockEventsData = [
     }
 ];
 
-var images = new Array(5);  
-    // images to be changed also change he first image in index.html
-    images[0] = "./imgs/bg2.png";
-    images[1] = "./imgs/trees.svg";
-    images[2] = "./imgs/register.svg";
-    images[3] = "./imgs/ham.svg";
-    images[4] = "./imgs/page-heading.svg";
-
-    var numimg = 4; //change it to number of images -1 
-    var curimg = 0;
-
-    function change(n){
-        var im=document.getElementById("image");
-        if(curimg==0&&n==-1){
-            curimg = numimg;
-            im.src = images[curimg];
-        }
-        else if(curimg==numimg&&n==1){
-            curimg = 0;
-            im.src = images[curimg];
-        }
-        else{
-            curimg = curimg + n;    
-            im.src = images[curimg];
-        }
+function disappearEvent (objectElem) {
+    var svgElems = objectElem.contentDocument.getElementsByTagName("svg")[0].children;
+    var delay = 0.02;
+    for (var i = 0; i < svgElems.length; i++) {
+      svgElems[i].style.transition = "transform 0.4s " + delay + "s linear, opacity 0.3s " + delay + "s linear";
+      svgElems[i].style.transform = "translate(" + Math.random()*1000 + "px, " + (-Math.random()*1000) + "px) scale(0)";
+      svgElems[i].style.opacity = "0";
+      if (i % 7 == 0) delay += 0.01;
     }
+}
+
+function appearEvent (objectElem) {
+    var svgElems = objectElem.contentDocument.getElementsByTagName("svg")[0].children;
+    var delay = 0.02;
+    for (var i = 0; i < svgElems.length; i++) {
+      svgElems[i].style.transition = "transform 0.3s " + delay + "s linear, opacity 0.3s " + delay + "s linear";
+      svgElems[i].style.transform = "";
+      svgElems[i].style.opacity = "1";
+      if (i % 7 == 0) delay += 0.01;
+    }
+}
+
+var images = document.getElementById("events-image").children;
+
+var numimg = images.length - 1; //change it to number of images -1
+var curimg = 0;
+
+function change(n){
+    disappearEvent(images[curimg]);
+    if(curimg==0&&n==-1){
+        curimg = numimg;
+    }
+    else if(curimg==numimg&&n==1){
+        curimg = 0;
+    }
+    else{
+        curimg = curimg + n;
+    }
+    setTimeout(
+        function () {
+            images[curimg].style.opacity = 1;
+            appearEvent(images[curimg]);
+        },
+        1000
+    )
+}
 
 var prev= document.getElementById('prev-event');
 var next=document.getElementById('next-event');
@@ -131,45 +151,24 @@ categoriesClose.addEventListener('click', function(){
     categories.style.top="100%";
     categories.style.display='none';
     categories.style.zIndex="0"
-    }, 500);    
+    }, 500);
     // categories.style.opacity="0"; 
 });
 
+function disruptEventSvgs () {
+    var svgObjs = document.getElementById("events-image").children;
+    for (var j = 1; j < svgObjs.length; j++ ) {
+        var svgElems = svgObjs[j].contentDocument.getElementsByTagName("svg")[0].children;
+        for (var i = 0; i < svgElems.length; i++) {
+        svgElems[i].style.transform = "translate(" + Math.random()*1000 + "px, " + (-Math.random()*1000) + "px) scale(0)";
+        svgElems[i].style.opacity = "0";
+        }
+    }
+}
 
-// var eventSvgContainer = document.getElementById("event-svg-container"),
-//     eventList = document.getElementById("events-list"),
-//     leftArrow = document.getElementById("left-arrow"),
-//     rightArrow = document.getElementById("right-arrow");
-
-// for (var i = 0; i < mockEventsData.length; i++) {
-//     var categoryDiv = document.createElement("div");
-//     categoryDiv.setAttribute("class", "event-category");
-
-//     var categoryImg = document.createElement("img");
-//     categoryImg.setAttribute("src", mockEventsData[i].svg);
-
-//     categoryDiv.appendChild(categoryImg);
-//     eventSvgContainer.appendChild(categoryDiv);
-// }
-
-// var elem = document.querySelector('#event-svg-container');
-// var flkty;
-
-// function initializeSlider () {
-//     flkty = new Flickity( elem, {
-//         wrapAround: true,
-//         cellAlign: "center",
-//         pageDots: false,
-//         prevNextButtons: false
-//     });
-
-//     leftArrow.addEventListener("click", function () {
-//         flkty.previous();
-//     });
-
-//     rightArrow.addEventListener("click", function () {
-//         flkty.next();
-//     })
-// }
-
-// initializeSlider();
+setTimeout(
+    function () {
+        disruptEventSvgs();
+    },
+    1000
+);

@@ -90,6 +90,14 @@
         font-size: 4vw;
     }
 
+    #events-image {
+        height: 300px;
+    }
+
+    object {
+        height: auto;
+    }
+
     #menu, #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
         background: url('../imgs/mobileBackground1.svg') no-repeat;
         background-size: cover;

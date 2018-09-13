@@ -28,7 +28,7 @@ body, html {
     align-items: center;
 }
 
-.page:not(#home-page) {
+.page:not(#events-page) {
     display: none;
 }
 
@@ -264,6 +264,20 @@ body, html, #homeLayer1, #trees {
 #events-image {
     flex-grow: 1;
     text-align: center;
+    height: 500px;
+    position: relative;
+}
+
+object {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+object:not(#online-svg) {
+    opacity: 0;
 }
 
 #view-events-btn {
@@ -417,10 +431,6 @@ body, html, #homeLayer1, #trees {
 
 #left-arrow {
     transform: rotate(180deg);
-}
-
-.flickity-viewport {
-    height: 100% !important;
 }
 
 #close-events {

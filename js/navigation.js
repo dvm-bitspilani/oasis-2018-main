@@ -157,9 +157,9 @@ for (var page in pages) {
     })();
 }
 
-closeEvents.addEventListener("click", function () {
-    openPage(pages.home.name);
-});
+// closeEvents.addEventListener("click", function () {
+//     openPage(pages.home.name);
+// });
 
 function stretch(pos) {
     var first = document.getElementById("first-" + pos),
