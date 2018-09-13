@@ -28,7 +28,7 @@ body, html {
     align-items: center;
 }
 
-.page:not(#events-page) {
+.page:not(#home-page) {
     display: none;
 }
 
@@ -304,14 +304,6 @@ object:not(#online-svg) {
 	width: 20px;
 }
 
-#event-individual {
-	overflow: auto;
-	color: white;
-	font-family: montserrat;
-    font-size: 14px;
-    display: none;
-}
-
 #event-individual h3 {
 	font-family: 'bebas';
 	font-size: 29px;
@@ -466,6 +458,51 @@ object:not(#online-svg) {
 #categories-heading{
     cursor:pointer;
     font-size: 30px;
+}
+
+#view-events-wrapper{
+    position: absolute;
+    top: 100%;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: url('../imgs/boxBg.svg') no-repeat; */
+    background-size: cover;
+    background-position: center;
+    /*border: solid #fff 30px;*/
+    box-sizing: border-box;
+    overflow-y: scroll;
+    background: #000000;
+    transition: top 0.5s cubic-bezier(0.7, 0.3, 0, 1);
+}
+
+#view-events-wrapper-inner{
+    height: 75vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    align-content: center;
+}
+
+#event-name{
+    color: #ffffff;
+    font-family: "ikaros", sans-serif;
+    font-size: 2em;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#event-individual {
+	overflow: auto;
+	color: white;
+	font-family: montserrat;
+    font-size: 14px;
+    display: none;
 }
 
 #categories-wrapper{

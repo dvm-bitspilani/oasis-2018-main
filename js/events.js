@@ -155,6 +155,17 @@ categoriesClose.addEventListener('click', function(){
     // categories.style.opacity="0"; 
 });
 
+var viewEvents=document.getElementById('view-events-wrapper');
+var viewEventsBtn=document.getElementById('view-events-btn');
+
+viewEventsBtn.addEventListener('click', function(){
+    setTimeout(function(){
+    viewEvents.style.top="0%";
+    });
+    viewEvents.style.display='flex';
+    viewEvents.style.zIndex="999";
+});
+
 function disruptEventSvgs () {
     var svgObjs = document.getElementById("events-image").children;
     for (var j = 1; j < svgObjs.length; j++ ) {
