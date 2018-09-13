@@ -236,7 +236,7 @@ body, html, #homeLayer1, #trees {
 	/* display: none; */
 }
 
-#event-categories h2{
+.common-heading{
 	color: #FF0080;
 	font-family: "ikaros";
 	text-align: center;
@@ -460,7 +460,7 @@ object:not(#online-svg) {
 
 #categories-heading{
     cursor:pointer;
-    font-size: 30px;
+    font-size: 25px;
 	font-family: ikaros;
 	color: white;
 	position: absolute;
@@ -545,9 +545,9 @@ object:not(#online-svg) {
 #categories-main-heading{
     color: white;
     font-family: "ikaros", sans-serif;
-    font-size: 4vw;
+    font-size: 35px;
     text-align: center;
-    letter-spacing: 1vw;
+    letter-spacing: 3px;
 }
 
 #categories-events{

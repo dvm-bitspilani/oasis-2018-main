@@ -109,3 +109,15 @@
 		width: 85vw;
 	}
 }
+
+@media all and (max-width: 480px) {
+	#categories-main-heading{
+		font-size: 25px;	
+	}
+}
+
+@media all and (max-width: 300px) {
+	#categories-main-heading{
+		font-size: 20px;	
+	}
+}
