@@ -87,7 +87,7 @@
     }
 
     #categories-heading{
-        font-size: 4vw;
+		font-size: 19px;
     }
 
     #events-image {
@@ -95,7 +95,7 @@
     }
 
     object {
-        height: auto;
+        /*height: auto;*/
     }
 
     #menu, #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
