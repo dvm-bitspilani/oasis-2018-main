@@ -106,7 +106,7 @@ function openPage(pageName) {
 
         exitPage.style.zIndex = "3";
         exitPage.style.transition = "transform 0.25s linear";
-        exitPage.style.transform = "scale(1)";
+        exitPage.style.transform = "scale(0.95)";
 
         setTimeout(
             function () {

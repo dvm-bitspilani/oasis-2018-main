@@ -5,6 +5,7 @@ body, html {
     overflow: hidden;
     position: relative;
     background: black;
+    background: url('../imgs/background1.svg') no-repeat;
 }
 
 .layer, .page, .fullpage-flex {
@@ -18,7 +19,7 @@ body, html {
 }
 
 .page {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
 }
 
 .fullpage-flex {
@@ -33,8 +34,8 @@ body, html {
 }
 
 #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
-    background: url('../imgs/background1.svg') no-repeat;
-    background-size: cover;
+    /* background: url('../imgs/background1.svg') no-repeat;
+    background-size: cover; */
 }
 
 #homeLayer1 {
