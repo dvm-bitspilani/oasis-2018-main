@@ -27,6 +27,7 @@
         #right,
         #left {
             z-index: 299;
+            display: none;
         }
 
         #top {
@@ -806,7 +807,13 @@
         <div class="layer" id="homeLayer1"></div>
 
         <div id="register-link">
-            <img src="imgs/register.svg" />
+            <span>REGISTER</span>
+            <img src="imgs/register.svg" alt="Register" />
+        </div>
+
+        <div id="events-link">
+            <span>EVENTS</span>
+            <img src="imgs/events-button.svg" alt="View Events" />
         </div>
 
         <!-- <div id="events-link">
@@ -817,7 +824,7 @@
             <div>
                 <img src="imgs/ham.svg" id="ham-icon" />
             </div>
-            <div class="top-nav-link" id="events-link">
+            <div class="top-nav-link" id="events-link-nav">
                 <span>EVENTS</span>
             </div>
             <div class="top-nav-link" id="contacts-link">
@@ -847,28 +854,33 @@
     <div id="menu">
         <img src="imgs/close-icon.svg" id="close-icon" />
         <div id = "menu-trees"></div>
-        <ul id="menu-list">
-            <li id="home-link">
-                <span>HOME</span>
-            </li>
-            <!-- <li id = "sponsors-link"><span>SPONSORS</span></li> -->
-            <li id="about-link">
-                <span>ABOUT</span>
-            </li>
-            <li id="teaser-link">
-                <span>TEASER VIDEOS</span>
-            </li>
-            <li id="schedule-link">
-                <span>SCHEDULE</span>
-            </li>
-            <li id="archive-link">
-                <span>ARCHIVES</span>
-            </li>
-            <!-- <li id = "contacts-link"><span>CONTACT US</span></li> -->
-            <li id="dev-link">
-                <span>DEVELOPERS</span>
-            </li>
-        </ul>
+        <!-- <div id = "menu-" -->
+            <ul id="menu-list">
+                <li id="home-link">
+                    <span>HOME</span>
+                </li>
+                <!-- <li id = "sponsors-link"><span>SPONSORS</span></li> -->
+                <li id="about-link">
+                    <span>ABOUT</span>
+                </li>
+                <li id="teaser-link">
+                    <span>VIDEOS</span>
+                </li>
+                <li id="schedule-link">
+                    <span>SCHEDULE</span>
+                </li>
+                <li id="archive-link">
+                    <span>ARCHIVES</span>
+                </li>
+                <li id="dev-link">
+                    <span>DEVELOPERS</span>
+                </li>
+                <div id="mobile-social-media">
+                    <img src = "imgs/facebook icon.svg" />
+                    <img src = "imgs/insta icon.svg" />
+                    <img src = "imgs/twitter icon.svg" />
+                </div>
+            </ul>
     </div>
 
     <!-- DEVELOPERS -->
@@ -930,7 +942,7 @@
 				</div>
 			</div>
         </div>
-        <div id="view-events-wrapper"> 
+        <div id="view-events-wrapper">
             <div id="view-events-wrapper-inner">
             <div id="event-name">xyz</div>
             <div id="event-name">xyz</div>
@@ -958,12 +970,12 @@
             <img src="./imgs/close-icon.svg" id='categories-close'>
             <div id="categories-main-heading">ALL CATEGORIES</div>
             <div id="categories-events">
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
+                    <img src="./imgs/bg2.png" id="categories-events-image"/>
+                    <img src="./imgs/bg2.png" id="categories-events-image"/>
+                    <img src="./imgs/bg2.png" id="categories-events-image"/>
+                    <img src="./imgs/bg2.png" id="categories-events-image"/>
+                    <img src="./imgs/bg2.png" id="categories-events-image"/>
+                    <img src="./imgs/bg2.png" id="categories-events-image"/>
             </div>
             </div>
         </div>

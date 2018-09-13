@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1920">
   <defs>
     <style>
       .cls-1 {
@@ -38,20 +38,16 @@
       }
 
       .cls-10 {
-        clip-path: url(#clip-path-52);
-      }
-
-      .cls-11 {
         stroke: none;
       }
     </style>
     <clipPath id="clip-path">
-      <rect id="Rectangle_484" data-name="Rectangle 484" class="cls-1" width="1920" height="1080" transform="translate(3410 -3168)"/>
+      <rect id="Rectangle_489" data-name="Rectangle 489" class="cls-1" width="1080" height="1920" transform="translate(12774 -2806)"/>
     </clipPath>
     <linearGradient id="linear-gradient" x1="0.513" y1="1" x2="0.513" y2="0.022" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#ff0f0f"/>
-      <stop offset="0.261" stop-color="#123ef1" stop-opacity="0.639"/>
-      <stop offset="0.726" stop-color="#221765" stop-opacity="0.702"/>
+      <stop offset="0" stop-color="#0c6077"/>
+      <stop offset="0.244" stop-color="#1cb69b"/>
+      <stop offset="0.639" stop-color="#0f6178"/>
       <stop offset="1" stop-color="#01041d" stop-opacity="0.851"/>
     </linearGradient>
     <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
@@ -59,7 +55,7 @@
       <stop offset="1" stop-color="#bfad2e" stop-opacity="0"/>
     </radialGradient>
     <clipPath id="clip-path-2">
-      <rect id="Rectangle_396" data-name="Rectangle 396" class="cls-2" width="7.038" height="7.038" transform="translate(0 0)"/>
+      <rect id="Rectangle_396" data-name="Rectangle 396" class="cls-2" width="7.038" height="7.038"/>
     </clipPath>
     <radialGradient id="radial-gradient-2" cx="3.948" cy="3.948" r="3.54" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#fff"/>
@@ -67,21 +63,20 @@
       <stop offset="0.522" stop-color="#fff" stop-opacity="0.2"/>
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="clip-path-52">
-      <rect id="Rectangle_446" data-name="Rectangle 446" class="cls-2" width="7.038" height="7.038" transform="translate(0)"/>
-    </clipPath>
   </defs>
-  <g id="Mask_Group_7" data-name="Mask Group 7" class="cls-3" transform="translate(-3410 3168)">
-    <g id="Rectangle_486" data-name="Rectangle 486" class="cls-4" transform="translate(3410 -3168)">
-      <rect class="cls-11" width="1920" height="1080"/>
-      <rect class="cls-2" x="0.5" y="0.5" width="1919" height="1079"/>
+  <g id="Mask_Group_8" data-name="Mask Group 8" class="cls-3" transform="translate(-12774 2806)">
+    <g id="Rectangle_490" data-name="Rectangle 490" class="cls-4" transform="translate(12774 -2806)">
+      <rect class="cls-10" width="1080" height="1920"/>
+      <rect class="cls-2" x="0.5" y="0.5" width="1079" height="1919"/>
     </g>
-    <rect id="Rectangle_365" data-name="Rectangle 365" class="cls-5" width="1920" height="1080" transform="translate(3410 -3169)"/>
-    <ellipse id="Ellipse_9" data-name="Ellipse 9" class="cls-6" cx="610.5" cy="611" rx="610.5" ry="611" transform="translate(3760 -2808)"/>
-    <g id="New_Symbol_1_copy" class="cls-7" transform="translate(3409.975 -3172.395)">
+    <g id="Group_92" data-name="Group 92" transform="translate(-790 1335)">
+      <rect id="Rectangle_491" data-name="Rectangle 491" class="cls-5" width="1080" height="1921" transform="translate(13564 -4141)"/>
+      <circle id="Ellipse_12" data-name="Ellipse 12" class="cls-6" cx="719.5" cy="719.5" r="719.5" transform="translate(13385 -3525)"/>
+    </g>
+    <g id="stars_svg" data-name="stars svg" class="cls-7" transform="translate(12424.95 -2806.05)">
       <g id="Group_180" data-name="Group 180" transform="translate(0.025 0.025)">
-        <g id="Group_92" data-name="Group 92" class="cls-8" transform="translate(511.68 189.129)">
-          <circle id="Ellipse_12" data-name="Ellipse 12" class="cls-9" cx="3.519" cy="3.519" r="3.519" transform="translate(0 0)"/>
+        <g id="Group_92-2" data-name="Group 92" class="cls-8" transform="translate(511.68 189.129)">
+          <circle id="Ellipse_12-2" data-name="Ellipse 12" class="cls-9" cx="3.519" cy="3.519" r="3.519" transform="translate(0 0)"/>
         </g>
         <g id="Group_93" data-name="Group 93" class="cls-8" transform="translate(628.431 127.23)">
           <circle id="Ellipse_13" data-name="Ellipse 13" class="cls-9" cx="3.519" cy="3.519" r="3.519" transform="translate(0 0)"/>
@@ -230,8 +225,8 @@
         <g id="Group_141" data-name="Group 141" class="cls-8" transform="translate(716.042 41.252)">
           <circle id="Ellipse_61" data-name="Ellipse 61" class="cls-9" cx="3.519" cy="3.519" r="3.519" transform="translate(0 0)"/>
         </g>
-        <g id="Group_142" data-name="Group 142" class="cls-10" transform="translate(916.967)">
-          <circle id="Ellipse_62" data-name="Ellipse 62" class="cls-9" cx="3.519" cy="3.519" r="3.519" transform="translate(0)"/>
+        <g id="Group_142" data-name="Group 142" class="cls-8" transform="translate(916.967)">
+          <circle id="Ellipse_62" data-name="Ellipse 62" class="cls-9" cx="3.519" cy="3.519" r="3.519" transform="translate(0 0)"/>
         </g>
         <g id="Group_143" data-name="Group 143" class="cls-8" transform="translate(1176.294 13.812)">
           <circle id="Ellipse_63" data-name="Ellipse 63" class="cls-9" cx="3.519" cy="3.519" r="3.519" transform="translate(0 0)"/>

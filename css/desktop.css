@@ -57,7 +57,7 @@ body, html, #homeLayer1, #trees {
     top: 0;
     left: 0;
     height: 40px;
-    margin: 50px 0 0 70px;
+    margin: 15px 20px;
     z-index: 302;
     display: none;
 }
@@ -67,11 +67,11 @@ body, html, #homeLayer1, #trees {
     height: 40px;
 }
 
-#ham-icon:hover, #close-icon:hover, #register-link:hover {
+#ham-icon:hover, #close-icon:hover, #register-link:hover, #events-link:hover {
     cursor: pointer;
 }
 
-#ham-icon, #register-link {
+#ham-icon, #register-link, #events-link {
     z-index: 301;
 }
 
@@ -106,6 +106,9 @@ body, html, #homeLayer1, #trees {
     color: #c4217d;
 }
 
+#register-link span {
+    display: none;
+}
 
 #register-link {
     position: absolute;
@@ -117,6 +120,14 @@ body, html, #homeLayer1, #trees {
 #register-link img {
     width: 11vw;
     min-width: 190px;
+}
+
+#events-link span {
+    display: none;
+}
+
+#events-link img {
+    height: 10vh;
 }
 
 /* #events-link {
@@ -145,6 +156,10 @@ body, html, #homeLayer1, #trees {
     font-family: 'ikaros', sans-serif;
     margin-left: 20px;
     font-size: 150%;
+}
+
+#mobile-social-media {
+    display: none;
 }
 
 #social-media {
@@ -181,6 +196,9 @@ body, html, #homeLayer1, #trees {
 }
 
 #menu-list {
+    width: 100%;
+    height: 60vh;
+    overflow: auto;
     list-style: none;
     margin: 28vh 0 0 0;
     padding: 0;
@@ -602,4 +620,47 @@ object:not(#online-svg) {
     height: 350px;
     width: 300px;
     background: #fff;
+}
+
+#events-link {
+    display: none;
+}
+
+@media all and (max-height: 700px) and (orientation: landscape) {
+    #ham-icon {
+        height: 35px;
+    }
+
+    #top-nav {
+        font-size: 80%;
+    }
+
+    #register-link img {
+        width: 15vw;
+        min-width: 0;
+    }
+    #events-link img {
+        width: 13vw;
+        min-width: 0;
+    }
+    #base-line {
+        margin-bottom: 20px;
+    }
+    #social-media img {
+        height: 20px;
+        margin-left: 20px;
+    }
+    #daysToGo {
+        font-size: 20px;
+    }
+    #mobile-social-media {
+        justify-content: center;
+    }
+    #mobile-social-media img {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    #events-link {
+        bottom: 10vh;
+    }
 }
