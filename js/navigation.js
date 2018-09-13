@@ -115,7 +115,7 @@ function openPage(pageName) {
                 exitPage.style.opacity = "0";
 
                 pages[pageName].domElem.style.transition = "";
-                pages[pageName].domElem.style.transform = "scale(1.05)";
+				pages[pageName].domElem.style.transform = "scale(1)";
                 pages[pageName].domElem.style.opacity = "1";
                 pages[pageName].domElem.style.zIndex = "2";
                 pages[pageName].domElem.style.display = "block";
