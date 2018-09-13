@@ -114,6 +114,9 @@
 	#categories-main-heading{
 		font-size: 25px;	
 	}
+	.common-heading {
+		font-size: 37px;	
+	}
 }
 
 @media all and (max-width: 300px) {
