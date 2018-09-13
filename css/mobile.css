@@ -1,0 +1,111 @@
+@media all and (max-width: 700px) {
+    #homeLayer1 {
+        background: url('../imgs/mobileHomeLayer1.svg') no-repeat;
+    }
+
+    #homeLayer1, #trees {
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* HAM */
+    #ham-icon {
+        height: 30px;
+        margin: 4vh 0 0 4vh;
+    }
+
+    #close-icon {
+        height: 40px;
+        margin: 20px 0 0 20px;
+    }
+
+    /* NAV */
+
+    #top-nav {
+        margin: 0;
+    }
+
+    .top-nav-link {
+        display: none !important;
+    }
+
+    #register-link {
+        margin: 10vh 4vh 0 0;
+    }
+
+    #register-link img, #events-link img {
+        width: 28vw;
+    }
+
+    #social-media {
+        margin: 4vh 4vh 0 0;
+    }
+
+    #events-link {
+        margin: 10vh 0 0 4vh;
+    }
+
+    #social-media img {
+        height: 20px;
+        margin-left: 20px;
+    }
+
+    /* MENU */
+    #menu-list {
+        margin-top: 20px;
+        font-size: 80%;
+    }
+
+    #menu-list li {
+        margin-top: 25px;
+    }
+
+    /* EVENTS */
+    #events-page {
+        background: url('../imgs/mobileBackground2.svg') no-repeat;
+        background-size: cover;
+    }
+    #events-container {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #events-category-scroll {
+        height: 30%;
+    }
+
+    #event-svg-container {
+        width: 80%;
+    }
+
+    #left-arrow, #right-arrow {
+        height: 35px;
+    }
+
+    #view-events-button {
+        font-size: 180%;
+    }
+
+    #categories-heading{
+        font-size: 4vw;
+    }
+
+    #events-image {
+        height: 300px;
+    }
+
+    object {
+        height: auto;
+    }
+
+    #menu, #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
+        background: url('../imgs/mobileBackground1.svg') no-repeat;
+        background-size: cover;
+    }
+}
+
+@media all and (max-width: 600px) {
+	#events-container-inner {
+		width: 85vw;
+	}
+}
