@@ -63,14 +63,15 @@ body, html, #homeLayer1, #trees {
 }
 
 #ham-icon {
+    margin-top: -5px;
     height: 40px;
 }
 
-#ham-icon:hover, #close-icon:hover, #register-link:hover, #events-link:hover {
+#ham-icon:hover, #close-icon:hover, #register-link:hover {
     cursor: pointer;
 }
 
-#ham-icon, #register-link, #events-link {
+#ham-icon, #register-link {
     z-index: 301;
 }
 
@@ -81,7 +82,7 @@ body, html, #homeLayer1, #trees {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 50px 0 0 70px;
+    margin: 20px 0 0 20px;
     color: #fff;
     z-index: 301;
 }
@@ -110,14 +111,15 @@ body, html, #homeLayer1, #trees {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 13vh 70px 0 0;
+    margin: 20px 20px 0 0;
 }
 
 #register-link img {
-    width: 13vw;
+    width: 11vw;
+    min-width: 190px;
 }
 
-#events-link {
+/* #events-link {
     position: absolute;
     top: 0;
     left: 0;
@@ -126,25 +128,40 @@ body, html, #homeLayer1, #trees {
 
 #events-link img {
     width: 12vw;
+} */
+
+#base-line {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 301;
+}
+
+#daysToGo {
+    color: #fff;
+    font-family: 'ikaros', sans-serif;
+    margin-left: 20px;
+    font-size: 150%;
 }
 
 #social-media {
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
     flex-direction: row;
-    margin: 50px 70px 0 0;
+    margin-right: 20px;
 }
 
 #social-media img {
     height: 30px;
     margin-left: 40px;
-    z-index: 301;
+    transition: transform 0.1s linear;
 }
 
 #social-media img:hover {
     cursor: pointer;
+    transform: scale(1.2);
 }
 
 /* MENU */
@@ -160,7 +177,7 @@ body, html, #homeLayer1, #trees {
     justify-content: center;
     background: url('../imgs/background1.svg') no-repeat;
     background-size: cover;
-    transform: scale(1.05);
+    transform: scale(1);
 }
 
 #menu-list {
