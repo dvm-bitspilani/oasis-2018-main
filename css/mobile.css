@@ -1,4 +1,4 @@
-@media all and (max-width: 700px) {
+@media all and (max-width: 800px) and (orientation: portrait) {
     #homeLayer1 {
         background: url('../imgs/mobileHomeLayer1.svg') no-repeat;
     }
@@ -10,8 +10,8 @@
 
     /* HAM */
     #ham-icon {
-        height: 30px;
-        margin: 4vh 0 0 4vh;
+        height: 40px;
+        margin: 3vh 0 0 3vh;
     }
 
     #close-icon {
@@ -30,19 +30,36 @@
     }
 
     #register-link {
-        margin: 10vh 4vh 0 0;
+        margin: 3vh 3vh 0 0;
     }
 
-    #register-link img, #events-link img {
+    #register-link span {
+        display: block;
+        font-family: "ikaros", sans-serif;
+        color: #fff;
+        font-size: 1.8em; /*sarthak ne kaha*/
+    }
+
+    /* #register-link img, #events-link img {
         width: 28vw;
+    } */
+
+    #register-link img {
+        display: none;
+    }
+
+    #mobile-social-media {
+        padding: 5vh 7vw 5vh 7vw;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #mobile-social-media img {
+        height: 30px;
     }
 
     #social-media {
         margin: 4vh 4vh 0 0;
-    }
-
-    #events-link {
-        margin: 10vh 0 0 4vh;
     }
 
     #social-media img {
@@ -50,9 +67,13 @@
         margin-left: 20px;
     }
 
+    #base-line {
+        display: none;
+    }
+
     /* MENU */
     #menu-list {
-        margin-top: 20px;
+        margin-top: 30vh;
         font-size: 80%;
     }
 
@@ -102,6 +123,46 @@
         background: url('../imgs/mobileBackground1.svg') no-repeat;
         background-size: cover;
     }
+    #mobile-social-media {
+        justify-content: center;
+    }
+    #mobile-social-media img {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    #events-link {
+        display: flex;
+        position: absolute;
+        bottom: 15vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* REGISTER */
+    .field{
+        margin-bottom: 0;
+      }
+      .field label{
+        font-size: 1.5em;
+      }
+      .field p{
+        font-size: 1em;
+      }
+      .field input[type=text]{
+        font-size: 1.5em;
+      }
+    
+      .field .radio-input label{
+        font-size: .8em;
+      }
+      select{
+        font-size: 1.5em;
+        width: 75vw;
+      }
+    
+      .select2-search__field{
+          /*width: calc(75vw-20px) !important;*/
+      }
 }
 
 @media all and (max-width: 600px) {

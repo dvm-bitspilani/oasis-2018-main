@@ -6,42 +6,42 @@ var menu = document.getElementById("menu"),
 var pages = {
     home: {
         name: "home",
-        linkElem: document.getElementById("home-link"),
+        linkElem: [document.getElementById("home-link")],
         domElem: document.getElementById("home-page")
     },
     archive: {
         name: "archive",
-        linkElem: document.getElementById("archive-link"),
+        linkElem: [document.getElementById("archive-link")],
         domElem: document.getElementById("archive-page")
     },
     about: {
         name: "about",
-        linkElem: document.getElementById("about-link"),
+        linkElem: [document.getElementById("about-link")],
         domElem: document.getElementById("about-page")
     },
     developers: {
         name: "developers",
-        linkElem: document.getElementById("dev-link"),
+        linkElem: [document.getElementById("dev-link")],
         domElem: document.getElementById("dev-page")
     },
     events: {
         name: "events",
-        linkElem: document.getElementById("events-link"),
+        linkElem: [document.getElementById("events-link"), document.getElementById("events-link-nav")],
         domElem: document.getElementById("events-page")
     },
     contacts: {
         name: "contacts",
-        linkElem: document.getElementById("contacts-link"),
+        linkElem: [document.getElementById("contacts-link")],
         domElem: document.getElementById("contacts-page")
     },
     sponsors: {
         name: "sponsors",
-        linkElem: document.getElementById("sponsors-link"),
+        linkElem: [document.getElementById("sponsors-link")],
         domElem: document.getElementById("sponsors-page")
     },
     register: {
         name: "register",
-        linkElem: document.getElementById("register-link"),
+        linkElem: [document.getElementById("register-link")],
         domElem: document.getElementById("register-page")
     }
 };
@@ -102,7 +102,11 @@ function openPage(pageName) {
         else {
             exitPage = currentPage.domElem;
         }
-        stretchAll();
+        topStretch.style.display = "block";
+        bottomStretch.style.display = "block";
+        leftStretch.style.display = "block";
+        rightStretch.style.display = "block";
+        if (window.matchMedia("(min-width: 800px)").matches) stretchAll();
 
         exitPage.style.zIndex = "3";
         exitPage.style.transition = "transform 0.25s linear";
@@ -128,19 +132,29 @@ function openPage(pageName) {
                 exitPage.style.display = "none";
                 currentPage.domElem.style.display = "none";
                 currentPage = pages[pageName];
+
+                topStretch.style.display = "none";
+                bottomStretch.style.display = "none";
+                leftStretch.style.display = "none";
+                rightStretch.style.display = "none";
             },
             500
         );
 
-        var navDisplayProperty = "none";
-        if (pageName === "home") {
-            navDisplayProperty = "flex";
-        }
+        // var navDisplayProp = "none", otherDisplayProp = "none";
+        // if (pageName === pages.home.name) {
+        //     navDisplayProp = "flex";
+        //     otherDisplayProp = "block";
+        // }
 
-        var topNavLinks = document.getElementsByClassName("top-nav-link");
-        for (var z = 0; z < topNavLinks.length; z++) {
-            topNavLinks[z].style.display = navDisplayProperty;
-        }
+        // var topNavLinks = document.getElementsByClassName("top-nav-link");
+        // for (var z = 0; z < topNavLinks.length; z++) {
+        //     topNavLinks[z].style.display = navDisplayProp;
+        // }
+
+        // document.getElementById("register-link").style.display = otherDisplayProp;
+        // document.getElementById("base-line").style.display = otherDisplayProp;
+
         closeMenu(true);
     }
     else {
@@ -151,9 +165,11 @@ function openPage(pageName) {
 for (var page in pages) {
     (function () {
         var pageObj = pages[page];
-        pageObj.linkElem.addEventListener("click", function () {
-            openPage(pageObj.name);
-        });
+        for (var i = 0; i < pageObj.linkElem.length; i++) {
+            pageObj.linkElem[i].addEventListener("click", function () {
+                openPage(pageObj.name);
+            });
+        }
     })();
 }
 
