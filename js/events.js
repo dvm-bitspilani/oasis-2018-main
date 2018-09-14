@@ -136,12 +136,12 @@ var categoriesInner=document.getElementById('categories-wrapper-inner');
 var categoriesClose=document.getElementById('categories-close');
 
 cHeading.addEventListener('click', function(){
-    categories.style.top="0%";
+    categories.style.top="0";
     categories.style.display='flex';
     categories.style.zIndex="999";
     // categories.style.opacity="1";
     setTimeout(function(){
-    categoriesInner.style.opacity="1";    
+		categoriesInner.style.opacity="1";    
     }, 1);
 });
 

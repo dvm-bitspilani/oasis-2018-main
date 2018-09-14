@@ -108,15 +108,15 @@
     }
 
     #categories-heading{
-        font-size: 4vw;
+		font-size: 19px;
     }
 
     #events-image {
-        height: 300px;
+        /*height: 300px;*/
     }
 
     object {
-        height: auto;
+        /*height: auto;*/
     }
 
     #menu, #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
@@ -137,10 +137,51 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
+    /* REGISTER */
+    .field{
+        margin-bottom: 0;
+      }
+      .field label{
+        font-size: 1.5em;
+      }
+      .field p{
+        font-size: 1em;
+      }
+      .field input[type=text]{
+        font-size: 1.5em;
+      }
+    
+      .field .radio-input label{
+        font-size: .8em;
+      }
+      select{
+        font-size: 1.5em;
+        width: 75vw;
+      }
+    
+      .select2-search__field{
+          /*width: calc(75vw-20px) !important;*/
+      }
 }
 
 @media all and (max-width: 600px) {
 	#events-container-inner {
 		width: 85vw;
+	}
+}
+
+@media all and (max-width: 480px) {
+	#categories-main-heading{
+		font-size: 25px;	
+	}
+	.common-heading {
+		font-size: 37px;	
+	}
+}
+
+@media all and (max-width: 300px) {
+	#categories-main-heading{
+		font-size: 20px;	
 	}
 }

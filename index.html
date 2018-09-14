@@ -801,26 +801,36 @@
     </svg>
 
 
-    <div id = "trees"></div>
+    <!-- <div id = "trees"></div> -->
 
     <!-- HOME -->
     <div class="page" id="home-page">
         <!-- layers -->
         <div class="layer" id="homeLayer1"></div>
 
+        <!-- <div id="events-link">
+            <img src="imgs/eventsButton.svg" />
+        </div> -->
+
+        <div id = "base-line">
+            <div id = "daysToGo">Days to go</div>
+            <div id = "social-media">
+                <img src = "imgs/facebook icon.svg" />
+                <img src = "imgs/insta icon.svg" />
+                <img src = "imgs/twitter icon.svg" />
+            </div>
+        </div>
+    
         <div id="register-link">
             <span>REGISTER</span>
             <img src="imgs/register.svg" alt="Register" />
         </div>
-
+    
         <div id="events-link">
             <span>EVENTS</span>
             <img src="imgs/events-button.svg" alt="View Events" />
         </div>
 
-        <!-- <div id="events-link">
-            <img src="imgs/eventsButton.svg" />
-        </div> -->
 
         <div id="top-nav">
             <div>
@@ -915,22 +925,19 @@
                 <div id="close-events">CLOSE</div>
 			</div> -->
             <div id="events-container">
-                    <div id="categories-nav">
-                            <img src="./imgs/close-icon.svg" id='events-close'>
-                            <span id='categories-heading'>ALL CATEGORIES</span>
-                    </div>
+				<div id="categories-heading">ALL CATEGORIES</div>
 				<div id="events-container-inner">
 					<div id="event-categories">
-						<h2 id="events-header">EVENTS</h2>
+						<h2 id="events-header" class="common-heading">EVENTS</h2>
 						<div id="events-image-wrapper">
 							<img id="prev-event" class="event-change-btn" src="imgs/arrow.svg"/>
 							<div id="events-image">
                                 <!-- change first image below -->
-                                <object id = "online-svg" data="./imgs/svg-anims2/online.svg" type="image/svg+xml"></object>
-                                <object id = "drama-svg" data="./imgs/svg-anims2/drama.svg" type="image/svg+xml"></object>
-                                <object id = "fineart-svg" data="./imgs/svg-anims2/fineart.svg" type="image/svg+xml"></object>
-                                <object id = "music-svg" data="./imgs/svg-anims2/music.svg" type="image/svg+xml"></object>
-                                <object id = "photography-svg" data="./imgs/svg-anims2/photography.svg" type="image/svg+xml"></object>
+								<object id = "online-svg" data="./imgs/svg-anims2/online.svg" type="image/svg+xml"></object>
+								<object id = "drama-svg" data="./imgs/svg-anims2/drama.svg" type="image/svg+xml"></object>
+								<object id = "fineart-svg" data="./imgs/svg-anims2/fineart.svg" type="image/svg+xml"></object>
+								<object id = "music-svg" data="./imgs/svg-anims2/music.svg" type="image/svg+xml"></object>
+								<object id = "photography-svg" data="./imgs/svg-anims2/photography.svg" type="image/svg+xml"></object>
                             </div>
 							<img id="next-event" class="event-change-btn" src="imgs/arrow.svg"/>
 						</div>
@@ -964,11 +971,23 @@
                         Consectetur dolor vel asperiores blanditiis dolore. At labore exercitationem cupiditate in eaque, fuga reiciendis Quam ea ipsa exercitationem eligendi voluptatem Cumque nulla ad adipisci nihil necessitatibus Et ad deleniti minima numquam mollitia Esse harum neque repellendus voluptatum debitis voluptatibus? Explicabo tempora doloribus vel excepturi sunt? Recusandae mollitia asperiores pariatur reiciendis.
                     </p>
             </div>
+				</div>
+			</div>
+        </div>
+        <div id="view-events-wrapper"> 
+            <div id="view-events-wrapper-inner">
+            <div id="event-name">xyz</div>
+            <div id="event-name">xyz</div>
+            <div id="event-name">xyz</div>
+            <div id="event-name">xyz</div>
+            <div id="event-name">xyz</div>
+            </div>
+            
         </div>
         <div id="categories-wrapper">
             <div id="categories-wrapper-inner">
             <!-- <div id="categories-close">close</div> -->
-            <img src="./imgs/close-icon.svg" id='categories-close'>
+            <img src="./imgs/close-icon.svg" class='close' id="categories-close">
             <div id="categories-main-heading">ALL CATEGORIES</div>
             <div id="categories-events">
                     <img src="./imgs/bg2.png" id="categories-events-image"/>
@@ -984,7 +1003,149 @@
 
     <!-- REGISTER -->
     <div class="page" id="register-page">
-
+        <div class="wrapper">
+            <nav class="menu_options">
+                
+              <button class="register-btn"><a href="/2017/register/login/">LOGIN</a></button> 
+        
+                </nav>
+                <h1 id="reg" style=" font-family: 'bebas neue'; color: rgba(255, 255, 255, 1);  letter-spacing: 10px; font-weight: normal; font-size: 300%; padding-bottom: 2%;">REGISTER</h1>
+                <p></p>
+            <form class="form"  id="register-form" acion="/2017/register/" method = "POST" style="opacity: 1; color: rgba(255, 255, 255, 1)">
+                    
+                  <div class="field">
+                    <label>1. What is your Name: </label>
+                    <p></p>
+                <div class="input">
+                        <input type="text" name="name" tabindex="1" />
+                      </div>
+                  </div>
+                  <div class="field">
+                    <label>2. What is your gender?</label>
+                    <div class="radio-input">
+                         <input type="radio" name="gender" value="M" checked id="male" > <label for="male" tabindex="2">Male</label>
+                           <input type="radio" name="gender" value="F" id="female"> <label for="female" tabindex="3">Female</label>
+                           <input type="radio" name="gender" value="O" id="others"> <label for="others" tabindex="3">Others</label>
+                    </div>
+                  </div>
+        
+                  <div class="field">
+                    <label>3. Which city do you reside in?</label>
+                    <div class="input">
+                        <input type="text" name="city" tabindex="4"/>
+                    </div>
+                  </div>
+        
+                  <div class="field">
+                    <label>4. Where can we contact you?</label>
+                <p style="display:inline">+91-</p>
+                    <div class="input">
+                    <input type="text" type="number" name="phone" max="9999999999" min="100000000" tabindex="5"/>
+                    </div>
+                  </div>
+        
+                  <div class="field">
+                    <label>5. What is your Email ID? </label>
+                    <div class="input" >
+                        <input type="text" name="email" tabindex="6"/>
+                      </div>	
+                  </div>
+                  <div class="field">
+                    <label>6. What is the name of your college? </label>
+                <p></p>
+                    <div class="input">
+                        <select name="college" id="college" tabindex="7" >
+        
+                            <!-- just for UI testing, the list to be 'get' from back -->
+        
+                                 <option value="" disabled selected>Search college name</option>
+                                <option value="college8">college1</option>
+                                <option value="college2">college2</option>
+                                <option value="college3">college3</option>
+                                <option value="college4">college4</option>
+                                <option value="college5">college5</option>
+                                <option value="college6">college6</option>
+                                <option value="college1">college1</option>
+                                <option value="college2">college2</option>
+                                <option value="college3">college3</option>
+                                <option value="college4">college4</option>
+                                <option value="college5">college5</option>
+                                <option value="college6">college6</option>
+                                
+                                    
+                                
+                            </select>
+                      </div>	
+                  </div>
+                  <div class="field">
+                    <label>7. Are you the head of any Cultural Society?</label>
+                    <div class="radio-input" >
+                        <input type="radio" value="True" name="head_of_society" id="yes"/><label for="yes" tabindex="8">Yes</label>
+                  <input type="radio" value="False" name="head_of_society" id="no" checked/><label for="no" tabindex="9" >No</label>
+                      </div>	
+                  </div>
+        
+                  <div class="field">
+                    <label>8. What is your year of study?</label>
+                    <div class="radio-input">
+                         <input type="radio" name="year_of_study" value="1" checked id="one" > <label for="one" tabindex="10">1</label>
+                           <input type="radio" name="year_of_study" value="2" id="two"> <label for="two" tabindex="11">2</label>
+                           <input type="radio" name="year_of_study" value="3" id="three"> <label for="three" tabindex="12">3</label>
+                           <input type="radio" name="year_of_study" value="4" id="four"> <label for="four" tabindex="13">4</label>
+                           <input type="radio" name="year_of_study" value="5" id="five"> <label for="five" tabindex="14">5</label>
+                          
+                    </div>	
+                  </div>
+        
+              <div class="field">
+                        <label>9. What event(s) do you want to register for?</label>
+                        <p id="select_info"></p>
+                <div style="display:flex;width:auto">
+                <select style="color: white;" id="event-select" name="states[]"  multiple  tabindex="15">
+                                                    
+                        <!-- just for UI testing, the list to be 'get' from back -->
+        
+                                <option value="2">Event1</option>
+                            
+                                <option value="3">Event2</option>
+                            
+                                <option value="4">Event3</option>
+                            
+                                <option value="5">Event4</option>
+                            
+                                <option value="6">Event5</option>
+                            
+                                <option value="7">Event6</option>
+                            
+                                <option value="8">Event7</option>
+                            
+                                <option value="9">Event8</option>
+                            
+                                <option value="10">Event9</option>
+                            
+                                <option value="11">Event10</option>
+                            
+                                
+                            
+                        </select>
+                
+                
+                <div class="events-box" id="events">
+                </div>
+              </div>
+             
+            <div class="submit">
+                    <input type="button" id="submit-button" name="submit" value="SUBMIT"  tabindex="17">
+              </div>
+        
+                                      <!-- CAPTCHA KEY TO BE PROVIDED BY BACKEND(raghav) -->
+        </form>
+        
+        
+        
+        <a href="#" class="close">
+        
+        </div>
     </div>
 
     <!-- SPONSORS -->
