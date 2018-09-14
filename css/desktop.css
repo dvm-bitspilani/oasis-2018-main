@@ -47,7 +47,13 @@ body, html {
 }
 
 #homeLayer1 {
-    background: url('../imgs/homeLayer1.svg') no-repeat;
+    /* background: url('../imgs/homeLayer1.svg') no-repeat; */
+}
+#home-svg-desktop {
+    display: block;
+}
+#home-svg-mobile {
+    display: none;
 }
 
 body, html, #homeLayer1{

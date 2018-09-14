@@ -1,6 +1,14 @@
 @media all and (max-width: 800px) and (orientation: portrait) {
+    #home-svg-desktop {
+        display: none;
+    }
+    #home-svg-mobile {
+        width: 100vw;
+        height: auto;
+        display: block;
+    }
     #homeLayer1 {
-        background: url('../imgs/mobileHomeLayer1.svg') no-repeat;
+        /* background: url('../imgs/mobileHomeLayer1.svg') no-repeat; */
     }
 
     #homeLayer1, #trees {
@@ -192,4 +200,11 @@
 	#categories-main-heading{
 		font-size: 20px;	
 	}
+}
+/*change this to aspect ratio*/
+@media all and (max-width: 430px) {
+    #home-svg-mobile {
+        height: 100vh;
+        width: auto;
+    }
 }
