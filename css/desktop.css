@@ -27,7 +27,7 @@ body, html {
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: 299;
+    /* z-index: 299; */
 }
 
 .fullpage-flex {
@@ -55,6 +55,12 @@ body, html, #homeLayer1{
     background-position: center;
 }
 
+.clickable {
+    z-index: 304;
+}
+imput {
+    z-index: 304;
+}
 /* HAM */
 #close-icon {
     position: absolute;
@@ -639,7 +645,7 @@ object:not(#online-svg) {
 /* REGISTER */
 
 #register-page {
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 .wrapper {
@@ -714,21 +720,22 @@ object:not(#online-svg) {
   }
   
   form{
-   padding-top: 5%;
+    padding-top: 5vh;
+    height: 60vh;
+    overflow-y: scroll;
     opacity: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    z-index: 304;
   }
+
   .field {
-    margin-bottom: 7rem;
+    margin-bottom: 2rem;
     opacity: 1;
     transition: 0.5s ease all;
     width: 50%;
-    display: flex;
-    flex-direction: column;
   }
   
   .field > label {
@@ -747,11 +754,11 @@ object:not(#online-svg) {
     background: none;
     outline: none;
   }
+  
   .field .input{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+      margin-bottom: 20px;
   }
+
   .field p{
     color:#fff;
     font-size: 2em;
@@ -815,6 +822,7 @@ object:not(#online-svg) {
         -ms-transition: all 0.3s linear;
          -o-transition: all 0.3s linear;
             transition: all 0.3s linear;
+    cursor: pointer;
   }
   .field .radio-input input:checked + label{
     color: #00bcd4;
@@ -853,13 +861,10 @@ object:not(#online-svg) {
     transform: scale(1);
   }
   .submit{
-    width:70%;
     height:auto;
     display:flex;
     flex-direction:row-reverse;
     justify-content: center;
-    margin-left: 18%;
-    margin-top: 15%;
   }
   #back-btn{
    

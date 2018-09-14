@@ -139,8 +139,11 @@
     }
 
     /* REGISTER */
+    form {
+        overflow-x: hidden;
+    }
     .field{
-        margin-bottom: 0;
+        margin-bottom: 30px;
       }
       .field label{
         font-size: 1.5em;
@@ -157,11 +160,16 @@
       }
       select{
         font-size: 1.5em;
-        width: 75vw;
       }
     
       .select2-search__field{
           /*width: calc(75vw-20px) !important;*/
+      }
+      .wrapper {
+          padding-top: 10vh;
+      }
+      .field {
+          width: 70vw;
       }
 }
 

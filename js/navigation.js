@@ -119,7 +119,7 @@ function openPage(pageName) {
                 exitPage.style.opacity = "0";
 
                 pages[pageName].domElem.style.transition = "";
-				pages[pageName].domElem.style.transform = "scale(1)";
+				pages[pageName].domElem.style.transform = "";
                 pages[pageName].domElem.style.opacity = "1";
                 pages[pageName].domElem.style.zIndex = "2";
                 pages[pageName].domElem.style.display = "block";
@@ -130,8 +130,10 @@ function openPage(pageName) {
         setTimeout(
             function () {
                 exitPage.style.display = "none";
+                exitPage.style.zIndex = "";
                 currentPage.domElem.style.display = "none";
                 currentPage = pages[pageName];
+                currentPage.domElem.style.zIndex = "";
 
                 topStretch.style.display = "none";
                 bottomStretch.style.display = "none";

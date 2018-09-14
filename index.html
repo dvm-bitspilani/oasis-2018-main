@@ -801,7 +801,7 @@
     </svg>
 
 
-    <!-- <div id = "trees"></div> -->
+    <div id = "trees"></div>
 
     <!-- HOME -->
     <div class="page" id="home-page">
@@ -812,7 +812,7 @@
             <img src="imgs/eventsButton.svg" />
         </div> -->
 
-        <div id = "base-line">
+        <div id = "base-line" class="clickable">
             <div id = "daysToGo">Days to go</div>
             <div id = "social-media">
                 <img src = "imgs/facebook icon.svg" />
@@ -821,18 +821,18 @@
             </div>
         </div>
     
-        <div id="register-link">
+        <div id="register-link" class = "clickable">
             <span>REGISTER</span>
             <img src="imgs/register.svg" alt="Register" />
         </div>
     
-        <div id="events-link">
+        <div id="events-link" class = "clickable">
             <span>EVENTS</span>
             <img src="imgs/events-button.svg" alt="View Events" />
         </div>
 
 
-        <div id="top-nav">
+        <div id="top-nav" class = "clickable">
             <div>
                 <img src="imgs/ham.svg" id="ham-icon" />
             </div>
@@ -846,15 +846,6 @@
                 <span>SPONSORS</span>
             </div>
         </div>
-
-        <div id = "base-line">
-            <div id = "daysToGo"></div>
-            <div id = "social-media">
-                <img src = "imgs/facebook icon.svg" />
-                <img src = "imgs/insta icon.svg" />
-                <img src = "imgs/twitter icon.svg" />
-            </div>
-        </div>
     </div>
 
     <!-- ABOUT -->
@@ -864,9 +855,9 @@
 
     <!-- MENU -->
     <div id="menu">
-        <img src="imgs/close-icon.svg" id="close-icon" />
+        <img src="imgs/close-icon.svg" id="close-icon" class = "clickable" />
         <!-- <div id = "menu-" -->
-            <ul id="menu-list">
+            <ul id="menu-list" class = "clickable" >
                 <li id="home-link">
                     <span>HOME</span>
                 </li>
@@ -925,12 +916,12 @@
                 <div id="close-events">CLOSE</div>
 			</div> -->
             <div id="events-container">
-				<div id="categories-heading">ALL CATEGORIES</div>
+				<div id="categories-heading" class="clickable">ALL CATEGORIES</div>
 				<div id="events-container-inner">
 					<div id="event-categories">
 						<h2 id="events-header" class="common-heading">EVENTS</h2>
 						<div id="events-image-wrapper">
-							<img id="prev-event" class="event-change-btn" src="imgs/arrow.svg"/>
+							<img id="prev-event" class="event-change-btn clickable" src="imgs/arrow.svg"/>
 							<div id="events-image">
                                 <!-- change first image below -->
 								<object id = "online-svg" data="./imgs/svg-anims2/online.svg" type="image/svg+xml"></object>
@@ -939,10 +930,10 @@
 								<object id = "music-svg" data="./imgs/svg-anims2/music.svg" type="image/svg+xml"></object>
 								<object id = "photography-svg" data="./imgs/svg-anims2/photography.svg" type="image/svg+xml"></object>
                             </div>
-							<img id="next-event" class="event-change-btn" src="imgs/arrow.svg"/>
+							<img id="next-event" class="event-change-btn clickable" src="imgs/arrow.svg"/>
 						</div>
 						<div id="view-events-btncontainer">
-							<div id="view-events-btn">
+							<div id="view-events-btn" class="clickable">
 								VIEW EVENTS
 							</div>
 						</div>
@@ -1004,9 +995,10 @@
     <!-- REGISTER -->
     <div class="page" id="register-page">
         <div class="wrapper">
-            <nav class="menu_options">
-                
-              <button class="register-btn"><a href="/2017/register/login/">LOGIN</a></button> 
+            <nav class="menu_options clickable">
+                <div id="register-link" class="clickable">
+                    <span><a href="/2017/register/login/" style="color: #fff; text-decoration: none;">LOGIN</a></span>
+                </div>
         
                 </nav>
                 <h1 id="reg" style=" font-family: 'bebas neue'; color: rgba(255, 255, 255, 1);  letter-spacing: 10px; font-weight: normal; font-size: 300%; padding-bottom: 2%;">REGISTER</h1>
@@ -1014,7 +1006,7 @@
             <form class="form"  id="register-form" acion="/2017/register/" method = "POST" style="opacity: 1; color: rgba(255, 255, 255, 1)">
                     
                   <div class="field">
-                    <label>1. What is your Name: </label>
+                    <label>1. What is your full name: </label>
                     <p></p>
                 <div class="input">
                         <input type="text" name="name" tabindex="1" />
