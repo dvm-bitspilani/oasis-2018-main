@@ -1,5 +1,5 @@
 //days to go
-var DDay =  "2018-09-16";
+var DDay =  "2018-10-27";
 function getTimeRemaining(day){
 	var date = Date.parse(day) - Date.parse(new Date());
 	var days = Math.floor(date/(1000*60*60*24));
