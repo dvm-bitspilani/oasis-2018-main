@@ -31,7 +31,7 @@ var pages = {
     },
     contacts: {
         name: "contacts",
-        linkElem: [document.getElementById("contacts-link")],
+        linkElem: [document.getElementById("contacts-link"), document.getElementById("contacts-link-nav")],
         domElem: document.getElementById("contacts-page")
     },
     sponsors: {

@@ -152,33 +152,54 @@
     }
     .field{
         margin-bottom: 30px;
-      }
-      .field label{
+    }
+    .field label{
         font-size: 1.5em;
-      }
-      .field p{
+    }
+    .field p{
         font-size: 1em;
-      }
-      .field input[type=text]{
+    }
+    .field input[type=text]{
         font-size: 1.5em;
-      }
+    }
     
-      .field .radio-input label{
+    .field .radio-input label{
         font-size: .8em;
-      }
-      select{
+    }
+    select{
         font-size: 1.5em;
-      }
+    }
     
-      .select2-search__field{
+    .select2-search__field{
           /*width: calc(75vw-20px) !important;*/
-      }
-      .wrapper {
-          padding-top: 10vh;
-      }
-      .field {
-          width: 70vw;
-      }
+    }
+    .wrapper {
+        padding-top: 10vh;
+    }
+    .field {
+        width: 70vw;
+    }
+
+    /*CONTACT AND DEVELOPERS*/
+    .contacts-menu-list {
+        display: block;
+    }
+    .contact-img, .dev-img {
+        width: 28vh;
+    }
+
+    .contacts-flex {
+        height: 92vh;
+    }
+
+    #contact-header, #dev-header {
+        font-size: 200%;
+    }
+
+    #devs-container {
+        margin-top: -2vh;
+    }
+
 }
 
 @media all and (max-width: 600px) {

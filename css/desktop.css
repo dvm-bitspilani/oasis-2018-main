@@ -994,73 +994,42 @@ span[role=combobox] {
  
 }
 
-/* DEVELOPERS PAGE */
-
-/*.dev-flex {
-    justify-content: space-around;
-}
-
-.page-heading {
-    width: 35vw;
-}
-
-#devs-container {
-    height: 75vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.dev-member {
-    height: 350px;
-    width: 300px;
-    background: #fff;
-}
-*/
-#dev-page, #contacts-page {
-    overflow-y: scroll;
-    background: url('../imgs/bg2.png') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+/* DEVELOPERS PAGE AND CONTACT US */
 
 .dev-flex, .contacts-flex {
-    justify-content: space-around;
     overflow-y: scroll;
-}
-
-.page-heading {
-    width: 35vw;
-}
-
-.social-media-dev {
-    width: 12vw;
+    width: 100%;
+    height: 90vh;
+    z-index: 304;
 }
 
 #devs-container, #contacts-container {
-    /*height: 90vh;*/
     width: 75vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-
-    /*padding-bottom: 5vh;
-    padding-top: 20vh;*/
+    margin-top: 2vh;
+    position: absolute;
+    top: 18vh;
 }
 
-.contact-img, .dev-img {
+.contact-img-con, .dev-img-con {
     margin-bottom: 6vh;
-    margin-right: 2vw;
-    margin-left: 2vw;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
     justify-content: center;
     text-align: center;
 }
 
-#contacts-container {
-    margin-top: 2vh;
+/*.dev-img {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2.5vh;
+    margin-top: 2.5vh;
+}*/
+.contacts-menu-list {
+    display: none;
 }
 
 .contact-name, .dev-name {
@@ -1085,6 +1054,10 @@ span[role=combobox] {
     font-weight: 300;
     letter-spacing: 11px;
     margin-top: 26vh;
+    position: absolute;
+    top: -23vh;
+    text-align: center;
+
 }
 
 #dev-header {
@@ -1096,15 +1069,17 @@ span[role=combobox] {
     letter-spacing: 11px;
     margin-top: 3vh;
     margin-bottom: 3vh;
+    position: absolute;
+    top: 0vh;
 }
-/*.dev-member {
-    height: 350px;
-    width: 300px;
-    background: #fff;
-}*/
+
 /*SOCIAL ICON*/
 .social-media-dev {
     padding-top: 1.7vh;
+    width: 12vw;
+    text-align: center;
+    justify-content: center;
+
 }
 
 .social-icon{
@@ -1112,6 +1087,7 @@ span[role=combobox] {
     margin-right: 1vh;
     margin-left: 1vh;
     cursor: pointer;
+    margin-top: 1.7vh;
 }
 
   @media screen and (max-width : 992px)
