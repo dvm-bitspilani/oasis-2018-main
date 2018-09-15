@@ -67,6 +67,20 @@ body, html, #homeLayer1{
 imput {
     z-index: 304;
 }
+
+.close-page {
+    position: absolute;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px 0 0 20px;
+}
+
+.close-page:hover {
+    cursor: pointer;
+}
+
 /* HAM */
 #close-icon {
     position: absolute;
