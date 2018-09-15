@@ -180,7 +180,7 @@
         display: block;
     }
     .contact-img, .dev-img {
-        width: 28vh;
+        width: 25vw;
     }
 
     .contacts-flex {
@@ -195,20 +195,47 @@
         margin-top: -2vh;
     }
 
-    /*SPONSERS*/
+    .contact-name {
+        font-size: 110%;
+    }
+
+    .contact-info, .contact-email, .contact-num {
+        font-size: 90%;
+    }
+
+    .contact-img-con {
+        width: 25vw;
+    }
+
+    /*SPONSORS*/
+    .spons-menu-list {
+        display: block;
+    }
+    #spons-header {
+        margin-top: 220vh;
+    }
     #spons-container-main {
-        position: absolute;
-        top: 1vh;   
+        margin-bottom: 2vh; 
+    }
+    .sponsor-main {
+        justify-content: center;
+        text-align: center;
     }
 
     .title-spons-img {
         width: 48vw;
     }
 
-    #spons-container {
+    .sponsor-others {
+        height: 20vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*#spons-container {
         position: absolute;
         top: 44vh;
-    }
+    }*/
 
     .other-spons {
         width: 44vw;

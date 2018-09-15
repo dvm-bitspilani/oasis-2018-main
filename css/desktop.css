@@ -1036,8 +1036,13 @@ span[role=combobox] {
     margin-left: 2.5vw;
     justify-content: center;
     text-align: center;
+    width: 20vw;
 }
 
+.contact-img {
+    width: 10vw;
+    border-radius: 50%;
+}
 /*.dev-img {
     justify-content: center;
     text-align: center;
@@ -1062,7 +1067,17 @@ span[role=combobox] {
     font-size: 120%;
 }
 
-#contact-header, #spons-header {
+.contact-info {
+    font-style: italic;
+}
+
+.contact-email, .contact-num {
+    font-family: "montserrat";
+    color: #CBB0E2;
+    font-size: 120%;
+}
+
+#contact-header {
     color: #FF7E7E;
     font-family: "bebas neue", sans-serif;
     padding-top: 4vh;
@@ -1106,14 +1121,28 @@ span[role=combobox] {
     margin-top: 1.7vh;
 }
 
-/*SPONSERS*/
+/*SPONSORS*/
 #spons-container-main {
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 16vh;
+    margin-top: 6vh;
+    margin-bottom: 3vh;
+}
+
+#spons-header {
+    color: #FF7E7E;
+    font-family: "bebas neue", sans-serif;
+    padding-top: 4vh;
+    font-size: 250%;
+    font-weight: 300;
+    letter-spacing: 11px;
+    margin-top: 60vh;
+    /*position: absolute;
+    top: -23vh;*/
+    text-align: center;
 }
 
 .title-spons {
@@ -1126,12 +1155,14 @@ span[role=combobox] {
 .panasonic {
     color: #fff;
     /*margin-top: 2vh;*/
+    text-align: center;
     font-size: 120%;
     font-family: "montserrat";
 }
 
 .title-spons-img {
     margin-bottom: 2vh;
+    width: 40vw;
 }
 
 #spons-container {
@@ -1144,6 +1175,21 @@ span[role=combobox] {
     margin-top: 2vh;
     z-index: 301;
    /* padding-left: 9vw;*/
+}
+
+.sponsor-others {
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: "montserrat";
+    margin-right: 2vh;
+    margin-left: 2vh;
+    margin-bottom: 8vh;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .other-spons {
