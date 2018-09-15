@@ -44,6 +44,26 @@ function animOnLoadComplete() {
             time+=130;
         }
 
+        // translate elements
+        var skyElems = svg.getElementById('skyelements').children;
+        var randomCount = 30;
+        for(i=0; i<randomCount; i++) {
+            k = Math.floor(Math.random() * skyElems.length);
+            skyElems[k].classList.add('animateSky1');
+        }
+        for(i=0; i<randomCount; i++) {
+            k = Math.floor(Math.random() * skyElems.length);
+            skyElems[k].classList.add('animateSky2');
+        }
+        for(i=0; i<randomCount; i++) {
+            k = Math.floor(Math.random() * skyElems.length);
+            skyElems[k].classList.add('animateSky3');
+        }
+        for(i=0; i<randomCount; i++) {
+            k = Math.floor(Math.random() * skyElems.length);
+            skyElems[k].classList.add('animateSky4');
+        }
+
         // fade in oasis date and tagline
         var oasisDate = svg.getElementById('oasisDate');
         var tagline = svg.getElementById('autumnOfLove');

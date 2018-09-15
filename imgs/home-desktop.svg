@@ -1,6 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_2" data-name="Layer 2" viewBox="0 0 1920 1080">
     <defs>
         <style>
+            .animateSky1 {
+                animation: translateAnim1 2s ease-in-out alternate-reverse infinite;
+            }
+            .animateSky2 {
+                animation: translateAnim2 2s ease-in-out alternate-reverse infinite;
+            }
+            .animateSky3 {
+                animation: translateAnim3 2s ease-in-out alternate-reverse infinite;
+            }
+            .animateSky4 {
+                animation: translateAnim4 2s ease-in-out alternate-reverse infinite;
+            }
+            @keyframes translateAnim1 {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateY(-10px);
+                }
+            }
+            @keyframes translateAnim2 {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateY(5px);
+                }
+            }
+            @keyframes translateAnim3 {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateY(-15px);
+                }
+            }
+            @keyframes translateAnim4 {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateY(15px);
+                }
+            }
             #oasisDate {
                 opacity: 0;
             }
