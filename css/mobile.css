@@ -110,6 +110,12 @@
         font-size: 180%;
     }
 
+    #view-events-wrapper {
+        background: url('../imgs/mobileBackground2.svg');
+        background-size: cover;
+        background-position: center;
+    }
+
     #categories-heading{
 		font-size: 19px;
     }
@@ -118,8 +124,8 @@
         /*height: 300px;*/
     }
 
-    object {
-        /*height: auto;*/
+    #events-image object {
+        width: 70%;
     }
 
     #menu, #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
