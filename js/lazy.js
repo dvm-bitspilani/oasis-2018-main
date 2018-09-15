@@ -1,12 +1,13 @@
 "use strict"
 
-var lazyLoadImgFunctionGenerator = function (elems, dataProps) {
+var lazyLoadImgFunctionGenerator = function (elems, dataProps, completeAll) {
 	return function(){
 		elems.forEach(function(elem) {
 			for(var dataProp in dataProps) { 
 				dataProps[dataProp](elem.dataset[dataProp], elem);
 			}
 		});
+		completeAll();
 	}
 }
 
@@ -33,6 +34,11 @@ function lazyLoad() {
 					el.style.height = "100%";
 				})
 			}
+		},
+		function() {
+			document.getElementById("view-events-btn").style.opacity = "1";	
+			document.getElementById("next-event").style.opacity = "1";	
+			document.getElementById("prev-event").style.opacity = "1";	
 		}
 	);
 	lazyLoadEventImages();

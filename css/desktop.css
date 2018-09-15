@@ -341,7 +341,9 @@ object:not(#online-svg) {
 	width: auto;
 	padding: 10px;
 	font-family: montserrat;
-	transition: transform 0.3s ease-in-out;
+	opacity: 0;
+	transition: transform 0.3s ease-in-out,
+				opacity 2s ease-in-out;
 }
 
 #view-events-btn:hover {
@@ -349,7 +351,14 @@ object:not(#online-svg) {
 }
 
 #prev-event {
+	opacity: 0;
+	transition: opacity 2s ease-in-out;
 	transform: rotateZ(180deg);
+}
+
+#next-event {
+	transition: opacity 2s ease-in-out;
+	opacity: 0;
 }
 
 .event-change-btn {
@@ -450,7 +459,9 @@ object:not(#online-svg) {
 }
 
 #view-events-button {
+	transition: opacity 0.5s;
     font-family: 'biko-bold';
+	opacity: 0;
     font-size: 200%;
     color: #14406C;
     background: #65F0DC;
