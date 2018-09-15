@@ -41,9 +41,9 @@ body, html {
     display: none;
 }
 
-#home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
-    /* background: url('../imgs/background1.svg') no-repeat;
-    background-size: cover; */
+#home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page, #videos-page {
+    background: url('../imgs/background1.svg') no-repeat;
+    background-size: cover;
 }
 
 #homeLayer1 {
@@ -66,6 +66,15 @@ body, html, #homeLayer1{
 }
 imput {
     z-index: 304;
+}
+
+.coming-soon {
+    font-family: "ikaros";
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 150%;
+    color: #fff;
 }
 
 .close-page, .category-event-close {
@@ -1199,6 +1208,14 @@ span[role=combobox] {
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
+
+/* VIDEOS */
+
+.videos-heading {
+    margin-top: 20vh;
+}
+
+/* . */
 
 
   @media screen and (max-width : 992px)

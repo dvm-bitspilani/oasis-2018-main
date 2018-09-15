@@ -3,11 +3,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1080 1920" style="enable-background:new 0 0 1080 1920;" xml:space="preserve">
 <style type="text/css">
-			#skyelements {opacity: 0; animation: fadeInText 0.3s ease-in-out forwards; animation-delay: 0.2s;}
+			<!-- #skyelements {opacity: 0; animation: fadeInText 0.3s ease-in-out forwards; animation-delay: 0.2s;}
             #autumnOfLove { opacity: 0; animation: fadeInText 0.3s ease-in-out forwards; animation-delay: 0.5s;}
 			#oasisDate {animation: fadeInText 0.3s ease-in-out forwards; animation-delay: 0.5s;}
 			@keyframes fadeInText {from {opacity: 0;} to {opacity: 1} }
-            .left1 { animation: animateLeft1 3s ease-in-out alternate-reverse infinite; transform: rotate(-7deg); transform-origin: 14.73% 62.69%; } .right2 { transform: rotate(7deg); animation: animateRight2 3s ease-in-out alternate-reverse infinite; transform-origin: 85.12% 62.69%; } @keyframes animateLeft1 { from { transform: rotate(-7deg); } to { transform: rotate(12deg); } } @keyframes animateRight2 { from { transform: rotate(7deg); } to { transform: rotate(-12deg); } }
+            .left1 { animation: animateLeft1 3s ease-in-out alternate-reverse infinite; transform: rotate(-7deg); transform-origin: 14.73% 62.69%; } .right2 { transform: rotate(7deg); animation: animateRight2 3s ease-in-out alternate-reverse infinite; transform-origin: 85.12% 62.69%; } @keyframes animateLeft1 { from { transform: rotate(-7deg); } to { transform: rotate(12deg); } } @keyframes animateRight2 { from { transform: rotate(7deg); } to { transform: rotate(-12deg); } } -->
             
 	.st0{stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
 	.st1{fill:#00C96A;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}

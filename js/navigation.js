@@ -24,11 +24,11 @@ var pages = {
     //     linkElem: [document.getElementById("dev-link")],
     //     domElem: document.getElementById("dev-page")
     // },
-    // events: {
-    //     name: "events",
-    //     linkElem: [document.getElementById("events-link"), document.getElementById("events-link-nav")],
-    //     domElem: document.getElementById("events-page")
-    // },
+    events: {
+        name: "events",
+        linkElem: [document.getElementById("events-link"), document.getElementById("events-link-nav")],
+        domElem: document.getElementById("events-page")
+    },
     contacts: {
         name: "contacts",
         linkElem: [document.getElementById("contacts-link"), document.getElementById("contacts-link-nav")],
@@ -43,6 +43,21 @@ var pages = {
         name: "register",
         linkElem: [document.getElementById("register-link")],
         domElem: document.getElementById("register-page")
+    },
+    videos: {
+        name: "videos",
+        linkElem: [document.getElementById("videos-link")],
+        domElem: document.getElementById("videos-page")
+    },
+    archives: {
+        name: "archives",
+        linkElem: [document.getElementById("archives-link")],
+        domElem: document.getElementById("archives-page")
+    },
+    schedule: {
+        name: "schedule",
+        linkElem: [document.getElementById("schedule-link")],
+        domElem: document.getElementById("schedule-page")
     }
 };
 
@@ -106,7 +121,9 @@ function openPage(pageName) {
         bottomStretch.style.display = "block";
         leftStretch.style.display = "block";
         rightStretch.style.display = "block";
-        if (window.matchMedia("(min-width: 800px)").matches) stretchAll();
+        if (window.matchMedia("(min-width: 800px)").matches) {
+            stretchAll();
+        }
 
         exitPage.style.zIndex = "3";
         exitPage.style.transition = "transform 0.25s linear";
