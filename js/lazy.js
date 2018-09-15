@@ -1,6 +1,6 @@
 "use strict"
 
-var lazyLoadGenerator = function (elems, dataProps) {
+var lazyLoadImgFunctionGenerator = function (elems, dataProps) {
 	return function(){
 		elems.forEach(function(elem) {
 			for(var dataProp in dataProps) { 
@@ -11,11 +11,13 @@ var lazyLoadGenerator = function (elems, dataProps) {
 }
 
 function lazyLoad() {
-	var lazyLoadeventImages = lazyLoadGenerator(Array.from(document.getElementsByClassName("events-svg")),
+	var lazyLoadEventImages = lazyLoadImgFunctionGenerator(Array.from(document.getElementsByClassName("events-svg")),
 		{
-			url: function(u, el) {
+			name: function(n, el) {
+				var baseURI = "/imgs/svg-anims2/";
 				console.log(1);
-				fetch('http://i.imgur.com/qY1nKlP.png', {
+				console.log(baseURI + n);
+				fetch(baseURI + n, {
 					method: 'get',
 				}).then(function(res){
 					console.log(2);
@@ -31,7 +33,7 @@ function lazyLoad() {
 			}
 		}
 	);
-	lazyLoadeventImages();
+	lazyLoadEventImages();
 }
 
 lazyLoad();
