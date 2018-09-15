@@ -36,7 +36,7 @@ var pages = {
     },
     sponsors: {
         name: "sponsors",
-        linkElem: [document.getElementById("sponsors-link")],
+        linkElem: [document.getElementById("sponsors-link-nav"), document.getElementById("sponsors-link")],
         domElem: document.getElementById("sponsors-page")
     },
     register: {

@@ -1106,6 +1106,55 @@ span[role=combobox] {
     margin-top: 1.7vh;
 }
 
+/*SPONSERS*/
+#spons-container-main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 16vh;
+}
+
+.title-spons {
+    color: #fff;
+    margin-bottom: 2vh;
+    font-size: 150%;
+    font-family: montserrat;
+}
+
+.panasonic {
+    color: #fff;
+    /*margin-top: 2vh;*/
+    font-size: 120%;
+    font-family: montserrat;
+}
+
+.title-spons-img {
+    margin-bottom: 2vh;
+}
+
+#spons-container {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    z-index: 301;
+   /* padding-left: 9vw;*/
+}
+
+.other-spons {
+    width: 10vw;
+    margin-right: 2.5vh;
+    margin-left: 2.5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+
   @media screen and (max-width : 992px)
   {
     
