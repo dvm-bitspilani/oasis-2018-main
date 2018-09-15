@@ -73,6 +73,7 @@ function animOnLoadComplete() {
             tagline.style.transition = "0.3s opacity ease-in";
             tagline.style.opacity = 1;
         }, time+200);
+        window.addEventListener('resize', function () {setTransformOrigin(lights)});
     }
 
     function fadeIn(elems, time) {
@@ -90,7 +91,10 @@ function animOnLoadComplete() {
             arr = arr.split(' ');
             var x = arr[4];
             var y = arr[5];
-            lights[i].style.transformOrigin = (x/1920)*100 + '% ' + (y/1080)*100 + '%';
+            if(document.getElementById('home-svg-desktop').style.display == 'none')
+                lights[i].style.transformOrigin = (x/1920)*100 + '% ' + (y/1080)*100 + '%';
+            else
+                lights[i].style.transformOrigin = (x/1920)*100 + '% ' + (y/1080)*100 + '%';
         }
     };
 
