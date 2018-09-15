@@ -27,6 +27,7 @@
         #right,
         #left {
             z-index: 299;
+            display: none;
         }
 
         #top {
@@ -39,7 +40,6 @@
             position: absolute;
             bottom: 0;
             width: 100vw;
-            /* transform-origin: 100% 100%; */
             transform: rotate(180deg);
         }
 
@@ -72,7 +72,7 @@
             justify-content: center;
             align-items: center;
             transition: all 0.7s ease-out;
-			display: none;
+            /* display: none; */
         }
 
         #loader-container svg {
@@ -254,7 +254,7 @@
 
 <body>
     <!-- LOADER -->
-    <!-- <div id="loader-container">
+    <div id="loader-container">
         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3255.33 1704.98">
             <defs>
                 <style>
@@ -721,7 +721,7 @@
                 The Far Out Fest
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- STRETCH SVGS  -->
     <svg id="top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 74.195">
@@ -800,22 +800,47 @@
         </path>
     </svg>
 
+
+    <div id="trees"></div>
+
     <!-- HOME -->
     <div class="page" id="home-page">
         <!-- layers -->
-        <div class="layer" id="homeLayer1"></div>
-
-        <div id="register-link">
-            <img src="imgs/register.svg" />
+        <div class="layer" id="homeLayer1">
+            <object id="home-svg-desktop" data="./imgs/home-desktop.svg" type="image/svg+xml"></object>
+            <object id="home-svg-mobile" data="./imgs/mobileHomeLayer1.svg" type="image/svg+xml"></object>
         </div>
 
-        <div id="events-link">
+        <!-- <div id="events-link">
             <img src="imgs/eventsButton.svg" />
+        </div> -->
+
+        <div id="base-line" class="clickable">
+            <div id="daysToGo">Days to go</div>
+            <div id="social-media">
+                <img src="imgs/facebook icon.svg" />
+                <img src="imgs/insta icon.svg" />
+                <img src="imgs/twitter icon.svg" />
+            </div>
         </div>
 
-        <div id="top-nav">
+        <div id="register-link" class="clickable">
+            <span>REGISTER</span>
+            <img src="imgs/register.svg" alt="Register" />
+        </div>
+
+        <div id="events-link" class="clickable">
+            <span>EVENTS</span>
+            <img src="imgs/events-button.svg" alt="View Events" />
+        </div>
+
+
+        <div id="top-nav" class="clickable">
             <div>
                 <img src="imgs/ham.svg" id="ham-icon" />
+            </div>
+            <div class="top-nav-link" id="events-link-nav">
+                <span>EVENTS</span>
             </div>
             <div class="top-nav-link" id="contacts-link">
                 <span>CONTACTS</span>
@@ -823,12 +848,6 @@
             <div class="top-nav-link" id="sponsors-link">
                 <span>SPONSORS</span>
             </div>
-        </div>
-
-        <div id = "social-media">
-            <a href = "#"><img src = "imgs/facebook icon.svg" /></a>
-            <img src = "imgs/insta icon.svg" />
-            <img src = "imgs/twitter icon.svg" />
         </div>
     </div>
 
@@ -839,9 +858,9 @@
 
     <!-- MENU -->
     <div id="menu">
-        <img src="imgs/close-icon.svg" id="close-icon" />
-        <div id = "menu-trees"></div>
-        <ul id="menu-list">
+        <img src="imgs/close-icon.svg" id="close-icon" class="clickable" />
+        <!-- <div id = "menu-" -->
+        <ul id="menu-list" class="clickable">
             <li id="home-link">
                 <span>HOME</span>
             </li>
@@ -850,7 +869,7 @@
                 <span>ABOUT</span>
             </li>
             <li id="teaser-link">
-                <span>TEASER VIDEOS</span>
+                <span>VIDEOS</span>
             </li>
             <li id="schedule-link">
                 <span>SCHEDULE</span>
@@ -858,10 +877,14 @@
             <li id="archive-link">
                 <span>ARCHIVES</span>
             </li>
-            <!-- <li id = "contacts-link"><span>CONTACT US</span></li> -->
             <li id="dev-link">
                 <span>DEVELOPERS</span>
             </li>
+            <div id="mobile-social-media">
+                <img src="imgs/facebook icon.svg" />
+                <img src="imgs/insta icon.svg" />
+                <img src="imgs/twitter icon.svg" />
+            </div>
         </ul>
     </div>
 
@@ -896,228 +919,400 @@
                 <div id="close-events">CLOSE</div>
 			</div> -->
             <div id="events-container">
-                    <div id="categories-nav">
-                            <img src="./imgs/close-icon.svg" id='events-close'>
-                            <span id='categories-heading'>ALL CATEGORIES</span>
-                    </div>
-				<div id="events-container-inner">
-					<div id="event-categories">
-						<h2 id="events-header">EVENTS</h2>
-						<div id="events-image-wrapper">
-							<img id="prev-event" class="event-change-btn" src="imgs/arrow.svg"/>
-							<div id="events-image">
+                <div id="categories-heading" class="clickable">ALL CATEGORIES</div>
+                <div id="events-container-inner">
+                    <div id="event-categories">
+                        <h2 id="events-header" class="common-heading">EVENTS</h2>
+                        <div id="events-image-wrapper">
+                            <img id="prev-event" class="event-change-btn clickable" src="imgs/arrow.svg" />
+                            <div id="events-image">
                                 <!-- change first image below -->
-                                <object id = "online-svg" data="./imgs/svg-anims2/online.svg" type="image/svg+xml"></object>
-                                <object id = "drama-svg" data="./imgs/svg-anims2/drama.svg" type="image/svg+xml"></object>
-                                <object id = "fineart-svg" data="./imgs/svg-anims2/fineart.svg" type="image/svg+xml"></object>
-                                <object id = "music-svg" data="./imgs/svg-anims2/music.svg" type="image/svg+xml"></object>
-                                <object id = "photography-svg" data="./imgs/svg-anims2/photography.svg" type="image/svg+xml"></object>
+                                <object id="online-svg" data="./imgs/svg-anims2/online.svg" type="image/svg+xml"></object>
+                                <object id="drama-svg" data="./imgs/svg-anims2/drama.svg" type="image/svg+xml"></object>
+                                <object id="fineart-svg" data="./imgs/svg-anims2/fineart.svg" type="image/svg+xml"></object>
+                                <object id="music-svg" data="./imgs/svg-anims2/music.svg" type="image/svg+xml"></object>
+                                <object id="photography-svg" data="./imgs/svg-anims2/photography.svg" type="image/svg+xml"></object>
                             </div>
-							<img id="next-event" class="event-change-btn" src="imgs/arrow.svg"/>
-						</div>
-						<div id="view-events-btncontainer">
-							<div id="view-events-btn">
-								VIEW EVENTS
-							</div>
-						</div>
+                            <img id="next-event" class="event-change-btn clickable" src="imgs/arrow.svg" />
+                        </div>
+                        <div id="view-events-btncontainer">
+                            <div id="view-events-btn" class="clickable">
+                                VIEW EVENTS
+                            </div>
+                        </div>
                     </div>
-				</div>
-			</div>
+                </div>
+            </div>
         </div>
-        <div id="view-events-wrapper"> 
+        <div id="view-events-wrapper">
             <div id="view-events-wrapper-inner">
-            <div id="event-name">xyz</div>
-            <div id="event-name">xyz</div>
-            <div id="event-name">xyz</div>
-            <div id="event-name">xyz</div>
-            <div id="event-name">xyz</div>
+                <div id="event-name">xyz</div>
+                <div id="event-name">xyz</div>
+                <div id="event-name">xyz</div>
+                <div id="event-name">xyz</div>
+                <div id="event-name">xyz</div>
             </div>
             <div id="event-individual">
-                    <h3>RAZMATTAZ</h3>
-                        Contact <br>
-                        Megh Thakkar: 99999 99999
-                    <h4>ABOUT</h4>
-                    <p>
-                        Sit qui amet odit delectus sint Nihil animi consequuntur reprehenderit aliquid cupiditate Velit voluptatum nesciunt in veritatis atque reprehenderit incidunt sapiente Ratione iure inventore iusto autem inventore quam Minima magnam laudantium cupiditate expedita asperiores pariatur consequuntur eaque, veniam Praesentium provident dolorum tempora cupiditate eum. Asperiores quia est aut facilis consectetur.
-                    </p>
-                        <h4>RULES</h4>
-                    <p>
-                        Consectetur dolor vel asperiores blanditiis dolore. At labore exercitationem cupiditate in eaque, fuga reiciendis Quam ea ipsa exercitationem eligendi voluptatem Cumque nulla ad adipisci nihil necessitatibus Et ad deleniti minima numquam mollitia Esse harum neque repellendus voluptatum debitis voluptatibus? Explicabo tempora doloribus vel excepturi sunt? Recusandae mollitia asperiores pariatur reiciendis.
-                    </p>
+                <h3>RAZMATTAZ</h3>
+                Contact
+                <br> Megh Thakkar: 99999 99999
+                <h4>ABOUT</h4>
+                <p>
+                    Sit qui amet odit delectus sint Nihil animi consequuntur reprehenderit aliquid cupiditate Velit voluptatum nesciunt in veritatis
+                    atque reprehenderit incidunt sapiente Ratione iure inventore iusto autem inventore quam Minima magnam
+                    laudantium cupiditate expedita asperiores pariatur consequuntur eaque, veniam Praesentium provident dolorum
+                    tempora cupiditate eum. Asperiores quia est aut facilis consectetur.
+                </p>
+                <h4>RULES</h4>
+                <p>
+                    Consectetur dolor vel asperiores blanditiis dolore. At labore exercitationem cupiditate in eaque, fuga reiciendis Quam ea
+                    ipsa exercitationem eligendi voluptatem Cumque nulla ad adipisci nihil necessitatibus Et ad deleniti
+                    minima numquam mollitia Esse harum neque repellendus voluptatum debitis voluptatibus? Explicabo tempora
+                    doloribus vel excepturi sunt? Recusandae mollitia asperiores pariatur reiciendis.
+                </p>
             </div>
         </div>
-        <div id="categories-wrapper">
-            <div id="categories-wrapper-inner">
+    </div>
+    </div>
+    <div id="view-events-wrapper">
+        <div id="view-events-wrapper-inner">
+            <div id="event-name">xyz</div>
+            <div id="event-name">xyz</div>
+            <div id="event-name">xyz</div>
+            <div id="event-name">xyz</div>
+            <div id="event-name">xyz</div>
+        </div>
+
+    </div>
+    <div id="categories-wrapper">
+        <div id="categories-wrapper-inner">
             <!-- <div id="categories-close">close</div> -->
-            <img src="./imgs/close-icon.svg" id='categories-close'>
+            <img src="./imgs/close-icon.svg" class='close' id="categories-close">
             <div id="categories-main-heading">ALL CATEGORIES</div>
             <div id="categories-events">
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-                    <img src="./imgs/bg2.png" id="categories-events-image"/>  
-            </div>
+                <img src="./imgs/bg2.png" id="categories-events-image" />
+                <img src="./imgs/bg2.png" id="categories-events-image" />
+                <img src="./imgs/bg2.png" id="categories-events-image" />
+                <img src="./imgs/bg2.png" id="categories-events-image" />
+                <img src="./imgs/bg2.png" id="categories-events-image" />
+                <img src="./imgs/bg2.png" id="categories-events-image" />
             </div>
         </div>
+    </div>
     </div>
 
     <!-- REGISTER -->
     <div class="page" id="register-page">
+        <div class="wrapper">
+            <nav class="menu_options clickable">
+                <div id="register-link" class="clickable">
+                    <span>
+                        <a href="/2017/register/login/" style="color: #fff; text-decoration: none;">LOGIN</a>
+                    </span>
+                </div>
 
-    </div>
+            </nav>
+            <h1 id="reg" style=" font-family: 'bebas neue'; color: rgba(255, 255, 255, 1);  letter-spacing: 10px; font-weight: normal; font-size: 300%; padding-bottom: 2%;">REGISTER</h1>
+            <p></p>
+            <form class="form" id="register-form" acion="/2017/register/" method="POST" style="opacity: 1; color: rgba(255, 255, 255, 1)">
 
-    <!-- SPONSORS -->
-    <div class="page" id="sponsors-page">
+                <div class="field">
+                    <label>1. What is your full name: </label>
+                    <p></p>
+                    <div class="input">
+                        <input type="text" name="name" tabindex="1" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>2. What is your gender?</label>
+                    <div class="radio-input">
+                        <input type="radio" name="gender" value="M" checked id="male">
+                        <label for="male" tabindex="2">Male</label>
+                        <input type="radio" name="gender" value="F" id="female">
+                        <label for="female" tabindex="3">Female</label>
+                        <input type="radio" name="gender" value="O" id="others">
+                        <label for="others" tabindex="3">Others</label>
+                    </div>
+                </div>
 
-    </div>
+                <div class="field">
+                    <label>3. Which city do you reside in?</label>
+                    <div class="input">
+                        <input type="text" name="city" tabindex="4" />
+                    </div>
+                </div>
 
-    <!-- ARCHIVE -->
-    <div class="page" id="archive-page">
+                <div class="field">
+                    <label>4. Where can we contact you?</label>
+                    <p style="display:inline">+91-</p>
+                    <div class="input">
+                        <input type="text" type="number" name="phone" max="9999999999" min="100000000" tabindex="5" />
+                    </div>
+                </div>
 
-    </div>
+                <div class="field">
+                    <label>5. What is your Email ID? </label>
+                    <div class="input">
+                        <input type="text" name="email" tabindex="6" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>6. What is the name of your college? </label>
+                    <p></p>
+                    <div class="input">
+                        <select name="college" id="college" tabindex="7">
 
-    <!-- CONTACTS -->
-    <div class="page" id="contacts-page">
+                            <!-- just for UI testing, the list to be 'get' from back -->
 
-    </div>
+                            <option value="" disabled selected>Search college name</option>
+                            <option value="college8">college1</option>
+                            <option value="college2">college2</option>
+                            <option value="college3">college3</option>
+                            <option value="college4">college4</option>
+                            <option value="college5">college5</option>
+                            <option value="college6">college6</option>
+                            <option value="college1">college1</option>
+                            <option value="college2">college2</option>
+                            <option value="college3">college3</option>
+                            <option value="college4">college4</option>
+                            <option value="college5">college5</option>
+                            <option value="college6">college6</option>
 
-    <!-- SCRIPTS -->
-    <!-- LOADER -->
-    <!-- <script>
-        window.onload = function () {
-            onLoadComplete();
-        }
-        var colorJets = document.getElementById('colorJets');
-        var greyJets = document.getElementById('greyJets');
-        var busWithSmoke = document.getElementById('bus-with-smoke');
-        var oasisText = document.getElementById('oasisText');
-        var loaderDiv = document.getElementById('loader-container');
-        var oasisTitle = document.getElementById('oasis-title');
-        var oasisSubtitle = document.getElementById('oasis-subtitle');
 
-        var v = 11, dir = 1;
-        function cir() {
-            colorJets.getElementsByClassName("loader-cls-10")[0].setAttribute("r", v);
-            v += dir;
-            if (v < 2) dir = 1;
-            if (v > 22) dir = -1;
-        }
-        setInterval(cir, 11);
 
-        var v1 = 15, dir1 = 1;
-        function cir1() {
-            colorJets.getElementsByClassName("loader-cls-13")[0].setAttribute("r", v1);
-            v1 += dir1;
-            if (v1 < 5) dir1 = 1;
-            if (v1 > 25) dir1 = -1;
-        }
-        setInterval(cir1, 11);
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>7. Are you the head of any Cultural Society?</label>
+                    <div class="radio-input">
+                        <input type="radio" value="True" name="head_of_society" id="yes" />
+                        <label for="yes" tabindex="8">Yes</label>
+                        <input type="radio" value="False" name="head_of_society" id="no" checked/>
+                        <label for="no" tabindex="9">No</label>
+                    </div>
+                </div>
 
-        var v2 = 15, dir2 = 1;
-        function cir2() {
-            colorJets.getElementsByClassName("loader-cls-13")[1].setAttribute("r", v2);
-            v2 += dir2;
-            if (v2 < 5) dir2 = 1;
-            if (v2 > 25) dir2 = -1;
-        }
-        setInterval(cir2, 11);
+                <div class="field">
+                    <label>8. What is your year of study?</label>
+                    <div class="radio-input">
+                        <input type="radio" name="year_of_study" value="1" checked id="one">
+                        <label for="one" tabindex="10">1</label>
+                        <input type="radio" name="year_of_study" value="2" id="two">
+                        <label for="two" tabindex="11">2</label>
+                        <input type="radio" name="year_of_study" value="3" id="three">
+                        <label for="three" tabindex="12">3</label>
+                        <input type="radio" name="year_of_study" value="4" id="four">
+                        <label for="four" tabindex="13">4</label>
+                        <input type="radio" name="year_of_study" value="5" id="five">
+                        <label for="five" tabindex="14">5</label>
 
-        var v3 = 16, dir3 = 1;
-        function cir3() {
-            colorJets.getElementsByClassName("loader-cls-10")[1].setAttribute("r", v3);
-            v3 += dir3;
-            if (v3 < 5) dir3 = 1;
-            if (v3 > 30) dir3 = -1;
-        }
-        setInterval(cir3, 11);
+                    </div>
+                </div>
 
-        var v4 = 10, dir4 = 1;
-        function cir4() {
-            colorJets.getElementsByClassName("loader-cls-9")[0].setAttribute("r", v4);
-            v4 += dir4;
-            if (v4 < 1) dir4 = 1;
-            if (v4 > 22) dir4 = -1;
-        }
-        setInterval(cir4, 11);
+                <div class="field">
+                    <label>9. What event(s) do you want to register for?</label>
+                    <p id="select_info"></p>
+                    <div style="display:flex;width:auto">
+                        <select style="color: white;" id="event-select" name="states[]" multiple tabindex="15">
 
-        var v5 = 35, dir5 = 1;
-        function cir5() {
-            colorJets.getElementsByClassName("loader-cls-10")[2].setAttribute("r", v5);
-            v5 += dir5;
-            if (v5 < 20) dir5 = 1;
-            if (v5 > 40) dir5 = -1;
-        }
-        setInterval(cir5, 11);
+                            <!-- just for UI testing, the list to be 'get' from back -->
 
-        var v6 = 30, dir6 = 1;
-        function cir6() {
-            colorJets.getElementsByClassName("loader-cls-13")[2].setAttribute("r", v6);
-            v6 += dir6;
-            if (v6 < 20) dir6 = 1;
-            if (v6 > 32) dir6 = -1;
-        }
-        setInterval(cir6, 11);
+                            <option value="2">Event1</option>
 
-        var v7 = 15, dir7 = 1;
-        function cir7() {
-            colorJets.getElementsByClassName("loader-cls-12")[0].setAttribute("r", v7);
-            v7 += dir7;
-            if (v7 < 5) dir7 = 1;
-            if (v7 > 25) dir7 = -1;
-        }
-        setInterval(cir7, 11);
+                            <option value="3">Event2</option>
 
-        var v8 = 27, dir8 = 1;
-        function cir8() {
-            colorJets.getElementsByClassName("loader-cls-9")[1].setAttribute("r", v8);
-            v8 += dir8;
-            if (v8 < 15) dir8 = 1;
-            if (v8 > 28) dir8 = -1;
-        }
-        setInterval(cir8, 11);
+                            <option value="4">Event3</option>
 
-        var v9 = 32, dir9 = 1;
-        function cir9() {
-            colorJets.getElementsByClassName("loader-cls-11")[0].setAttribute("r", v9);
-            v9 += dir9;
-            if (v9 < 20) dir9 = 1;
-            if (v9 > 34) dir9 = -1;
-        }
-        setInterval(cir9, 11);
+                            <option value="5">Event4</option>
 
-        var v10 = 18, dir10 = 1;
-        function cir10() {
-            colorJets.getElementsByClassName("loader-cls-12")[1].setAttribute("r", v10);
-            v10 += dir9;
-            if (v10 < 15) dir10 = 1;
-            if (v10 > 34) dir10 = -1;
-        }
-        setInterval(cir10, 11);
+                            <option value="6">Event5</option>
 
-        var vX = 32, dirX = 1;
-        function cirX() {
-            greyJets.getElementsByClassName("loader-cls-14")[0].setAttribute("r", vX);
-            vX += dirX;
-            if (vX < 32) dirX = 1;
-            if (vX > 60) dirX = -1;
-        }
-        setInterval(cirX, 11);
+                            <option value="7">Event6</option>
 
-        function onLoadComplete() {
-            busWithSmoke.classList.add("busTransition");
-            setTimeout(function () { oasisText.style.opacity = 1; }, 500);
-            setTimeout(function () { oasisTitle.classList.add('blurText'); oasisSubtitle.classList.add('blurText'); }, 2000);
-            setTimeout(function () { loaderDiv.style.opacity = 0; }, 2300);
-            setTimeout(function () { loaderDiv.style.display = 'none' }, 3000);
-        }
-    </script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-    <script src="js/flickity.min.js"></script>
-    <script src="js/pure-swipe.min.js"></script>
-    <script src="js/events.js"></script>
-    <script src="js/navigation.js"></script>
+                            <option value="8">Event7</option>
+
+                            <option value="9">Event8</option>
+
+                            <option value="10">Event9</option>
+
+                            <option value="11">Event10</option>
+
+
+
+                        </select>
+
+
+                        <div class="events-box" id="events">
+                        </div>
+                    </div>
+
+                    <div class="submit">
+                        <input type="button" id="submit-button" name="submit" value="SUBMIT" tabindex="17">
+                    </div>
+
+                    <!-- CAPTCHA KEY TO BE PROVIDED BY BACKEND(raghav) -->
+            </form>
+
+
+
+            <a href="#" class="close">
+
+                </div>
+        </div>
+
+        <!-- SPONSORS -->
+        <div class="page" id="sponsors-page">
+
+        </div>
+
+        <!-- ARCHIVE -->
+        <div class="page" id="archive-page">
+
+        </div>
+
+        <!-- CONTACTS -->
+        <div class="page" id="contacts-page">
+
+        </div>
+
+        <script src="js/home.js"></script>
+        <!-- LOADER -->
+        <script>
+            window.onload = function () {
+                onLoadComplete();
+                setTimeout(animOnLoadComplete, 2300);
+            }
+            var colorJets = document.getElementById('colorJets');
+            var greyJets = document.getElementById('greyJets');
+            var busWithSmoke = document.getElementById('bus-with-smoke');
+            var oasisText = document.getElementById('oasisText');
+            var loaderDiv = document.getElementById('loader-container');
+            var oasisTitle = document.getElementById('oasis-title');
+            var oasisSubtitle = document.getElementById('oasis-subtitle');
+
+            var v = 11, dir = 1;
+            function cir() {
+                colorJets.getElementsByClassName("loader-cls-10")[0].setAttribute("r", v);
+                v += dir;
+                if (v < 2) dir = 1;
+                if (v > 22) dir = -1;
+            }
+            setInterval(cir, 11);
+
+            var v1 = 15, dir1 = 1;
+            function cir1() {
+                colorJets.getElementsByClassName("loader-cls-13")[0].setAttribute("r", v1);
+                v1 += dir1;
+                if (v1 < 5) dir1 = 1;
+                if (v1 > 25) dir1 = -1;
+            }
+            setInterval(cir1, 11);
+
+            var v2 = 15, dir2 = 1;
+            function cir2() {
+                colorJets.getElementsByClassName("loader-cls-13")[1].setAttribute("r", v2);
+                v2 += dir2;
+                if (v2 < 5) dir2 = 1;
+                if (v2 > 25) dir2 = -1;
+            }
+            setInterval(cir2, 11);
+
+            var v3 = 16, dir3 = 1;
+            function cir3() {
+                colorJets.getElementsByClassName("loader-cls-10")[1].setAttribute("r", v3);
+                v3 += dir3;
+                if (v3 < 5) dir3 = 1;
+                if (v3 > 30) dir3 = -1;
+            }
+            setInterval(cir3, 11);
+
+            var v4 = 10, dir4 = 1;
+            function cir4() {
+                colorJets.getElementsByClassName("loader-cls-9")[0].setAttribute("r", v4);
+                v4 += dir4;
+                if (v4 < 1) dir4 = 1;
+                if (v4 > 22) dir4 = -1;
+            }
+            setInterval(cir4, 11);
+
+            var v5 = 35, dir5 = 1;
+            function cir5() {
+                colorJets.getElementsByClassName("loader-cls-10")[2].setAttribute("r", v5);
+                v5 += dir5;
+                if (v5 < 20) dir5 = 1;
+                if (v5 > 40) dir5 = -1;
+            }
+            setInterval(cir5, 11);
+
+            var v6 = 30, dir6 = 1;
+            function cir6() {
+                colorJets.getElementsByClassName("loader-cls-13")[2].setAttribute("r", v6);
+                v6 += dir6;
+                if (v6 < 20) dir6 = 1;
+                if (v6 > 32) dir6 = -1;
+            }
+            setInterval(cir6, 11);
+
+            var v7 = 15, dir7 = 1;
+            function cir7() {
+                colorJets.getElementsByClassName("loader-cls-12")[0].setAttribute("r", v7);
+                v7 += dir7;
+                if (v7 < 5) dir7 = 1;
+                if (v7 > 25) dir7 = -1;
+            }
+            setInterval(cir7, 11);
+
+            var v8 = 27, dir8 = 1;
+            function cir8() {
+                colorJets.getElementsByClassName("loader-cls-9")[1].setAttribute("r", v8);
+                v8 += dir8;
+                if (v8 < 15) dir8 = 1;
+                if (v8 > 28) dir8 = -1;
+            }
+            setInterval(cir8, 11);
+
+            var v9 = 32, dir9 = 1;
+            function cir9() {
+                colorJets.getElementsByClassName("loader-cls-11")[0].setAttribute("r", v9);
+                v9 += dir9;
+                if (v9 < 20) dir9 = 1;
+                if (v9 > 34) dir9 = -1;
+            }
+            setInterval(cir9, 11);
+
+            var v10 = 18, dir10 = 1;
+            function cir10() {
+                colorJets.getElementsByClassName("loader-cls-12")[1].setAttribute("r", v10);
+                v10 += dir9;
+                if (v10 < 15) dir10 = 1;
+                if (v10 > 34) dir10 = -1;
+            }
+            setInterval(cir10, 11);
+
+            var vX = 32, dirX = 1;
+            function cirX() {
+                greyJets.getElementsByClassName("loader-cls-14")[0].setAttribute("r", vX);
+                vX += dirX;
+                if (vX < 32) dirX = 1;
+                if (vX > 60) dirX = -1;
+            }
+            setInterval(cirX, 11);
+
+            function onLoadComplete() {
+                busWithSmoke.classList.add("busTransition");
+                setTimeout(function () { oasisText.style.opacity = 1; }, 500);
+                setTimeout(function () { oasisTitle.classList.add('blurText'); oasisSubtitle.classList.add('blurText'); }, 2000);
+                setTimeout(function () { loaderDiv.style.opacity = 0; }, 2300);
+                setTimeout(function () { loaderDiv.style.display = 'none' }, 3000);
+            }
+        </script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+        <script src="js/flickity.min.js"></script>
+        <script src="js/pure-swipe.min.js"></script>
+        <script src="js/events.js"></script>
+        <script src="js/days.js"></script>
+        <script src="js/navigation.js"></script>
 </body>
 
 </html>

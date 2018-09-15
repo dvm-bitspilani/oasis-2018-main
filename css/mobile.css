@@ -1,6 +1,14 @@
-@media all and (max-width: 700px) {
+@media all and (max-width: 800px) and (orientation: portrait) {
+    #home-svg-desktop {
+        display: none;
+    }
+    #home-svg-mobile {
+        width: 100vw;
+        height: auto;
+        display: block;
+    }
     #homeLayer1 {
-        background: url('../imgs/mobileHomeLayer1.svg') no-repeat;
+        /* background: url('../imgs/mobileHomeLayer1.svg') no-repeat; */
     }
 
     #homeLayer1, #trees {
@@ -10,8 +18,8 @@
 
     /* HAM */
     #ham-icon {
-        height: 30px;
-        margin: 4vh 0 0 4vh;
+        height: 40px;
+        margin: 3vh 0 0 3vh;
     }
 
     #close-icon {
@@ -30,19 +38,36 @@
     }
 
     #register-link {
-        margin: 10vh 4vh 0 0;
+        margin: 3vh 3vh 0 0;
     }
 
-    #register-link img, #events-link img {
+    #register-link span {
+        display: block;
+        font-family: "ikaros", sans-serif;
+        color: #fff;
+        font-size: 1.8em; /*sarthak ne kaha*/
+    }
+
+    /* #register-link img, #events-link img {
         width: 28vw;
+    } */
+
+    #register-link img {
+        display: none;
+    }
+
+    #mobile-social-media {
+        padding: 5vh 7vw 5vh 7vw;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #mobile-social-media img {
+        height: 30px;
     }
 
     #social-media {
         margin: 4vh 4vh 0 0;
-    }
-
-    #events-link {
-        margin: 10vh 0 0 4vh;
     }
 
     #social-media img {
@@ -50,14 +75,13 @@
         margin-left: 20px;
     }
 
-    /* MENU */
-    #menu-list {
-        margin-top: 20px;
-        font-size: 80%;
+    #base-line {
+        display: none;
     }
 
-    #menu-list li {
-        margin-top: 25px;
+    /* MENU */
+    #menu-list {
+        font-size: 80%;
     }
 
     /* EVENTS */
@@ -87,25 +111,95 @@
     }
 
     #categories-heading{
-        font-size: 4vw;
+		font-size: 19px;
     }
 
     #events-image {
-        height: 300px;
+        /*height: 300px;*/
     }
 
     object {
-        height: auto;
+        /*height: auto;*/
     }
 
     #menu, #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
         background: url('../imgs/mobileBackground1.svg') no-repeat;
         background-size: cover;
     }
+    #mobile-social-media {
+        justify-content: center;
+    }
+    #mobile-social-media img {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    #events-link {
+        display: flex;
+        position: absolute;
+        bottom: 15vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* REGISTER */
+    form {
+        overflow-x: hidden;
+    }
+    .field{
+        margin-bottom: 30px;
+      }
+      .field label{
+        font-size: 1.5em;
+      }
+      .field p{
+        font-size: 1em;
+      }
+      .field input[type=text]{
+        font-size: 1.5em;
+      }
+    
+      .field .radio-input label{
+        font-size: .8em;
+      }
+      select{
+        font-size: 1.5em;
+      }
+    
+      .select2-search__field{
+          /*width: calc(75vw-20px) !important;*/
+      }
+      .wrapper {
+          padding-top: 10vh;
+      }
+      .field {
+          width: 70vw;
+      }
 }
 
 @media all and (max-width: 600px) {
 	#events-container-inner {
 		width: 85vw;
 	}
+}
+
+@media all and (max-width: 480px) {
+	#categories-main-heading{
+		font-size: 25px;	
+	}
+	.common-heading {
+		font-size: 37px;	
+	}
+}
+
+@media all and (max-width: 300px) {
+	#categories-main-heading{
+		font-size: 20px;	
+	}
+}
+/*change this to aspect ratio*/
+@media all and (max-width: 430px) {
+    #home-svg-mobile {
+        height: 100vh;
+        width: auto;
+    }
 }
