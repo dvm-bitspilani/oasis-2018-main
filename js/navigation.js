@@ -195,3 +195,14 @@ function stretchAll() {
     stretch("right");
     stretch("left");
 }
+
+var closePageIcons = document.getElementsByClassName("close-page");
+
+for (var closeCount = 0; closeCount < closePageIcons.length; closeCount++) {
+    closePageIcons[closeCount].addEventListener(
+        "click",
+        function () {
+            openPage(pages.home.name);
+        }
+    )
+}
