@@ -29,6 +29,8 @@ function lazyLoad() {
 					console.log(objectURL + "Hello");
 					el.setAttribute("data", objectURL);	
 					el.setAttribute("type", "image/png");
+					el.style.width = "100%";
+					el.style.height = "100%";
 				})
 			}
 		}
