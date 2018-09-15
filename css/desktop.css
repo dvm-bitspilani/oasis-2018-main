@@ -336,8 +336,8 @@ imput {
 }
 
 #events-image object {
-    width: 80%;
-	height: 80%;
+    width: 70%;
+	height: 69%;
     position: absolute;
     top: 50%;
 	transform: translateY(-50%) translateX(-50%);
