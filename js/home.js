@@ -10,13 +10,13 @@ function animOnLoadComplete() {
         }
     })();
 
-    (function () {
-        svg = mobileSVG.contentDocument;
-        if (svg) {
-            console.log("Mobile!");
-            animateSVG(svg);
-        }
-    })();
+    // (function () {
+    //     svg = mobileSVG.contentDocument;
+    //     if (svg) {
+    //         console.log("Mobile!");
+    //         animateSVG(svg);
+    //     }
+    // })();
 
     function animateSVG(svg) {
         oasisText = svg.getElementById("Layer_2-2");
