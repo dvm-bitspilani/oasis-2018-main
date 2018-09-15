@@ -19,11 +19,11 @@ var pages = {
         linkElem: [document.getElementById("about-link")],
         domElem: document.getElementById("about-page")
     },
-    developers: {
-        name: "developers",
-        linkElem: [document.getElementById("dev-link")],
-        domElem: document.getElementById("dev-page")
-    },
+    // developers: {
+    //     name: "developers",
+    //     linkElem: [document.getElementById("dev-link")],
+    //     domElem: document.getElementById("dev-page")
+    // },
     events: {
         name: "events",
         linkElem: [document.getElementById("events-link"), document.getElementById("events-link-nav")],
@@ -194,4 +194,15 @@ function stretchAll() {
     stretch("bottom");
     stretch("right");
     stretch("left");
+}
+
+var closePageIcons = document.getElementsByClassName("close-page");
+
+for (var closeCount = 0; closeCount < closePageIcons.length; closeCount++) {
+    closePageIcons[closeCount].addEventListener(
+        "click",
+        function () {
+            openPage(pages.home.name);
+        }
+    )
 }
