@@ -181,5 +181,5 @@ setTimeout(
     function () {
         disruptEventSvgs();
     },
-    1000
+    3000
 );

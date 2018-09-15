@@ -19,11 +19,11 @@ var pages = {
         linkElem: [document.getElementById("about-link")],
         domElem: document.getElementById("about-page")
     },
-    developers: {
-        name: "developers",
-        linkElem: [document.getElementById("dev-link")],
-        domElem: document.getElementById("dev-page")
-    },
+    // developers: {
+    //     name: "developers",
+    //     linkElem: [document.getElementById("dev-link")],
+    //     domElem: document.getElementById("dev-page")
+    // },
     events: {
         name: "events",
         linkElem: [document.getElementById("events-link"), document.getElementById("events-link-nav")],
