@@ -8,7 +8,7 @@
         display: block;
     }
     #homeLayer1 {
-        /* background: url('../imgs/mobileHomeLayer1.svg') no-repeat; */
+        background: url('../imgs/home-mobile.svg') no-repeat;
     }
 
     #homeLayer1, #trees {
