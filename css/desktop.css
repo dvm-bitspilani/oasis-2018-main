@@ -994,6 +994,126 @@ span[role=combobox] {
  
 }
 
+/* DEVELOPERS PAGE */
+
+/*.dev-flex {
+    justify-content: space-around;
+}
+
+.page-heading {
+    width: 35vw;
+}
+
+#devs-container {
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dev-member {
+    height: 350px;
+    width: 300px;
+    background: #fff;
+}
+*/
+#dev-page, #contacts-page {
+    overflow-y: scroll;
+    background: url('../imgs/bg2.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.dev-flex, .contacts-flex {
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+
+.page-heading {
+    width: 35vw;
+}
+
+.social-media-dev {
+    width: 12vw;
+}
+
+#devs-container, #contacts-container {
+    /*height: 90vh;*/
+    width: 75vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    /*padding-bottom: 5vh;
+    padding-top: 20vh;*/
+}
+
+.contact-img, .dev-img {
+    margin-bottom: 6vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    justify-content: center;
+    text-align: center;
+}
+
+#contacts-container {
+    margin-top: 2vh;
+}
+
+.contact-name, .dev-name {
+    font-family: "louis_george";
+    color: #65F0DC;
+    font-size: 150%;
+    margin-bottom: 0.7vh;
+    margin-top: 0.7vh;
+}
+
+.contact-info, .dev-info {
+    font-family: "biko";
+    color: #CBB0E2;
+    font-size: 120%;
+}
+
+#contact-header {
+    color: #FF7E7E;
+    font-family: "bebas", sans-serif;
+    padding-top: 4vh;
+    font-size: 250%;
+    font-weight: 300;
+    letter-spacing: 11px;
+    margin-top: 26vh;
+}
+
+#dev-header {
+    color: #FF7E7E;
+    font-family: "bebas", sans-serif;
+    padding-top: 4vh;
+    font-size: 250%;
+    font-weight: 300;
+    letter-spacing: 11px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+/*.dev-member {
+    height: 350px;
+    width: 300px;
+    background: #fff;
+}*/
+/*SOCIAL ICON*/
+.social-media-dev {
+    padding-top: 1.7vh;
+}
+
+.social-icon{
+    width: 25px;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    cursor: pointer;
+}
+
   @media screen and (max-width : 992px)
   {
     
