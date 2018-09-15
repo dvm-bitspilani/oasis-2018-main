@@ -37,7 +37,7 @@ body, html {
     align-items: center;
 }
 
-.page:not(#home-page) {
+.page:not(#events-page) {
     display: none;
 }
 
@@ -620,7 +620,7 @@ object:not(#dance-svg) {
     flex-flow: wrap;
 }
 
-#categories-events-image{
+.categories-events-image{
     width: 21vw;
     margin: 30px;
 }
