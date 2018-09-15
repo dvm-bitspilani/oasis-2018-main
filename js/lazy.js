@@ -17,16 +17,14 @@ function lazyLoad() {
 				console.log(1);
 				fetch('http://i.imgur.com/qY1nKlP.png', {
 					method: 'get',
-					headers: {
-						'Content-Type': 'image/svg+xml'
-					}
 				}).then(function(res){
 					console.log(2);
-					res.blob()
+					return res.blob()
 				}).then(function(data){
 					console.log(3);
+					console.log(data);
 					var objectURL = URL.createObjectURL(data);
-					console.log(objectURL);
+					console.log(objectURL + "Hello");
 					el.setAttribute("data", objectURL);	
 					el.setAttribute("type", "image/png");
 				})
