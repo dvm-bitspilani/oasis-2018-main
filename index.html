@@ -72,7 +72,7 @@
             justify-content: center;
             align-items: center;
             transition: all 0.7s ease-out;
-            display: none;
+            /* display: none; */
         }
 
         #loader-container svg {
@@ -807,7 +807,7 @@
     <div class="page" id="home-page">
         <!-- layers -->
         <div class="layer" id="homeLayer1">
-            <object id="home-svg-desktop" data="./imgs/homeLayer1.svg" type="image/svg+xml"></object>
+            <object id="home-svg-desktop" data="./imgs/home-desktop.svg" type="image/svg+xml"></object>
             <object id="home-svg-mobile" data="./imgs/mobileHomeLayer1.svg" type="image/svg+xml"></object>
         </div>
 
@@ -1179,10 +1179,10 @@
         <script src="js/home.js"></script>
         <!-- LOADER -->
         <script>
-            // window.onload = function () {
-            //     onLoadComplete();
-            //     setTimeout(animOnLoadComplete, 2300);
-            // }
+            window.onload = function () {
+                onLoadComplete();
+                setTimeout(animOnLoadComplete, 2300);
+            }
             var colorJets = document.getElementById('colorJets');
             var greyJets = document.getElementById('greyJets');
             var busWithSmoke = document.getElementById('bus-with-smoke');
