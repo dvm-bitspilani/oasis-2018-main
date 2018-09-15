@@ -1028,12 +1028,12 @@ span[role=combobox] {
     margin-bottom: 2.5vh;
     margin-top: 2.5vh;
 }*/
-.contacts-menu-list {
+.contacts-menu-list, .spons-menu-list {
     display: none;
 }
 
 .contact-name, .dev-name {
-    font-family: "louis_george";
+    font-family: "montserrat";
     color: #65F0DC;
     font-size: 150%;
     margin-bottom: 0.7vh;
@@ -1041,14 +1041,14 @@ span[role=combobox] {
 }
 
 .contact-info, .dev-info {
-    font-family: "biko";
+    font-family: "montserrat";
     color: #CBB0E2;
     font-size: 120%;
 }
 
-#contact-header {
+#contact-header, #spons-header {
     color: #FF7E7E;
-    font-family: "bebas", sans-serif;
+    font-family: "bebas neue", sans-serif;
     padding-top: 4vh;
     font-size: 250%;
     font-weight: 300;
@@ -1062,7 +1062,7 @@ span[role=combobox] {
 
 #dev-header {
     color: #FF7E7E;
-    font-family: "bebas", sans-serif;
+    font-family: "bebas neue", sans-serif;
     padding-top: 4vh;
     font-size: 250%;
     font-weight: 300;
@@ -1104,14 +1104,14 @@ span[role=combobox] {
     color: #fff;
     margin-bottom: 2vh;
     font-size: 150%;
-    font-family: montserrat;
+    font-family: "montserrat";
 }
 
 .panasonic {
     color: #fff;
     /*margin-top: 2vh;*/
     font-size: 120%;
-    font-family: montserrat;
+    font-family: "montserrat";
 }
 
 .title-spons-img {
