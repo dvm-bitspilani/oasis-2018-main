@@ -81,12 +81,7 @@
 
     /* MENU */
     #menu-list {
-        margin-top: 30vh;
         font-size: 80%;
-    }
-
-    #menu-list li {
-        margin-top: 25px;
     }
 
     /* EVENTS */
