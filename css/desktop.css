@@ -37,7 +37,7 @@ body, html {
     align-items: center;
 }
 
-.page:not(#events-page) {
+.page:not(#home-page) {
     display: none;
 }
 

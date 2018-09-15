@@ -1,4 +1,3 @@
-"use strict"
 
 var lazyLoadImgFunctionGenerator = function (elems, dataProps, completeAll) {
 	return function(){
@@ -30,8 +29,8 @@ function lazyLoad() {
 					console.log(objectURL + "Hello");
 					el.setAttribute("data", objectURL);	
 					el.setAttribute("type", "image/svg+xml");
-					el.style.width = "100%";
-					el.style.height = "100%";
+					el.style.width = "70%";
+					el.style.height = "70%";
 				})
 			}
 		},

@@ -190,7 +190,7 @@ function disruptEventSvgs() {
 
 setTimeout(
     function () {
-        disruptEventSvgs();
+		//disruptEventSvgs();
     },
     3000
 );
