@@ -1016,7 +1016,7 @@ span[role=combobox] {
     overflow-y: scroll;
     width: 100%;
     height: 90vh;
-    z-index: 304;
+    z-index: 302;
 }
 
 #devs-container, #contacts-container {

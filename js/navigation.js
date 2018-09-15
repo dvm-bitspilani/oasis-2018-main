@@ -9,11 +9,11 @@ var pages = {
         linkElem: [document.getElementById("home-link")],
         domElem: document.getElementById("home-page")
     },
-    archive: {
-        name: "archive",
-        linkElem: [document.getElementById("archive-link")],
-        domElem: document.getElementById("archive-page")
-    },
+    // archive: {
+    //     name: "archive",
+    //     linkElem: [document.getElementById("archive-link")],
+    //     domElem: document.getElementById("archive-page")
+    // },
     about: {
         name: "about",
         linkElem: [document.getElementById("about-link")],
@@ -24,11 +24,11 @@ var pages = {
     //     linkElem: [document.getElementById("dev-link")],
     //     domElem: document.getElementById("dev-page")
     // },
-    events: {
-        name: "events",
-        linkElem: [document.getElementById("events-link"), document.getElementById("events-link-nav")],
-        domElem: document.getElementById("events-page")
-    },
+    // events: {
+    //     name: "events",
+    //     linkElem: [document.getElementById("events-link"), document.getElementById("events-link-nav")],
+    //     domElem: document.getElementById("events-page")
+    // },
     contacts: {
         name: "contacts",
         linkElem: [document.getElementById("contacts-link"), document.getElementById("contacts-link-nav")],
