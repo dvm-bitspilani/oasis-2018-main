@@ -343,7 +343,7 @@ object {
     left: 0;
 }
 
-object:not(#online-svg) {
+object:not(#dance-svg) {
     opacity: 0;
 }
 
