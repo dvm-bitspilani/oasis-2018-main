@@ -31,12 +31,12 @@ var pages = {
     },
     contacts: {
         name: "contacts",
-        linkElem: [document.getElementById("contacts-link")],
+        linkElem: [document.getElementById("contacts-link"), document.getElementById("contacts-link-nav")],
         domElem: document.getElementById("contacts-page")
     },
     sponsors: {
         name: "sponsors",
-        linkElem: [document.getElementById("sponsors-link")],
+        linkElem: [document.getElementById("sponsors-link-nav"), document.getElementById("sponsors-link")],
         domElem: document.getElementById("sponsors-page")
     },
     register: {
