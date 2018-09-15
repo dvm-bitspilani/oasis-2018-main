@@ -284,3 +284,15 @@
         width: auto;
     }
 }
+
+@media all and (max-width: 800px) {
+	.about-content {
+		padding: 0 50px;	
+	}
+}
+
+@media all and (max-width: 400px) {
+	.about-content {
+		padding: 0 25px;	
+	}
+}
