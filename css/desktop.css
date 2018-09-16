@@ -1079,7 +1079,7 @@ span[role=combobox] {
 
 .contact-info, .dev-info {
     font-family: "montserrat";
-    color: #CBB0E2;
+    color: #fff;
     font-size: 120%;
 }
 
@@ -1089,7 +1089,7 @@ span[role=combobox] {
 
 .contact-email, .contact-num {
     font-family: "montserrat";
-    color: #CBB0E2;
+    color: #fff;
     font-size: 120%;
 }
 
@@ -1238,7 +1238,7 @@ span[role=combobox] {
    
   }
 
-@media handheld and (max-height: 850px) and (orientation: landscape) {
+@media all and (max-height: 850px) and (orientation: landscape) {
     #ham-icon {
         height: 1.6em;
         padding-top: 1.5px;
