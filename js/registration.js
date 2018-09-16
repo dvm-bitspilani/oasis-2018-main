@@ -91,8 +91,8 @@ $(document).ready(function () {
 });
 
 document.getElementById('submit-button').addEventListener('click', function () {
+  console.log('submit button clicked');
   var eventsSelected = $("#event-select").val();
-  console.log(eventsSelected);
   var name = document.getElementById('name').value;
   var city = document.getElementById('city').value;
   var phone = document.getElementById('phoneNumber').value;
@@ -131,7 +131,7 @@ document.getElementById('submit-button').addEventListener('click', function () {
         year_of_study = 5;
     }
     year();
-
+    console.log('Initialising to send requests');
     var xhr = new XMLHttpRequest();
     xhr.open("POST", URL, true);
 
