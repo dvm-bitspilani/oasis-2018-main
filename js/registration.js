@@ -1,7 +1,16 @@
+document.getElementById("closeIconDialog").addEventListener('click', function () {
+  document.getElementById("overlay").style.opacity = 0;
+  setTimeout(function() {document.getElementById("overlay").style.display = 'none'; document.getElementById("errorSpan").innerHTML=""}, 350);
+});
+
+function showError (errorMsg) {
+  document.getElementById("errorSpan").innerHTML = errorMsg;
+  document.getElementById("overlay").style.display = "flex";
+  document.getElementById("overlay").style.opacity = 1;
+}
+
 $(document).ready(function () {
   $("#back-btn").css('display', "none");
-  $('#select_info').text('(For Multiple Selection of Events Press Ctrl+)');
-  $('#select_info_mobile').text('(For Multiple Selection of Events Press +)');
 })
 
 function checkEmail() {
@@ -44,12 +53,12 @@ function phonenumber() {
 
 $(document).ready(function () {
   $('#event-select').select2({
-    'placeholder': 'Search event name',
-    width: "resolve",
+    'placeholder': 'Event(s)',
+    width: "100%",
   });
   $('#college').select2({
 
-    width: "resolve",
+    width: "100%",
   });
 });
 
@@ -71,12 +80,11 @@ $(document).ready(function () {
       var eventsOption = "";
 
       for (var i = 0; i < clgs.length; i++) {
-        collegeOption += "<option>" + clgs[i] + " </option>";
+        collegeOption += "<option>" + clgs[i] + "</option>";
       }
 
       for (var i = 0; i < events.length; i++) {
-        eventsOption += "<option id='" + events[i].id + "'>" + events[i].name + " </option>";
-        console.log(events[i]);
+        eventsOption += "<option id='" + events[i].id + "'>" + events[i].name + "</option>";
       }
 
       // console.log(collegeOption);
@@ -85,14 +93,13 @@ $(document).ready(function () {
       // document.getElementById('college').append(collegeOption);
       eventsElem = document.getElementById('event-select');
       eventsElem.innerHTML += eventsOption;
-
+      console.log(eventsElem.innerHTML);
     }
   }
 });
 
 document.getElementById('submit-button').addEventListener('click', function () {
-  console.log('submit button clicked');
-  var eventsSelected = $("#event-select").val();
+  var eventsSelected = $("#event-select").select2('val');
   var name = document.getElementById('name').value;
   var city = document.getElementById('city').value;
   var phone = document.getElementById('phoneNumber').value;
@@ -132,19 +139,19 @@ document.getElementById('submit-button').addEventListener('click', function () {
     }
     year();
     console.log('Initialising to send requests');
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", URL, true);
+    // var xhr = new XMLHttpRequest();
+    // xhr.open("POST", URL, true);
 
-    xhr.setRequestHeader("Content-Type", "application/json");
+    // xhr.setRequestHeader("Content-Type", "application/json");
 
-    xhr.onreadystatechange = function () {
-      if (this.readyState == XMLHttpRequest.DONE && this.status == 200 && this.responseText.status == 1) {
-        console.log(this.responseText);
-      }
-      else {
-        console.log(this.responseText);
-      }
-    }
+    // xhr.onreadystatechange = function () {
+    //   if (this.readyState == XMLHttpRequest.DONE && this.status == 200 && this.responseText.status == 1) {
+    //     console.log(this.responseText);
+    //   }
+    //   else {
+    //     console.log(this.responseText);
+    //   }
+    // }
     x = JSON.stringify({
       events: eventsSelected,
       email: email,
@@ -156,10 +163,26 @@ document.getElementById('submit-button').addEventListener('click', function () {
       head_of_society: head_of_society,
       year_of_study: year_of_study
     });
+    console.log(x);
     // console.log(x);
-    xhr.send(x);
+    $.ajax({
+      type: "POST",
+      contentType: "application/json",
+      url: URL,
+      data: x,
+      dataType: "json",
+      complete: function(data) {
+        // console.log(data);
+        if(data.status != 200) {
+          showError(data.responseText + '<h1>Please try again</h1>');
+        } else {
+          showError('Registration complete!');
+        }
+      }
+    });
+    // xhr.send(x);
   } else {
-    alert('Please fill all the fields.');
+    showError('Please fill all the fields.');
   }
 });
 

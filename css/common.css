@@ -66,3 +66,48 @@
         transform: rotate(-15deg);
     }
 }
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    /* opacity: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+#dialogBox {
+    background: #ffffff;
+    color: #000;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    height: 60vh;
+    width: 80vw;
+    position: relative;
+    overflow: scroll;
+}
+#dialogBox img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 9999;
+}
+#dialogBox span {
+    font-family: "ikaros", sans-serif;
+    text-align: center;
+}
+#dialogBox span h1 {
+    font-size: 2em;
+}

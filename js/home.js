@@ -15,7 +15,6 @@ function animOnLoadComplete() {
         console.log(svg);
         if (svg) {
             console.log("Desktop!");
-            console.log(svg);
             animateSVG(svg);
         }
     })();
