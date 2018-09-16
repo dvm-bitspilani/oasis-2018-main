@@ -1,9 +1,9 @@
 document.getElementById("closeIconDialog").addEventListener('click', function () {
   document.getElementById("overlay").style.opacity = 0;
-  setTimeout(function() {document.getElementById("overlay").style.display = 'none'; document.getElementById("errorSpan").innerHTML=""}, 350);
+  setTimeout(function () { document.getElementById("overlay").style.display = 'none'; document.getElementById("errorSpan").innerHTML = "" }, 350);
 });
 
-function showError (errorMsg) {
+function showError(errorMsg) {
   document.getElementById("errorSpan").innerHTML = errorMsg;
   document.getElementById("overlay").style.display = "flex";
   document.getElementById("overlay").style.opacity = 1;
@@ -57,7 +57,6 @@ $(document).ready(function () {
     width: "100%",
   });
   $('#college').select2({
-
     width: "100%",
   });
 });
@@ -171,9 +170,9 @@ document.getElementById('submit-button').addEventListener('click', function () {
       url: URL,
       data: x,
       dataType: "json",
-      complete: function(data) {
+      complete: function (data) {
         // console.log(data);
-        if(data.status != 200) {
+        if (data.status != 200) {
           showError(data.responseText + '<h1>Please try again</h1>');
         } else {
           showError('Registration complete!');

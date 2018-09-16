@@ -1,4 +1,7 @@
 @media all and (max-width: 800px) and (orientation: portrait) {
+    .field .input {
+        font-size: 15px;
+    }
     #trees {
         display: none;
     }
