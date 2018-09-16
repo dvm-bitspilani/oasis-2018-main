@@ -66,23 +66,39 @@ var mockEventsData = [
 
 function disappearEvent(objectElem) {
     var svgElems = objectElem.contentDocument.getElementsByTagName("svg")[0].children;
-    var delay = 0.02;
-    for (var i = 0; i < svgElems.length; i++) {
-        svgElems[i].style.transition = "transform 0.4s " + delay + "s linear, opacity 0.3s " + delay + "s linear";
-        svgElems[i].style.transform = "translate(" + Math.random() * 1000 + "px, " + (-Math.random() * 1000) + "px) scale(0)";
-        svgElems[i].style.opacity = "0";
-        if (i % 7 == 0) delay += 0.01;
+    if (document.documentElement.clientWidth < 800) {
+        var svg = objectElem.contentDocument.getElementsByTagName("svg")[0];
+        svg.style.transition = "transform 0.2s linear, opacity 0.2s linear";
+        svg.style.opacity = "0";
+        // svg.style.transform = "scale(1.05)";
+    }
+    else {
+        var delay = 0.02;
+        for (var i = 0; i < svgElems.length; i++) {
+            svgElems[i].style.transition = "transform 0.4s " + delay + "s linear, opacity 0.3s " + delay + "s linear";
+            svgElems[i].style.transform = "translate(" + Math.random() * 1000 + "px, " + (-Math.random() * 1000) + "px) scale(0)";
+            // svgElems[i].style.opacity = "0";
+            if (i % 7 == 0) delay += 0.01;
+        }
     }
 }
 
 function appearEvent(objectElem) {
     var svgElems = objectElem.contentDocument.getElementsByTagName("svg")[0].children;
-    var delay = 0.02;
-    for (var i = 0; i < svgElems.length; i++) {
-        svgElems[i].style.transition = "transform 0.3s " + delay + "s linear, opacity 0.3s " + delay + "s linear";
-        svgElems[i].style.transform = "";
-        svgElems[i].style.opacity = "1";
-        if (i % 7 == 0) delay += 0.01;
+    if (document.documentElement.clientWidth < 800) {
+        var svg = objectElem.contentDocument.getElementsByTagName("svg")[0];
+        // svg.style.transform = "scale(1)";
+        // svg.style.transition = "opacity 0.2s linear";
+        // svg.style.opacity = "1";
+    }
+    else {
+        var delay = 0.02;
+        for (var i = 0; i < svgElems.length; i++) {
+            svgElems[i].style.transition = "transform 0.3s " + delay + "s linear, opacity 0.3s " + delay + "s linear";
+            svgElems[i].style.transform = "";
+            svgElems[i].style.opacity = "1";
+            if (i % 7 == 0) delay += 0.01;
+        }
     }
 }
 
@@ -104,6 +120,7 @@ function change(n) {
     }
     setTimeout(
         function () {
+            images[curimg].style.transition = "opacity 0.2s linear";
             images[curimg].style.opacity = 1;
             appearEvent(images[curimg]);
         },
@@ -168,14 +185,30 @@ categoryEventClose.addEventListener('click', function () {
 var viewEvents = document.getElementById('view-events-wrapper');
 var viewEventsBtn = document.getElementById('view-events-btn');
 
-viewEventsBtn.addEventListener('click', function (e) {
+function openViewEvents () {
     setTimeout(function () {
-        console.log(viewEvents)
         viewEvents.style.opacity = "1";
     }, 100);
     viewEvents.style.display = 'flex';
     viewEvents.style.zIndex = "999";
+}
+
+viewEventsBtn.addEventListener('click', function (e) {
+    openViewEvents();
 });
+
+// var allCategoriesImg = document.querySelectorAll("categories-events img");
+// for (var ac = 0; ac < allCategoriesImg.length; ac++) {
+//     console.log("allCategoriesImg");
+//     allCategoriesImg[ac].addEventListener(
+//         "click",
+//         function () {
+//             console.log("asdf");
+//             openViewEvents();
+//         }
+//     )
+// }
+
 
 function disruptEventSvgs() {
     var svgObjs = document.getElementById("events-image").children;
@@ -190,7 +223,7 @@ function disruptEventSvgs() {
 
 setTimeout(
     function () {
-        disruptEventSvgs();
+        if (document.documentElement.clientWidth > 800) disruptEventSvgs();
     },
     3000
 );

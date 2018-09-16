@@ -117,26 +117,26 @@ function openPage(pageName) {
         else {
             exitPage = currentPage.domElem;
         }
-        topStretch.style.display = "block";
-        bottomStretch.style.display = "block";
-        leftStretch.style.display = "block";
-        rightStretch.style.display = "block";
+        // topStretch.style.display = "block";
+        // bottomStretch.style.display = "block";
+        // leftStretch.style.display = "block";
+        // rightStretch.style.display = "block";
         if (window.matchMedia("(min-width: 800px)").matches) {
             stretchAll();
         }
 
         exitPage.style.zIndex = "3";
         exitPage.style.transition = "transform 0.25s linear";
-        exitPage.style.transform = "scale(0.95)";
+        // exitPage.style.transform = "scale(0.95)";
 
         setTimeout(
             function () {
-                exitPage.style.transition = "transform 0.2s linear, opacity 0.2s linear";
-                exitPage.style.transform = "scale(1.2)";
+                exitPage.style.transition = "transform 0.2s linear, opacity 0.4s linear";
+                // exitPage.style.transform = "scale(1.2)";
                 exitPage.style.opacity = "0";
 
                 pages[pageName].domElem.style.transition = "";
-				pages[pageName].domElem.style.transform = "";
+				// pages[pageName].domElem.style.transform = "";
                 pages[pageName].domElem.style.opacity = "1";
                 pages[pageName].domElem.style.zIndex = "2";
                 pages[pageName].domElem.style.display = "block";
@@ -152,12 +152,12 @@ function openPage(pageName) {
                 currentPage = pages[pageName];
                 currentPage.domElem.style.zIndex = "";
 
-                topStretch.style.display = "none";
-                bottomStretch.style.display = "none";
-                leftStretch.style.display = "none";
-                rightStretch.style.display = "none";
+                // topStretch.style.display = "none";
+                // bottomStretch.style.display = "none";
+                // leftStretch.style.display = "none";
+                // rightStretch.style.display = "none";
             },
-            500
+            800
         );
 
         // var navDisplayProp = "none", otherDisplayProp = "none";
