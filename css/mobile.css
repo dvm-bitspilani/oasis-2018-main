@@ -213,12 +213,14 @@
     }
     .spons-header-con {
         margin-top: 2vh;
+        margin-bottom: 6vh;
     }
-    #spons-header {
+    /*#spons-header {
         margin-top: 230vh;
-    }
+    }*/
     #spons-container-main {
-        margin-bottom: 2vh; 
+        margin-bottom: 2vh;
+        padding-top: 4vh;
     }
     .sponsor-main {
         justify-content: center;
