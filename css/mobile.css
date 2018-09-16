@@ -211,8 +211,11 @@
     .spons-menu-list {
         display: block;
     }
+    .spons-header-con {
+        margin-top: 2vh;
+    }
     #spons-header {
-        margin-top: 220vh;
+        margin-top: 230vh;
     }
     #spons-container-main {
         margin-bottom: 2vh; 
@@ -227,7 +230,7 @@
     }
 
     .sponsor-others {
-        height: 20vh;
+        height: 30vh;
         justify-content: center;
         align-items: center;
     }
