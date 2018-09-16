@@ -160,6 +160,13 @@ imput {
     min-width: 190px;
 }
 
+#login-link span {
+    position: absolute;
+    top: 3vh;
+    left: 3vh;
+    font-size: 1.8em;
+}
+
 #events-link span {
     display: none;
 }
@@ -703,7 +710,7 @@ object:not(#dance-svg) {
     padding-right: 0px;
     padding-left: 0px;
     overflow-y: auto;
-    padding-top: 10%;
+    padding-top: 5vh;
     color: rgba(255, 255, 255, 1);
   }
   
@@ -715,7 +722,7 @@ object:not(#dance-svg) {
   .menu_options{
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
   }
   
   
