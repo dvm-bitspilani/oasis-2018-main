@@ -163,7 +163,6 @@ document.getElementById('submit-button').addEventListener('click', function () {
       year_of_study: year_of_study
     });
     console.log(x);
-    // console.log(x);
     $.ajax({
       type: "POST",
       contentType: "application/json",
@@ -172,10 +171,14 @@ document.getElementById('submit-button').addEventListener('click', function () {
       dataType: "json",
       complete: function (data) {
         // console.log(data);
-        if (data.status != 200) {
-          showError(data.responseText + '<h1>Please try again</h1>');
+        if (data.status == 0) {
+          showError(data.message + '<h1>Please try again</h1>');
         } else {
-          showError('Registration complete!');
+          if(data.message) {
+            showError(data.message);
+          } else if(data.status != 200) {
+            showError(responseText + '<h1>Please try again</h1>');
+          }
         }
       }
     });
