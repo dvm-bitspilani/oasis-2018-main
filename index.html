@@ -86,7 +86,7 @@
         }
 
         #bus {
-            animation: stagger .15s ease;
+            animation: stagger .15s ease;-
             animation-iteration-count: infinite;
         }
 
@@ -113,7 +113,7 @@
             transform: translate(2000px, 50px);
         }
 
-        #speedLine0 path {
+        #speedLine0 path {4200
             animation-delay: 0s;
         }
 
@@ -125,7 +125,7 @@
             animation-delay: 0.3s;
         }
 
-        #speedLine3 path {
+        #speedLine3 path {4200
             animation-delay: 0.5s;
         }
 
@@ -1297,7 +1297,7 @@
                         <input type="text" name="city" tabindex="4" />
                     </div>
                 </div>
-
+                
                 <div class="field">
                     <label>4. Where can we contact you?</label>
                     <p style="display:inline">+91-</p>
@@ -1305,7 +1305,7 @@
                         <input type="text" type="number" name="phone" max="9999999999" min="100000000" tabindex="5" />
                     </div>
                 </div>
-
+                
                 <div class="field">
                     <label>5. What is your Email ID? </label>
                     <div class="input">
@@ -1317,7 +1317,7 @@
                     <p></p>
                     <div class="input">
                         <select name="college" id="college" tabindex="7">
-
+                            
                             <!-- just for UI testing, the list to be 'get' from back -->
 
                             <option value="" disabled selected>Search college name</option>
@@ -1333,9 +1333,9 @@
                             <option value="college4">college4</option>
                             <option value="college5">college5</option>
                             <option value="college6">college6</option>
-
-
-
+                            
+                            
+                            
                         </select>
                     </div>
                 </div>
@@ -1348,7 +1348,7 @@
                         <label for="no" tabindex="9">No</label>
                     </div>
                 </div>
-
+                
                 <div class="field">
                     <label>8. What is your year of study?</label>
                     <div class="radio-input">
@@ -1362,18 +1362,18 @@
                         <label for="four" tabindex="13">4</label>
                         <input type="radio" name="year_of_study" value="5" id="five">
                         <label for="five" tabindex="14">5</label>
-
+                        
                     </div>
                 </div>
-
+                
                 <div class="field">
                     <label>9. What event(s) do you want to register for?</label>
                     <p id="select_info"></p>
                     <div style="display:flex;width:auto">
                         <select style="color: white;" id="event-select" name="states[]" multiple tabindex="15">
-
+                            
                             <!-- just for UI testing, the list to be 'get' from back -->
-
+                            
                             <option value="2">Event1</option>
 
                             <option value="3">Event2</option>
@@ -1381,48 +1381,51 @@
                             <option value="4">Event3</option>
 
                             <option value="5">Event4</option>
-
+                            
                             <option value="6">Event5</option>
-
+                            
                             <option value="7">Event6</option>
-
+                            
                             <option value="8">Event7</option>
-
+                            
                             <option value="9">Event8</option>
 
                             <option value="10">Event9</option>
-
+                            
                             <option value="11">Event10</option>
-
-
-
+                            
+                            
+                            
                         </select>
-
+                        
 
                         <div class="events-box" id="events">
                         </div>
                     </div>
-
+                    
                     <div class="submit">
                         <input type="button" id="submit-button" name="submit" value="SUBMIT" tabindex="17">
                     </div>
-
+                    
                     <!-- CAPTCHA KEY TO BE PROVIDED BY BACKEND(raghav) -->
-            </form>
-
-
-
-            <a href="#" class="close">
+                </form>
+                
+                
+                
+                <a href="#" class="close">
 
                 </div>
-        </div>
-
-        <script src="js/home.js"></script>
-        <!-- LOADER -->
-        <script>
+            </div>
+            
+            <script src="js/home.js"></script>
+            <script src="js/pure-swipe.min.js"></script>
+            <script src="js/events.js"></script>
+            <!-- LOADER -->
+            <script>
             window.onload = function () {
                 onLoadComplete();
                 setTimeout(animOnLoadComplete, 2300);
+                if (document.documentElement.clientWidth > 800) disruptEventSvgs();
             }
             var colorJets = document.getElementById('colorJets');
             var greyJets = document.getElementById('greyJets');
@@ -1550,8 +1553,6 @@
         </script>
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
         <!-- <script src="js/flickity.min.js"></script> -->
-        <script src="js/pure-swipe.min.js"></script>
-        <script src="js/events.js"></script>
         <script src="js/days.js"></script>
         <script src="js/navigation.js"></script>
 </body>
