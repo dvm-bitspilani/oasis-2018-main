@@ -88,8 +88,8 @@ function appearEvent(objectElem) {
     if (document.documentElement.clientWidth < 800) {
         var svg = objectElem.contentDocument.getElementsByTagName("svg")[0];
         // svg.style.transform = "scale(1)";
-        // svg.style.transition = "opacity 0.2s linear";
-        // svg.style.opacity = "1";
+        svg.style.transition = "transform 0.2s linear, opacity 0.2s linear";
+        svg.style.opacity = "1";
     }
     else {
         var delay = 0.02;
@@ -118,14 +118,25 @@ function change(n) {
     else {
         curimg = curimg + n;
     }
-    setTimeout(
-        function () {
-            images[curimg].style.transition = "opacity 0.2s linear";
-            images[curimg].style.opacity = 1;
-            appearEvent(images[curimg]);
-        },
-        1000
-    )
+    if(document.documentElement.clientWidth < 800) {
+        setTimeout(
+            function () {
+                images[curimg].style.transition = "opacity 0.2s linear";
+                images[curimg].style.opacity = 1;
+                appearEvent(images[curimg]);
+            },
+            400
+        )
+    } else {
+        setTimeout(
+            function () {
+                images[curimg].style.transition = "opacity 0.2s linear";
+                images[curimg].style.opacity = 1;
+                appearEvent(images[curimg]);
+            },
+            1000
+        )
+    }
 }
 
 var prev = document.getElementById('prev-event');

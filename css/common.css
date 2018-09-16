@@ -1,7 +1,7 @@
 #top-nav {
     z-index: 301;
 }
-#home-svg-desktop, #home-svg-mobile {
+#home-svg-desktop {
     height: 100vh;
     position: absolute;
     top: 0;

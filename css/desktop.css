@@ -1231,9 +1231,10 @@ span[role=combobox] {
    
   }
 
-@media handheld and (max-height: 700px) and (orientation: landscape) {
+@media handheld and (max-height: 850px) and (orientation: landscape) {
     #ham-icon {
-        height: 35px;
+        height: 1.6em;
+        padding-top: 1.5px;
     }
 
     #top-nav {
@@ -1271,6 +1272,17 @@ span[role=combobox] {
     }
     #events-link {
         bottom: 10vh;
+    }
+    #top-nav {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #register-link {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .top-nav-link {
+        font-size: 1.4em;
     }
 }
 
