@@ -1408,7 +1408,10 @@
             window.onload = function () {
                 onLoadComplete();
                 setTimeout(animOnLoadComplete, 2300);
-                if (document.documentElement.clientWidth > 800) disruptEventSvgs();
+                if (document.documentElement.clientWidth > 800) 
+                    disruptEventSvgs();
+                else
+                    disruptEventSvgsMobile();
             }
             var colorJets = document.getElementById('colorJets');
             var greyJets = document.getElementById('greyJets');
