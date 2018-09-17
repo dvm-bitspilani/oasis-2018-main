@@ -688,13 +688,8 @@ object:not(#dance-svg) {
 
 .wrapper {
     box-sizing: border-box;
-    
-      
-  
-      background-image: linear-gradient(rgba(1, 4, 29, 0.85) ,rgba(28, 182, 155, 1) ,rgba(15, 97, 120, 1) ,rgba(12, 96, 119, 1));
-  
+    background-image: linear-gradient(rgba(1, 4, 29, 0.85) ,rgba(28, 182, 155, 1) ,rgba(15, 97, 120, 1) ,rgba(12, 96, 119, 1));
     font-family: 'montserrat', sans-serif;
-  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -709,7 +704,7 @@ object:not(#dance-svg) {
     padding: 20rem;
     padding-right: 0px;
     padding-left: 0px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     padding-top: 5vh;
     color: rgba(255, 255, 255, 1);
   }

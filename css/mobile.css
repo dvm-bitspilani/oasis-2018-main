@@ -2,6 +2,41 @@
     .field .input {
         font-size: 15px;
     }
+    /* REGISTER */
+    form {
+        overflow-x: hidden;
+    }
+    .field{
+        margin-bottom: 30px;
+    }
+    .field label{
+        font-size: 1.5em;
+    }
+    .field p{
+        font-size: 1em;
+    }
+    .field input[type=text]{
+        font-size: 1.5em;
+    }
+    
+    .field .radio-input label{
+        font-size: .8em;
+    }
+    select{
+        font-size: 1.5em;
+    }
+    
+    .select2-search__field{
+          /*width: calc(75vw-20px) !important;*/
+    }
+    .wrapper {
+        padding-top: 10vh;
+    }
+    .field {
+        width: 70vw;
+    }
+}
+@media all and (max-width: 800px) and (orientation: portrait) {
     #trees {
         display: none;
     }
@@ -160,40 +195,6 @@
         bottom: 5vh;
         left: 50%;
         transform: translateX(-50%);
-    }
-
-    /* REGISTER */
-    form {
-        overflow-x: hidden;
-    }
-    .field{
-        margin-bottom: 30px;
-    }
-    .field label{
-        font-size: 1.5em;
-    }
-    .field p{
-        font-size: 1em;
-    }
-    .field input[type=text]{
-        font-size: 1.5em;
-    }
-    
-    .field .radio-input label{
-        font-size: .8em;
-    }
-    select{
-        font-size: 1.5em;
-    }
-    
-    .select2-search__field{
-          /*width: calc(75vw-20px) !important;*/
-    }
-    .wrapper {
-        padding-top: 10vh;
-    }
-    .field {
-        width: 70vw;
     }
 
     /*CONTACT AND DEVELOPERS*/
