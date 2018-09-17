@@ -17,7 +17,7 @@
         bottom: 0;
         top: auto;
         height: 100vh;
-        background: url('../imgs/mobile-home.png') no-repeat;
+        background: url('../imgs/mobile-background.svg') no-repeat;
     }
 
     #homeLayer1, #trees {
