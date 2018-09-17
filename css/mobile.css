@@ -143,7 +143,7 @@
         width: 70%;
     }
 
-    #menu, #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page, #register-page {
+    #menu, #home-page, #about-page, #dev-page, #sponsors-page, #contacts-page, #archive-page/*, #register-page */{
         background: url('../imgs/mobileBackground1.svg') no-repeat;
         background-size: cover;
     }
@@ -170,20 +170,20 @@
         margin-bottom: 30px;
     }
     .field label{
-        font-size: 1.5em;
+        font-size: 25px;
     }
     .field p{
-        font-size: 1em;
+        font-size: 17px;
     }
     .field input[type=text]{
-        font-size: 1.5em;
+        font-size: 25px;
     }
     
     .field .radio-input label{
-        font-size: .8em;
+        font-size: 20px;
     }
     select{
-        font-size: 1.5em;
+        font-size: 25px;
     }
     
     .select2-search__field{
@@ -193,7 +193,7 @@
         padding-top: 10vh;
     }
     .field {
-        width: 70vw;
+        width: 70%;
     }
 
     /*CONTACT AND DEVELOPERS*/
@@ -308,4 +308,55 @@
 	.about-content {
 		padding: 0 25px;	
 	}
+}
+
+/*@media all and (max-width: 430px) {
+
+    #register-page {
+        background: url('../imgs/mobileBackground1.svg') no-repeat !important;
+        background-size: cover !important;
+        background: red;
+    }
+}*/
+
+@media all and (max-width: 430px) and (orientation: landscape) {
+    #register-page {
+        background: url('../imgs/mobileBackground1.svg') no-repeat !important;
+        background-size: cover !important;
+    }
+    #trees {
+        display: none;
+    }
+    form {
+        overflow-x: hidden;
+    }
+    .field{
+        margin-bottom: 30px;
+    }
+    .field label{
+        font-size: 25px;
+    }
+    .field p{
+        font-size: 17px;
+    }
+    .field input[type=text]{
+        font-size: 25px;
+    }
+    
+    .field .radio-input label{
+        font-size: 20px;
+    }
+    select{
+        font-size: 25px;
+    }
+    
+    .select2-search__field{
+          /*width: calc(75vw-20px) !important;*/
+    }
+    .wrapper {
+        padding-top: 10vh;
+    }
+    .field {
+        width: 70%;
+    }
 }
