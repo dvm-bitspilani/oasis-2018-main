@@ -240,3 +240,8 @@ function disruptEventSvgs() {
 //     },
 //     3000
 // );
+
+document.getElementById("close-events-page").addEventListener("click", function () {
+    console.log('close events clicked');
+    curimg = 0;
+});

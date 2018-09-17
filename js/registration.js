@@ -92,7 +92,7 @@ $(document).ready(function () {
       // document.getElementById('college').append(collegeOption);
       eventsElem = document.getElementById('event-select');
       eventsElem.innerHTML += eventsOption;
-      console.log(eventsElem.innerHTML);
+      // console.log(eventsElem.innerHTML);
     }
   }
 });
