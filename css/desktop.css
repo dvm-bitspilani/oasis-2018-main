@@ -9,6 +9,7 @@ body, html {
 }
 
 #trees {
+    
     position: absolute;
     top: 0;
     left: 0;
@@ -700,8 +701,8 @@ object:not(#dance-svg) {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;
     background-color: #262626;
     position: absolute;
     left: 0;
@@ -1025,6 +1026,7 @@ span[role=combobox] {
   padding: 0;
  
 }
+
 
 /* DEVELOPERS PAGE AND CONTACT US */
 
