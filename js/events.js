@@ -67,9 +67,16 @@ var mockEventsData = [
 function disappearEvent(objectElem) {
     var svgElems = objectElem.contentDocument.getElementsByTagName("svg")[0].children;
     if (document.documentElement.clientWidth < 800) {
-        var svg = objectElem.contentDocument.getElementsByTagName("svg")[0];
-        svg.style.transition = "transform 0.2s linear, opacity 0.2s linear";
-        svg.style.opacity = "0";
+        // var svg = objectElem.contentDocument.getElementsByTagName("svg")[0];
+        // svg.style.transition = "transform 0.2s linear, opacity 0.2s linear";
+        // svg.style.opacity = "0";
+        var delay = 0.02;
+        for (var i = 0; i < svgElems.length; i++) {
+            svgElems[i].style.transition = "transform 0.1s " + delay + "s linear, opacity 0.3s " + delay + "s linear";
+            svgElems[i].style.transform = "scale(0)";
+            svgElems[i].style.opacity = "0";
+            if (i % 7 == 0) delay += 0.01;
+        }
         // svg.style.transform = "scale(1.05)";
     }
     else {
@@ -86,10 +93,17 @@ function disappearEvent(objectElem) {
 function appearEvent(objectElem) {
     var svgElems = objectElem.contentDocument.getElementsByTagName("svg")[0].children;
     if (document.documentElement.clientWidth < 800) {
-        var svg = objectElem.contentDocument.getElementsByTagName("svg")[0];
-        // svg.style.transform = "scale(1)";
-        svg.style.transition = "transform 0.2s linear, opacity 0.2s linear";
-        svg.style.opacity = "1";
+        // var svg = objectElem.contentDocument.getElementsByTagName("svg")[0];
+        // // svg.style.transform = "scale(1)";
+        // svg.style.transition = "transform 0.2s linear, opacity 0.2s linear";
+        // svg.style.opacity = "1";
+        var delay = 0.02;
+        for (var i = 0; i < svgElems.length; i++) {
+            svgElems[i].style.transition = "transform 0.1s " + delay + "s linear, opacity 0.3s " + delay + "s linear";
+            svgElems[i].style.transform = "scale(1)";
+            svgElems[i].style.opacity = "1";
+            if (i % 7 == 0) delay += 0.01;
+        }
     }
     else {
         var delay = 0.02;
@@ -228,6 +242,19 @@ function disruptEventSvgs() {
             var svgElems = this.contentDocument.getElementsByTagName("svg")[0].children;
             for (var i = 0; i < svgElems.length; i++) {
                 svgElems[i].style.transform = "translate(" + Math.random() * 1000 + "px, " + (-Math.random() * 1000) + "px) scale(0)";
+                svgElems[i].style.opacity = "0";
+            }
+        });
+    }
+}
+
+function disruptEventSvgsMobile () {
+    var svgObjs = document.getElementById("events-image").children;
+    for (var j = 1; j < svgObjs.length; j++) {
+        svgObjs[j].addEventListener('load', function() {
+            var svgElems = this.contentDocument.getElementsByTagName("svg")[0].children;
+            for (var i = 0; i < svgElems.length; i++) {
+                svgElems[i].style.transform = "scale(0)";
                 svgElems[i].style.opacity = "0";
             }
         });
