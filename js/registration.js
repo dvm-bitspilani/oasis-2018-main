@@ -170,21 +170,17 @@ document.getElementById('submit-button').addEventListener('click', function () {
       data: x,
       dataType: "json",
       complete: function (data) {
-        // console.log(data);
+        data = (data.responseJSON);
         if (data.status == 0) {
-          showError(data.message + '<h1>Please try again</h1>');
+          showError('<h1>' + data.message + '</h1><h1>Please try again.</h1>');
         } else {
-          if(data.message) {
-            showError(data.message);
-          } else if(data.status != 200) {
-            showError(responseText + '<h1>Please try again</h1>');
-          }
+            showError('<h1>' + data.message + '</h1>');
         }
       }
     });
     // xhr.send(x);
   } else {
-    showError('Please fill all the fields.');
+    showError('<h1>Please fill all the fields.</h1>');
   }
 });
 
