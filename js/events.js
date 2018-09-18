@@ -154,17 +154,26 @@ viewEventsBtn.addEventListener('click', function (e) {
 //     )
 // }
 
+function onSvgLoad (svgElems) {
+    for (var i = 0; i < svgElems.length; i++) {
+        svgElems[i].style.transform = "translate(" + Math.random() * 1000 + "px, " + (-Math.random() * 1000) + "px) scale(0)";
+        svgElems[i].style.opacity = "0";
+    }
+}
 
 function disruptEventSvgs() {
     var svgObjs = document.getElementById("events-image").children;
     for (var j = 1; j < svgObjs.length; j++) {
-        // svgObjs[j].contentDocument.onload = function() {
+        if (svgObjs[j].contentDocument) {
             var svgElems = svgObjs[j].contentDocument.getElementsByTagName("svg")[0].children;
-            for (var i = 0; i < svgElems.length; i++) {
-                svgElems[i].style.transform = "translate(" + Math.random() * 1000 + "px, " + (-Math.random() * 1000) + "px) scale(0)";
-                svgElems[i].style.opacity = "0";
-            }
-        // }
+            onSvgLoad(svgElems);
+        }
+        else {
+            svgObjs[j].addEventListener("load", function() {
+                var svgElems = this.contentDocument.getElementsByTagName("svg")[0].children;
+                onSvgLoad(svgElems);
+            });
+        }
     }
 }
 
