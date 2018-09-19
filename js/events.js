@@ -1,3 +1,7 @@
+var eventCategories = ["Dance", "Online", "Drama", "Fine Art", "Music", "Photography", "Fashion", "Oratory", "Quizzing"];
+
+var eventsData = null;
+
 function disappearEvent(objectElem) {
     var svgElems = objectElem.contentDocument.getElementsByTagName("svg")[0].children;
     if (document.documentElement.clientWidth < 800) {
@@ -98,6 +102,7 @@ var categoriesInner = document.getElementById('categories-wrapper-inner');
 var categoriesClose = document.getElementById('categories-close');
 var categoryEventClose = document.getElementsByClassName('category-event-close')[0];
 var viewEventsWrapper = document.getElementById("view-events-wrapper");
+var viewEventsWrapperInner = document.getElementById("view-events-wrapper-inner");
 
 cHeading.addEventListener('click', function () {
     categories.style.top = "0";
@@ -136,6 +141,33 @@ function openViewEvents () {
     }, 100);
     viewEvents.style.display = 'flex';
     viewEvents.style.zIndex = "999";
+
+	if(!eventsData) return;
+	
+	else {
+		
+		while(viewEventsWrapperInner.firstChild) {
+			viewEventsWrapperInner.firstChild.remove();
+		}
+		
+		var currentEventObject = eventsData.filter(function(eventObj) {
+			return eventObj['name'] ===	eventCategories[curimg];
+		});	
+
+		console.log(currentEventObject);
+
+		var currentEvents =  currentEventObject.length ? currentEventObject[0].events : [];
+
+		for(var event in currentEvents) {
+			var elem = document.createElement("div");	
+			var text = document.createTextNode(event);
+			elem.classList.add("event-name");
+			
+			elem.append(text);
+			viewEventsWrapperInner.append(elem);
+		}
+	}
+
 }
 
 viewEventsBtn.addEventListener('click', function (e) {
@@ -195,3 +227,15 @@ document.getElementById("close-events-page").addEventListener("click", function 
     }
     curimg = 0;
 });
+
+var populateEvents = function() {
+	fetch("https://bits-oasis.org/2018/events/info/")
+		.then(function(res){ return res.json()})
+		.then(function(data){
+			console.log(data);
+			eventsData = data;
+		});
+
+}
+
+populateEvents()

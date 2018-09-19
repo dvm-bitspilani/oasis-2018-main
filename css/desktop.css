@@ -577,7 +577,7 @@ object:not(#dance-svg) {
     align-content: center;
 }
 
-#event-name{
+.event-name{
     color: #ffffff;
     font-family: "ikaros", sans-serif;
     font-size: 2em;
