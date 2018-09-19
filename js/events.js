@@ -1,4 +1,4 @@
-var eventCategories = ["Dance", "Online", "Drama", "Fine Art", "Music", "Photography", "Fashion", "Oratory", "Quizzing"];
+var eventCategories = ["Dance", "Online", "Drama", "Fine Art", "Music", "Photography", "Fashion", "Oratory", "Quizzing", "Miscellaneous"];
 
 var eventsData = null;
 
