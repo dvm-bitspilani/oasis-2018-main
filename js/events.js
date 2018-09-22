@@ -145,15 +145,21 @@ function showEventsWrapper() {
 }
 
 function populateEventsDOM(categoryName) {
+	
+
 	if(!eventsData) return;
 
 	while(viewEventsWrapperInner.firstChild) {
 		viewEventsWrapperInner.firstChild.remove();
 	}
 
+	var headingBox =  document.getElementsByClassName("event-category-heading")[0];
+	headingBox.textContent = categoryName;
+
 	var currentEventObject = eventsData.filter(function(eventObj) {
 		return eventObj['name'] ===	categoryName;
 	});	
+
 	var currentEvents =  currentEventObject.length ? currentEventObject[0].events : [];
 
 	for(var event in currentEvents) {
