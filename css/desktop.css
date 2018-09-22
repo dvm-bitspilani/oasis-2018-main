@@ -630,11 +630,11 @@ object:not(#dance-svg) {
     letter-spacing: 3px;
 }
 
-/* #categories-events{
+#categories-events{
     display: flex;
     justify-content: space-around;
     flex-flow: wrap;
-} */
+}
 
 .categories-events-image{
     width: 21vw;
