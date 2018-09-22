@@ -135,6 +135,40 @@ categoryEventClose.addEventListener('click', function () {
 var viewEvents = document.getElementById('view-events-wrapper');
 var viewEventsBtn = document.getElementById('view-events-btn');
 
+function openViewEventsFromAllCategories (categoryName) {
+
+    setTimeout(function () {
+        viewEvents.style.opacity = "1";
+    }, 100);
+
+
+    viewEvents.style.display = 'flex';
+    viewEvents.style.zIndex = "1002";
+
+	if(!eventsData) return;
+
+	while(viewEventsWrapperInner.firstChild) {
+		viewEventsWrapperInner.firstChild.remove();
+	}
+
+	var currentEventObject = eventsData.filter(function(eventObj) {
+		return eventObj['name'] ===	categoryName;
+	});	
+	var currentEvents =  currentEventObject.length ? currentEventObject[0].events : [];
+
+	for(var event in currentEvents) {
+		var elem = document.createElement("div");	
+		var text = document.createTextNode(event);
+		elem.classList.add("event-name");
+		
+		elem.append(text);
+		viewEventsWrapperInner.append(elem);
+	}
+	
+
+
+}
+
 function openViewEvents () {
     setTimeout(function () {
         viewEvents.style.opacity = "1";
@@ -144,28 +178,26 @@ function openViewEvents () {
 
 	if(!eventsData) return;
 	
-	else {
 		
-		while(viewEventsWrapperInner.firstChild) {
-			viewEventsWrapperInner.firstChild.remove();
-		}
+	while(viewEventsWrapperInner.firstChild) {
+		viewEventsWrapperInner.firstChild.remove();
+	}
+	
+	var currentEventObject = eventsData.filter(function(eventObj) {
+		return eventObj['name'] ===	eventCategories[curimg];
+	});	
+
+	console.log(currentEventObject);
+
+	var currentEvents =  currentEventObject.length ? currentEventObject[0].events : [];
+
+	for(var event in currentEvents) {
+		var elem = document.createElement("div");	
+		var text = document.createTextNode(event);
+		elem.classList.add("event-name");
 		
-		var currentEventObject = eventsData.filter(function(eventObj) {
-			return eventObj['name'] ===	eventCategories[curimg];
-		});	
-
-		console.log(currentEventObject);
-
-		var currentEvents =  currentEventObject.length ? currentEventObject[0].events : [];
-
-		for(var event in currentEvents) {
-			var elem = document.createElement("div");	
-			var text = document.createTextNode(event);
-			elem.classList.add("event-name");
-			
-			elem.append(text);
-			viewEventsWrapperInner.append(elem);
-		}
+		elem.append(text);
+		viewEventsWrapperInner.append(elem);
 	}
 
 }
@@ -229,13 +261,31 @@ document.getElementById("close-events-page").addEventListener("click", function 
 });
 
 var populateEvents = function() {
+	var miscCategories = ["Entertainment", "Films", "Writing"];
 	fetch("https://bits-oasis.org/2018/events/info/")
 		.then(function(res){ return res.json()})
 		.then(function(data){
+			var miscObj = data.filter(function(eventObj){
+				return 	eventObj.name === "Miscellaneous";
+			})[0];
+			data.forEach(function(eventObj) {
+				miscCategories.forEach(function(cat) {
+					if(cat === eventObj.name) {
+						Object.assign(miscObj.events, eventObj.events);
+					}
+				});
+			});
 			console.log(data);
 			eventsData = data;
 		});
 
 }
+
+Array.from(document.getElementsByClassName("categories-events-image"))
+	.forEach(function(domElem, i) {
+		domElem.addEventListener("click", function() {
+			openViewEventsFromAllCategories(eventCategories[i]);
+		});
+	})
 
 populateEvents()

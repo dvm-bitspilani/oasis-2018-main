@@ -639,6 +639,7 @@ object:not(#dance-svg) {
 .categories-events-image{
     width: 21vw;
     margin: 30px;
+	cursor: pointer;
 }
 
 .close{
