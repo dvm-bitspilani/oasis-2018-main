@@ -135,16 +135,16 @@ categoryEventClose.addEventListener('click', function () {
 var viewEvents = document.getElementById('view-events-wrapper');
 var viewEventsBtn = document.getElementById('view-events-btn');
 
-function openViewEventsFromAllCategories (categoryName) {
-
+function showEventsWrapper() {
     setTimeout(function () {
         viewEvents.style.opacity = "1";
     }, 100);
-
-
     viewEvents.style.display = 'flex';
-    viewEvents.style.zIndex = "1002";
+    viewEvents.style.zIndex = '1002';
 
+}
+
+function populateEventsDOM(categoryName) {
 	if(!eventsData) return;
 
 	while(viewEventsWrapperInner.firstChild) {
@@ -164,42 +164,16 @@ function openViewEventsFromAllCategories (categoryName) {
 		elem.append(text);
 		viewEventsWrapperInner.append(elem);
 	}
-	
+}
 
-
+function openViewEventsFromAllCategories (categoryName) {
+	showEventsWrapper();
+	populateEventsDOM(categoryName); 
 }
 
 function openViewEvents () {
-    setTimeout(function () {
-        viewEvents.style.opacity = "1";
-    }, 100);
-    viewEvents.style.display = 'flex';
-    viewEvents.style.zIndex = "999";
-
-	if(!eventsData) return;
-	
-		
-	while(viewEventsWrapperInner.firstChild) {
-		viewEventsWrapperInner.firstChild.remove();
-	}
-	
-	var currentEventObject = eventsData.filter(function(eventObj) {
-		return eventObj['name'] ===	eventCategories[curimg];
-	});	
-
-	console.log(currentEventObject);
-
-	var currentEvents =  currentEventObject.length ? currentEventObject[0].events : [];
-
-	for(var event in currentEvents) {
-		var elem = document.createElement("div");	
-		var text = document.createTextNode(event);
-		elem.classList.add("event-name");
-		
-		elem.append(text);
-		viewEventsWrapperInner.append(elem);
-	}
-
+	showEventsWrapper();
+	populateEventsDOM(eventCategories[curimg]); 
 }
 
 viewEventsBtn.addEventListener('click', function (e) {
