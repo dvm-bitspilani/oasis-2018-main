@@ -1023,8 +1023,8 @@ span[role=combobox] {
 
 /* DEVELOPERS PAGE AND CONTACT US */
 
-.dev-flex, .contacts-flex {
-    overflow-y: scroll;
+.dev-flex, .contacts-flex, .sponsors-flex {
+    overflow-y: auto;
     width: 100%;
     height: 90vh;
     z-index: 302;
@@ -1088,20 +1088,6 @@ span[role=combobox] {
     font-size: 120%;
 }
 
-#contact-header {
-    color: #FF7E7E;
-    font-family: "bebas neue", sans-serif;
-    padding-top: 4vh;
-    font-size: 250%;
-    font-weight: 300;
-    letter-spacing: 11px;
-    margin-top: 26vh;
-    position: absolute;
-    top: -23vh;
-    text-align: center;
-
-}
-
 #dev-header {
     color: #FF7E7E;
     font-family: "bebas neue", sans-serif;
@@ -1143,16 +1129,15 @@ span[role=combobox] {
     margin-bottom: 3vh;
 }
 
-#spons-header {
+#spons-header, #contact-header {
     color: #FF7E7E;
     font-family: "bebas neue", sans-serif;
     padding-top: 4vh;
     font-size: 250%;
     font-weight: 300;
     letter-spacing: 11px;
-    margin-top: 5vh;
-    /*position: absolute;
-    top: -23vh;*/
+    position: absolute;
+    top: 3vh;
     text-align: center;
 }
 
@@ -1185,7 +1170,8 @@ span[role=combobox] {
     align-items: center;
     margin-top: 2vh;
     z-index: 301;
-   /* padding-left: 9vw;*/
+    position: absolute;
+    top: 18vh;
 }
 
 .sponsor-others {
