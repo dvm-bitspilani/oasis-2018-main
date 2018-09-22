@@ -1,0 +1,132 @@
+#top-nav {
+    z-index: 301;
+}
+#home-svg-desktop {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1 !important;
+    width: auto;
+}
+.left1 {
+    animation: animateLeft1 3s ease-in-out alternate-reverse infinite;
+    transform: rotate(-7deg);
+}
+
+.left2 {
+    animation: animateLeft2 3.1s ease-in-out alternate-reverse infinite;
+    animation-delay: 1s;
+    transform: rotate(5deg);
+}
+
+.right1 {
+    animation: animateRight2 3s ease-in-out alternate-reverse infinite;
+    transform: rotate(-15deg);
+}
+
+.right2 {
+    transform: rotate(-5deg);
+    animation: animateRight1 3.1s ease-in-out alternate-reverse infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animateLeft1 {
+    from {
+        transform: rotate(-7deg);
+    }
+    to {
+        transform: rotate(12deg);
+    }
+}
+
+@keyframes animateLeft2 {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes animateRight1 {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-5deg);
+    }
+}
+@keyframes animateRight2 {
+    from {
+        transform: rotate(7deg);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
+}
+
+@media screen and (max-width : 992px)
+{
+   #dialogBox span h1 {
+    font-size: 5vw;
+}
+ 
+}
+
+@media screen and (min-width : 992px)
+{
+   #dialogBox span h1 {
+    font-size: 2em;
+}
+ 
+}
+
+
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    /* opacity: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+#dialogBox {
+    background: #ffffff;
+    color: #000;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    height: 60vh;
+    width: 80vw;
+    position: relative;
+    overflow: auto;
+}
+#dialogBox img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 9999;
+}
+#dialogBox span {
+    font-family: 'productSans', sans-serif;
+    text-align: center;
+}
+/* #dialogBox span h1 {
+    font-size: 2em;
+}
+ */
