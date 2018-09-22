@@ -1239,6 +1239,11 @@ span[role=combobox] {
         padding-top: 1.5px;
     }
 
+    #close-icon, .close-page {
+        height: 1.6em;
+        margin: 10px 10px;
+    }
+
     #top-nav {
         font-size: 80%;
     }
@@ -1285,6 +1290,11 @@ span[role=combobox] {
     }
     .top-nav-link {
         font-size: 1.4em;
+    }
+
+    #categories-heading {
+        top: 10px;
+        left: 10px;
     }
 }
 

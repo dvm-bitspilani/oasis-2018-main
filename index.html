@@ -1413,6 +1413,14 @@
                 </div>
         </div>
 
+        <script>
+            var isDesktop = window.matchMedia("(min-width: 800px)").matches;
+
+            window.onresize = function () {
+                isDesktop = window.matchMedia("(min-width: 800px)").matches;
+                if (isDesktop) console.log("asdf");
+            }
+        </script>
         <script src="js/home.js"></script>
         <script src="js/pure-swipe.min.js"></script>
         <script src="js/events.js"></script>
