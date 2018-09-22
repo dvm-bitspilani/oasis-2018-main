@@ -75,6 +75,14 @@
  
 }
 
+@media screen and (min-width : 992px)
+{
+   #dialogBox span h1 {
+    font-size: 2em;
+}
+ 
+}
+
 
 
 #overlay {
@@ -118,6 +126,7 @@
     font-family: 'productSans', sans-serif;
     text-align: center;
 }
-#dialogBox span h1 {
+/* #dialogBox span h1 {
     font-size: 2em;
 }
+ */
