@@ -183,27 +183,27 @@ function populateEventsDOM(categoryName) {
 	var currentEvents =  currentEventObject.length ? currentEventObject[0].events : [];
 
 	for(var event in currentEvents) {
-		var elem = document.createElement("div");	
-		var text = document.createTextNode(event);
-		elem.classList.add("event-name");
-		elem.append(text);
-		elem.addEventListener("click", function() {
-			(function(e){
-				console.log(e);
+		(function(event){
+			var elem = document.createElement("div");	
+			var text = document.createTextNode(event);
+			elem.classList.add("event-name");
+			elem.append(text);
+			elem.addEventListener("click", function() {
+				console.log(event);
 				while(individualEventsWrapper.firstChild) {
 					individualEventsWrapper.firstChild.remove();
 				}
 				individualEventsWrapper.prepend(individualEventsClose);
 				var h3 = document.createElement('h3');
-				var text = document.createTextNode(e);
+				var text = document.createTextNode(event);
 				h3.append(text);
 				individualEventsWrapper.append(h3);
-				individualEventsWrapper.insertAdjacentHTML("beforeend", currentEvents[e]);
+				individualEventsWrapper.insertAdjacentHTML("beforeend", currentEvents[event]);
 				showIndividualEventsWrapper();	
 				individualEventsWrapper.append();
-			})(event);
-		});
-		viewEventsWrapperInner.append(elem);
+			});
+			viewEventsWrapperInner.append(elem);
+		})(event);
 	}
 }
 

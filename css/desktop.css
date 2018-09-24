@@ -423,6 +423,7 @@ object:not(#dance-svg) {
 #event-individual p *{ 
 	background: none;
 	color: #ffffff;
+
 }
 
 #event-individual h4 {
