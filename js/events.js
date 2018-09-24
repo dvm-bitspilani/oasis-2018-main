@@ -103,6 +103,13 @@ var categoriesClose = document.getElementById('categories-close');
 var categoryEventClose = document.getElementsByClassName('category-event-close')[0];
 var viewEventsWrapper = document.getElementById("view-events-wrapper");
 var viewEventsWrapperInner = document.getElementById("view-events-wrapper-inner");
+var individualEventsWrapper = document.getElementById("event-individual");
+var individualEventsClose = document.querySelector("#event-individual .individual-event-close");
+
+document.querySelector("#event-individual .individual-event-close")
+	.addEventListener('click', function() {
+		closeIndividualEventsWrapper();	
+	});
 
 cHeading.addEventListener('click', function () {
     categories.style.top = "0";
@@ -141,12 +148,25 @@ function showEventsWrapper() {
     }, 100);
     viewEvents.style.display = 'flex';
     viewEvents.style.zIndex = '1002';
+}
 
+function showIndividualEventsWrapper() {
+    setTimeout(function () {
+        individualEventsWrapper.style.opacity = "1";
+    }, 200);
+    individualEventsWrapper.style.display = 'flex';
+    individualEventsWrapper.style.zIndex = '1003';
+}
+
+function closeIndividualEventsWrapper() {
+    individualEventsWrapper.style.opacity = "0";
+    setTimeout(function () {
+        individualEventsWrapper.style.display = "none";
+		individualEventsWrapper.style.zIndex = '0';
+    }, 500);
 }
 
 function populateEventsDOM(categoryName) {
-	
-
 	if(!eventsData) return;
 
 	while(viewEventsWrapperInner.firstChild) {
@@ -166,8 +186,23 @@ function populateEventsDOM(categoryName) {
 		var elem = document.createElement("div");	
 		var text = document.createTextNode(event);
 		elem.classList.add("event-name");
-		
 		elem.append(text);
+		elem.addEventListener("click", function() {
+			(function(e){
+				console.log(e);
+				while(individualEventsWrapper.firstChild) {
+					individualEventsWrapper.firstChild.remove();
+				}
+				individualEventsWrapper.prepend(individualEventsClose);
+				var h3 = document.createElement('h3');
+				var text = document.createTextNode(e);
+				h3.append(text);
+				individualEventsWrapper.append(h3);
+				individualEventsWrapper.insertAdjacentHTML("beforeend", currentEvents[e]);
+				showIndividualEventsWrapper();	
+				individualEventsWrapper.append();
+			})(event);
+		});
 		viewEventsWrapperInner.append(elem);
 	}
 }
@@ -269,3 +304,4 @@ Array.from(document.getElementsByClassName("categories-events-image"))
 	})
 
 populateEvents()
+
