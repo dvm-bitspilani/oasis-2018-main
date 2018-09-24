@@ -66,7 +66,7 @@
         margin: calc(3vh - 5px) 0 0 3vh;
     }
     
-    .close-page {
+    .close-page, .category-event-close, #categories-close {
         height: 35px;
         margin: calc(3vh - 5px) 3vh 0 0;
     }
