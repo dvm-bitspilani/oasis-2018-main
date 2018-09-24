@@ -421,8 +421,8 @@ object:not(#dance-svg) {
 }
 
 #event-individual p *{ 
-	background: none;
-	color: #ffffff;
+	background: none !important;
+	color: #ffffff !important;
 
 }
 
