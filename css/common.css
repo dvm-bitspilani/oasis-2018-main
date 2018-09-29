@@ -134,3 +134,14 @@
 .event-category-heading {
 	margin-bottom: 5vh !important;
 }
+
+.g-recaptcha{
+    padding-top: 20px;
+}
+
+.gc-reset{
+    transform:scale(0.95) !important;
+    -webkit-transform:scale(0.95) !important;
+    transform-origin:0 0 !important;
+    -webkit-transform-origin:0 0 !important;
+    }

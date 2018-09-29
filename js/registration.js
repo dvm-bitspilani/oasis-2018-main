@@ -62,6 +62,7 @@ $(document).ready(function () {
 });
 
 URL = "https://bits-oasis.org/2018/registrations/";
+// URL = "http://172.17.42.109:8000/registrations/";
 $(document).ready(function () {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', URL, true);
@@ -98,6 +99,8 @@ $(document).ready(function () {
 });
 
 document.getElementById('submit-button').addEventListener('click', function () {
+  let reCaptcha = document.getElementById('register-form').elements[document.getElementById('register-form').length- 2].value;
+  if(reCaptcha){
   var eventsSelected = $("#event-select").select2('val');
   var name = document.getElementById('name').value;
   var city = document.getElementById('city').value;
@@ -160,6 +163,7 @@ document.getElementById('submit-button').addEventListener('click', function () {
       city: city,
       phone: phone,
       head_of_society: head_of_society,
+      reCaptcha: reCaptcha,
       year_of_study: year_of_study
     });
     console.log(x);
@@ -182,6 +186,12 @@ document.getElementById('submit-button').addEventListener('click', function () {
   } else {
     showError('<h1>Please fill all the fields.</h1>');
   }
+}
+
+else{
+  showError('<h1>Please validate the reCaptcha</h1>');
+}
+
 });
 
   //new

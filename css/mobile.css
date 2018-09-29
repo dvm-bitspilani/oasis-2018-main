@@ -103,6 +103,18 @@
         display: none;
     }
 
+    .g-recaptcha{
+        transform: translateX(-10vw) scale(.77); 
+        padding: 20px;
+    }
+    
+    .gc-reset{
+        transform:scale(0.95) !important;
+        -webkit-transform:scale(0.95) !important;
+        transform-origin:0 0 !important;
+        -webkit-transform-origin:0 0 !important;
+        }
+
     #mobile-social-media {
         padding: 5vh 7vw 5vh 7vw;
         display: flex;
