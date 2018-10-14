@@ -607,6 +607,7 @@ object:not(#dance-svg) {
     /* justify-content: center; */
     align-items: center;
     align-content: center;
+	overflow-y: scroll;
 }
 
 .event-name{
