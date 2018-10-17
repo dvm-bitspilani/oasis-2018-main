@@ -570,14 +570,30 @@ object:not(#dance-svg) {
     cursor: pointer;
 }
 
-#categories-heading{
-    cursor:pointer;
-    font-size: 25px;
-	font-family: ikaros;
-	color: white;
+#categories-top {
 	position: absolute;
 	left: 25px;
-	top: 25px;
+  top: 25px;
+  display: flex;
+  font-size: 25px;
+	font-family: ikaros;
+  color: white;
+}
+
+.categories-top-elem {
+  margin-right: 50px;
+  transition: transform 0.1s linear;
+}
+
+.categories-top-elem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.categories-top-elem:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  color: #c4217d;
 }
 
 #view-events-wrapper{
