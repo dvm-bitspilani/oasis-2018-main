@@ -156,38 +156,43 @@ document.getElementById('submit-button').addEventListener('click', function () {
           // }
     if (checkPhonenumber(phone)) {
       if (checkEmail(email)) {
-        if(reCaptcha){
-          x = JSON.stringify({
-            events: eventsSelected,
-            email: email,
-            name: name,
-            college: college,
-            gender: gender,
-            city: city,
-            phone: phone,
-            head_of_society: head_of_society,
-            reCaptcha: reCaptcha,
-            year_of_study: year_of_study
-          });
+        if (eventsSelected !== null) {
+          if(reCaptcha){
+            x = JSON.stringify({
+              events: eventsSelected,
+              email: email,
+              name: name,
+              college: college,
+              gender: gender,
+              city: city,
+              phone: phone,
+              head_of_society: head_of_society,
+              reCaptcha: reCaptcha,
+              year_of_study: year_of_study
+            });
 
-          $.ajax({
-            type: "POST",
-            contentType: "application/json",
-            url: URL,
-            data: x,
-            dataType: "json",
-            complete: function (data) {
-              data = (data.responseJSON);
-              if (data.status == 0) {
-                showError('<h1>' + data.message + '</h1><h1>Please try again.</h1>');
-              } else {
-                  showError('<h1>' + data.message + '</h1>');
+            $.ajax({
+              type: "POST",
+              contentType: "application/json",
+              url: URL,
+              data: x,
+              dataType: "json",
+              complete: function (data) {
+                data = (data.responseJSON);
+                if (data.status == 0) {
+                  showError('<h1>' + data.message + '</h1><h1>Please try again.</h1>');
+                } else {
+                    showError('<h1>' + data.message + '</h1>');
+                }
               }
-            }
-          });
+            });
+          }
+          else{
+            showError('<h1>Please validate the reCaptcha</h1>');
+          }
         }
-        else{
-          showError('<h1>Please validate the reCaptcha</h1>');
+        else {
+          showError('<h1>Please select the event(s) you want to register for</h1>');
         }
       }
       else {
