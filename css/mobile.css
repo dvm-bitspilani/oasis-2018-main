@@ -178,8 +178,12 @@
         background-position: center;
     }
 
-    #categories-heading{
+    #categories-top{
 		font-size: 19px;
+    }
+
+    .categories-top-elem {
+      margin-right: 20px;
     }
 
     #events-image {
