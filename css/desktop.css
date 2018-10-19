@@ -159,12 +159,12 @@ imput {
     min-width: 190px;
 }
 
-#login-link span {
+/* #login-link span {
     position: absolute;
     top: 3vh;
     left: 3vh;
     font-size: 1.8em;
-}
+} */
 
 #events-link span {
     display: none;
@@ -263,6 +263,11 @@ imput {
 
 #menu-list li span:hover {
     cursor: pointer;
+}
+
+#menu-list li a {
+  text-decoration: none;
+  color: inherit;
 }
 
 #menu-trees {
