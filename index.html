@@ -885,11 +885,18 @@
             <li id="about-link">
                 <span>ABOUT</span>
             </li>
+            <li id="login-link">
+              <a href = "https://bits-oasis.org/2018/registrations/login" target = "_blank">
+                <span>LOGIN</span>
+              </a>
+            </li>
             <li id="videos-link">
                 <span>VIDEOS</span>
             </li>
             <li id="schedule-link">
+              <a href = "./schedule.pdf" target = "_blank">
                 <span>SCHEDULE</span>
+              </a>
             </li>
             <li id="archives-link">
                 <span>ARCHIVES</span>
@@ -1018,24 +1025,103 @@
 
     <!-- VIDEOS -->
     <div class="page" id="videos-page">
-        <img src="imgs/close-icon.svg" class="close-page clickable" />
-        <div class="common-heading videos-heading">VIDEOS</div>
-        <div class="coming-soon">Coming Soon...</div>
+      <div class = "fullpage-flex videos-flex">
+          <img src="imgs/close-icon.svg" class="close-page clickable" />
+          <div class="common-heading videos-heading">VIDEOS</div>
+          <!-- <div class="coming-soon">Coming Soon...</div> -->
+
+          <div class = "videos-container">
+            <div class="videos-content">
+              <div class="video-img">
+                  <div class="video-img-heading theme-color-text">Oasis'18 Teaser</div>
+                  <a href="https://www.youtube.com/watch?v=oWDZY6y7ED8" target="_blank" class="analytics-teaser18">
+                      <div class="img-thumbnail teaser18" style = "background: url('./imgs/video/oasis.jpg')">
+                          <img src="./imgs/video/youtube_play.svg" alt="Oasis'18 Teaser" class="youtube-thumbnail" />
+                      </div>
+                  </a>
+              </div>
+
+              <div class="video-img">
+                  <div class="video-img-heading theme-color-text">Oasis'17 Aftermovie</div>
+                  <a href="https://www.youtube.com/watch?v=xDyabSZ-nxA" target="_blank" class="analytics-aftermovie17">
+                      <div class="img-thumbnail aftermovie17" style = "background: url('./imgs/video/oasis_17_aftermovie.jpg')">
+                          <img src="./imgs/video/youtube_play.svg" alt="Oasis'17 Aftermovie" class="youtube-thumbnail" />
+                      </div>
+                  </a>
+              </div>
+
+              <div class="video-img">
+                  <div class="video-img-heading theme-color-text">Oasis'17 Teaser</div>
+                  <a href="https://www.youtube.com/watch?v=FN71wnk58Hg" target="_blank" class="analytics-teaser17">
+                      <div class="img-thumbnail teaser17" style = "background: url('./imgs/video/oasis_17_teaser.jpg')">
+                          <img src="./imgs/video/youtube_play.svg" alt="Oasis'18 Teaser" class="youtube-thumbnail" />
+                      </div>
+                  </a>
+              </div>
+
+              <div class="video-img">
+                  <div class="video-img-heading theme-color-text">Oasis'16 Aftermovie</div>
+                  <a href="https://www.youtube.com/watch?v=rh7WkyNXNRE" target="_blank" class="analytics-aftermovie16">
+                      <div class="img-thumbnail aftermovie16" style = "background: url('./imgs/video/oasis_16_aftermovie.jpg')">
+                          <img src="./imgs/video/youtube_play.svg" alt="Oasis'18 Teaser" class="youtube-thumbnail" />
+                      </div>
+                  </a>
+              </div>
+          </div>
+          </div>
+      </div>
     </div>
 
     <!-- ARCHIVES -->
     <div class="page" id="archives-page">
+      <div class = "fullpage-flex archives-flex">
         <img src="imgs/close-icon.svg" class="close-page clickable" />
-        <div class="common-heading videos-heading">ARCHIVES</div>
-        <div class="coming-soon">Coming Soon...</div>
+        <div class="common-heading archives-heading">ARCHIVES</div>
+        <!-- <div class="coming-soon">Coming Soon...</div> -->
+        <div class = "archives-container">
+            <div class="archives-content">
+              <div class="archive-img">
+                  <div class="archives-img-heading theme-color-text">Oasis'17 Main</div>
+                  <a href="https://bits-oasis.org/2017main/" target="_blank">
+                      <div class="img-thumbnail teaser18" style = "background: url('./imgs/archives/main_17.png')">
+                      </div>
+                  </a>
+              </div>
+
+              <div class="archive-img">
+                  <div class="archives-img-heading theme-color-text">Oasis'17 Intro</div>
+                  <a href="https://bits-oasis.org/2017intro/" target="_blank">
+                      <div class="img-thumbnail teaser18" style = "background: url('./imgs/archives/intro_17.png')">
+                      </div>
+                  </a>
+              </div>
+
+              <div class="archive-img">
+                  <div class="archives-img-heading theme-color-text">Oasis'16 Main</div>
+                  <a href="https://bits-oasis.org/2016main/" target="_blank">
+                      <div class="img-thumbnail teaser18" style = "background: url('./imgs/archives/main_16.png')">
+                      </div>
+                  </a>
+              </div>
+
+              <div class="archive-img">
+                  <div class="archives-img-heading theme-color-text">Oasis'16 Intro</div>
+                  <a href="https://bits-oasis.org/2016intro/" target="_blank">
+                      <div class="img-thumbnail teaser18" style = "background: url('./imgs/archives/intro_16.png')">
+                      </div>
+                  </a>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
 
     <!-- SCHEDULE -->
-    <div class="page" id="schedule-page">
+    <!-- <div class="page" id="schedule-page">
         <img src="imgs/close-icon.svg" class="close-page clickable" />
         <div class="common-heading videos-heading">SCHEDULE</div>
         <div class="coming-soon">Coming Soon...</div>
-    </div>
+    </div> -->
 
     <!-- EVENTS -->
     <div class="page" id="events-page">
@@ -1058,7 +1144,7 @@
             <div id="events-container">
                 <div id = "categories-top" class = "clickable">
                   <div id="categories-heading" class = "categories-top-elem" class="clickable">ALL CATEGORIES</div>
-                  <div class = "categories-top-elem" class="clickable"><a href = "./OasisInformationBooklet.pdf" target = "_blank">RULES</a></div>
+                  <div class = "categories-top-elem" class="clickable"><a href = "./OasisInformationBooklet.docx" target = "_blank">RULES</a></div>
                 </div>
                 <div id="events-container-inner">
                     <div id="event-categories">
@@ -1361,7 +1447,7 @@
                     <img src="./imgs/stucca/punitbatra.png" class="contact-img">
                     <div class="contact-name">Punit Batra</div>
                     <div class="contact-info">Sponsorship and Marketing</div>
-                    <div class="contact-email">sponsorship@bits-oasis.org</div>
+                    <div class="contact-email">punit@bits-oasis.org</div>
                     <div class="contact-num">+91 80033 35712</div>
                 </div>
                 <div class="contact-img-con">
