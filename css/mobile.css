@@ -288,6 +288,14 @@
     .videos-heading {
         margin-top: 12vh;
     }
+
+    .video-img-heading {
+        margin-top: 40px;
+    }
+
+    .img-thumbnail {
+      width: 95vw;
+    }
 }
 
 @media all and (max-width: 600px) {
