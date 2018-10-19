@@ -283,13 +283,13 @@
         width: 44vw;
     }
 
-    /* VIDEOS */
+    /* VIDEOS and ARCHIVES */
 
-    .videos-heading {
+    .videos-heading, .archives-heading {
         margin-top: 12vh;
     }
 
-    .video-img-heading {
+    .video-img-heading, .archives-img-heading {
         margin-top: 40px;
     }
 
