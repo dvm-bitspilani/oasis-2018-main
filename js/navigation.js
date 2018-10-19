@@ -54,11 +54,11 @@ var pages = {
         linkElem: [document.getElementById("archives-link")],
         domElem: document.getElementById("archives-page")
     },
-    schedule: {
-        name: "schedule",
-        linkElem: [document.getElementById("schedule-link")],
-        domElem: document.getElementById("schedule-page")
-    }
+    // schedule: {
+    //     name: "schedule",
+    //     linkElem: [document.getElementById("schedule-link")],
+    //     domElem: document.getElementById("schedule-page")
+    // }
 };
 
 var currentPage = pages.home;
