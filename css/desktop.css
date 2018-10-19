@@ -247,7 +247,7 @@ imput {
     list-style: none;
     /*margin: 28vh 0 0 0;*/
     padding: 0;
-    font-family: "bebas neue", sans-serif;
+    font-family: "ikaros", sans-serif;
     z-index: 302;
 }
 
@@ -1331,7 +1331,7 @@ span[role=combobox] {
     }
 
 	#menu-list li {
-		font-size: 150%;	
+		font-size: 200%;	
 	}
 
     #register-link img {
