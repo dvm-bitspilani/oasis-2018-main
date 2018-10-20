@@ -686,9 +686,9 @@ object:not(#dance-svg) {
 }
 
 #categories-events{
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
-    flex-flow: wrap;
+    flex-wrap: wrap; */
 }
 
 .categories-events-image{
