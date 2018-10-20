@@ -1,4 +1,4 @@
-var eventCategories = ["Dance", "Online", "Drama", "Fine Art", "Music", "Photography", "Fashion", "Oratory", "Quizzing", "Miscellaneous"];
+var eventCategories = ["Dance", "Online", "Drama", "Fine Art", "Music", "Photography", "Fashion", "Oratory", "Quizzing", "Humour", "Films", "Miscellaneous"];
 
 var eventsData = null;
 
@@ -276,7 +276,7 @@ document.getElementById("close-events-page").addEventListener("click", function 
 });
 
 var populateEvents = function() {
-	var miscCategories = ["Entertainment", "Films", "Writing"];
+	var miscCategories = ["Entertainment", "Writing"];
 	fetch("https://bits-oasis.org/2018/events/info/")
 		.then(function(res){ return res.json()})
 		.then(function(data){
