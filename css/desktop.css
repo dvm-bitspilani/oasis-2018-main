@@ -637,6 +637,7 @@ object:not(#dance-svg) {
     font-size: 2em;
     margin: 5px;
     cursor: pointer;
+    text-align: center;
 }
 
 #event-individual {
