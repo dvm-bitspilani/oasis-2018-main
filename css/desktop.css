@@ -1110,6 +1110,10 @@ span[role=combobox] {
     width: 10vw;
     border-radius: 50%;
 }
+
+.dev-img{
+    width: 10vw;
+}
 /*.dev-img {
     justify-content: center;
     text-align: center;

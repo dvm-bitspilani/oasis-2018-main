@@ -217,7 +217,7 @@
     .contacts-menu-list {
         display: block;
     }
-    .contact-img, .dev-img {
+    .contact-img, .dev-img{
         width: 25vw;
     }
 
@@ -228,6 +228,15 @@
     #contact-header, #dev-header {
         font-size: 200%;
     }
+
+    /* .dev-img-con {
+        margin-bottom: 6vh;
+        margin-right: 2.5vw;
+        margin-left: 2.5vw;
+        justify-content: center;
+        text-align: center;
+        width: 20vw;
+    } */
 
     #devs-container {
         margin-top: -2vh;
@@ -241,7 +250,7 @@
         font-size: 90%;
     }
 
-    .contact-img-con {
+    .contact-img-con, .dev-img-con {
         width: 80vw;
     }
 
