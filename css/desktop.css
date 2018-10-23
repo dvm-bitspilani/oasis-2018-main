@@ -1403,3 +1403,12 @@ span[role=combobox] {
 .about-heading{
 	margin-top: 5vh !important;
 }
+
+.sponsors-heading {
+	width: 100%;
+	font-size: 200%;
+	font-family: 'bebas neue', sans-serif;
+	text-align: center;
+	padding: 30px 0;
+	color: #FF7E7E;
+}
