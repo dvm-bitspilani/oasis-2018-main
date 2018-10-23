@@ -311,6 +311,9 @@
 	.common-heading {
 		font-size: 37px;	
 	}
+	.sponsors-heading {
+		padding: 20px 0;	
+	}
 }
 
 @media all and (max-width: 300px) {
