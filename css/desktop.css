@@ -1,4 +1,4 @@
-body, html {
+body, html { */
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -1255,6 +1255,7 @@ span[role=combobox] {
     margin-left: 2.5vh;
     margin-top: 2vh;
     margin-bottom: 2vh;
+	max-height: 100%;
 }
 
 /* VIDEOS and ARCHIVES */
@@ -1406,4 +1407,13 @@ span[role=combobox] {
 
 .about-heading{
 	margin-top: 5vh !important;
+}
+
+.sponsors-heading {
+	width: 100%;
+	font-size: 200%;
+	font-family: 'bebas neue', sans-serif;
+	text-align: center;
+	padding: 30px 0;
+	color: #FF7E7E;
 }

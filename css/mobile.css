@@ -320,6 +320,15 @@
 	.common-heading {
 		font-size: 37px;	
 	}
+	.sponsors-flex {
+		height: 98vh;	
+	}
+	.sponsors-heading {
+		padding: 20px 0;	
+	}
+	/* .sponsor-others {
+		height: 30vh;	
+	} */
 }
 
 @media all and (max-width: 300px) {
