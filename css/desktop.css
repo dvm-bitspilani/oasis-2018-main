@@ -1113,6 +1113,7 @@ span[role=combobox] {
 
 .dev-img{
     width: 10vw;
+    /* height: 10vh; */
 }
 /*.dev-img {
     justify-content: center;
