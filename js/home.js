@@ -106,3 +106,6 @@ function animOnLoadComplete() {
         setTimeout(function () { elem.style.opacity = 1; }, time + 100);
     }
 };
+
+console.log("%cMade with LOVE :)", "color: red; font-size: x-large");
+console.log("%c               - By DVM", "color: green; font-size: x-large");
